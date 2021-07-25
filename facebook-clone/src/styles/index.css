@@ -19,4 +19,8 @@
   color: blue;
   text-decoration: underline !important;
 }
+
+.logo img {
+  width: 50px;
+}
 /*# sourceMappingURL=index.css.map */
