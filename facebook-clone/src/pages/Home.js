@@ -4,11 +4,14 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div className="Home">
+    <div className="home">
       <Header />
-      <Article article="Premier article" key="1" />
-      <Article article="Deuxieme article" key="2" />
-      <h1>HELLO</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam in, nisi
+        labore ipsam neque quasi magni ipsum corrupti nobis vitae, soluta iure
+        explicabo animi atque, porro voluptatibus perspiciatis necessitatibus
+        ab!
+      </p>
     </div>
   );
 };

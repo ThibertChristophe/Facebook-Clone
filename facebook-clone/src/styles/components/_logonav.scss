@@ -1,0 +1,14 @@
+.logoNav {
+  width: 125px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  img {
+    width: 22px;
+  }
+  &:hover {
+    background-color: rgba(192, 192, 192, 0.192);
+  }
+}

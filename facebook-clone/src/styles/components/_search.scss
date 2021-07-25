@@ -1,0 +1,14 @@
+.search {
+  input {
+    color: white;
+    height: 40px;
+    width: 240px;
+    background-color: #3a3b3c;
+    border: none;
+    border-radius: 50px;
+    padding-left: 25px;
+    &::placeholder {
+      color: rgb(197, 197, 197);
+    }
+  }
+}
