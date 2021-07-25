@@ -1,0 +1,16 @@
+.logoNav_market {
+  width: 125px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+  img {
+    margin-top: 5px;
+    width: 24px;
+  }
+  &:hover {
+    background-color: rgba(192, 192, 192, 0.192);
+  }
+}
