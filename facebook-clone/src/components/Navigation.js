@@ -1,6 +1,7 @@
 import React from "react";
 import LogoNav from "../components/LogoNav";
 import { NavLink } from "react-router-dom";
+import LogoNav_friends from "./LogoNav_friends";
 
 const Navigation = () => {
   return (
@@ -9,7 +10,7 @@ const Navigation = () => {
         <LogoNav />
       </NavLink>
       <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav />
+        <LogoNav_friends />
       </NavLink>
       <NavLink exact to="/" activeClassName="nav-active">
         <LogoNav />

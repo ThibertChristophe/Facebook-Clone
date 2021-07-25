@@ -1,13 +1,13 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import Logo from "../components/Logo";
+import LogoFacebook from "../components/LogoFacebook";
 import Search from "./Search";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="zoneGauche">
-        <Logo />
+        <LogoFacebook />
         <Search />
       </div>
       <Navigation />
