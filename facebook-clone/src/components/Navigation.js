@@ -13,10 +13,13 @@ const Navigation = () => {
         <LogoNav_friends />
       </NavLink>
       <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav />
+        <LogoNav_friends />
       </NavLink>
       <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav />
+        <LogoNav_friends />
+      </NavLink>
+      <NavLink exact to="/" activeClassName="nav-active">
+        <LogoNav_friends />
       </NavLink>
     </div>
   );
