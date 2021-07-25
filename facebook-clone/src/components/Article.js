@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
-const Article = () => {
+const Article = (props) => {
   const [titre, setTitre] = useState("");
+
+  const { article } = props;
 
   const ajouteTitre = () => {
     if (titre === "") {
-      setTitre("Titre est là");
+      setTitre(article);
     } else {
       setTitre("");
     }
