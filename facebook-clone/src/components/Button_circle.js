@@ -5,7 +5,7 @@ const Button_circle = (Icon) => {
   return (
     <div className="button_circle">
       <button>
-        <img src={Icon.icon} alt="" />
+        <img src={Icon.Icon} alt="" />
       </button>
     </div>
   );
