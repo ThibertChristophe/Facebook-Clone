@@ -6,9 +6,23 @@
   align-items: center;
   border-radius: 10px;
   transition: all 0.15s ease;
+  position: relative;
   img {
     margin-top: 5px;
     width: 24px;
+  }
+  &::after {
+    content: "2";
+    width: 17px;
+    height: 17px;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    top: 10px;
+    left: 70px;
   }
   &:hover {
     background-color: rgba(192, 192, 192, 0.192);

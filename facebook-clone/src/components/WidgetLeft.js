@@ -9,6 +9,7 @@ import imgMarketplace from "../img/marketplace.png";
 import imgWatch from "../img/watch.png";
 import imgEvent from "../img/event.png";
 import imgSouvenir from "../img/souvenir.png";
+import imgArrowDown from "../img/arrow-down-simple.svg";
 
 const WidgetLeft = () => {
   return (
@@ -22,6 +23,7 @@ const WidgetLeft = () => {
       <WidgetButton title="Watch" img={imgWatch} />
       <WidgetButton title="Évènements" img={imgEvent} />
       <WidgetButton title="Souvenirs" img={imgSouvenir} />
+      <WidgetButton title="Voir plus" img={imgArrowDown} />
     </div>
   );
 };

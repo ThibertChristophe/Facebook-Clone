@@ -1,7 +1,6 @@
 import React from "react";
 
 const Button_circle = (Icon) => {
-  console.log(Icon.Icon);
   return (
     <div className="button_circle">
       <button>
