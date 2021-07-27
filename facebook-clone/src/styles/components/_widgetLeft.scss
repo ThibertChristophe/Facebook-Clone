@@ -2,5 +2,12 @@
   position: fixed;
   width: 350px;
   padding: 5px 0 0 15px;
-  height: 100vh;
+  height: 100%;
+  .widget-left-footer {
+    position: absolute;
+    bottom: 90px;
+    p {
+      font-size: 13px;
+    }
+  }
 }

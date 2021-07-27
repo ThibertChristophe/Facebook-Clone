@@ -3,9 +3,7 @@ import React from "react";
 const LogoNav_play = () => {
   return (
     <div className="logoNav_play">
-      <a href="">
-        <img src="/img/tv.svg" alt="" />
-      </a>
+      <img src="/img/tv.svg" alt="" />
     </div>
   );
 };

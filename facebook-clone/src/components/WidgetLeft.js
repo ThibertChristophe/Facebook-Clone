@@ -17,13 +17,19 @@ const WidgetLeft = () => {
       <WidgetButton title="Chris Thib" img={img_profil} />
       <WidgetButton title="COVID-19 - Centre d'information" img={imgCovid} />
       <WidgetButton title="Amis" img={imgAmis} />
+      <WidgetButton title="Watch" img={imgWatch} />
       <WidgetButton title="Vidéo en direct" img={imgLive} />
       <WidgetButton title="Groupes" img={imgGroup} notif="2 nouveaux" />
       <WidgetButton title="Marketplace" img={imgMarketplace} />
-      <WidgetButton title="Watch" img={imgWatch} />
       <WidgetButton title="Évènements" img={imgEvent} />
       <WidgetButton title="Souvenirs" img={imgSouvenir} />
       <WidgetButton title="Voir plus" img={imgArrowDown} />
+      <div className="widget-left-footer">
+        <p>
+          Confidentialité · Conditions générales · Publicités · Choix
+          publicitaires · Cookies · · Facebook © 2021
+        </p>
+      </div>
     </div>
   );
 };
