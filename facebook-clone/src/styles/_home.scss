@@ -1,3 +1,9 @@
 .home {
   background-color: #18191a;
+  position: relative;
+}
+.content {
+  display: flex;
+  position: relative;
+  height: 100vh;
 }

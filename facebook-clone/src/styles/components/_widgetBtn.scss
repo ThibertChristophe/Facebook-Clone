@@ -1,0 +1,35 @@
+.widget-btn {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 10px;
+  height: 55px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  &:hover {
+    background-color: rgba(182, 182, 182, 0.192);
+  }
+  .widget-btn-title {
+    color: white;
+  }
+  .notif-blue {
+    color: #2e89ff;
+    font-size: 12px;
+    line-height: 16px;
+    &::before {
+      display: inline-block;
+      content: "";
+      background-color: #2e89ff;
+      height: 5px;
+      width: 5px;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+  }
+  img {
+    margin-right: 10px;
+    border-radius: 20px;
+    width: 35px;
+  }
+}
