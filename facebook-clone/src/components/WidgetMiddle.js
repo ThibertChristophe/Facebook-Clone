@@ -3,7 +3,7 @@ import Stories from "./Stories";
 
 const WidgetMiddle = () => {
   return (
-    <div classname="widget-middle">
+    <div className="widget-middle">
       {/* Stories */}
       <Stories />
       {/* Write  */}

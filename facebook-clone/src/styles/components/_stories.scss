@@ -1,0 +1,11 @@
+.stories {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+  .stories-btn-next {
+    position: absolute;
+    right: -20px;
+  }
+}
