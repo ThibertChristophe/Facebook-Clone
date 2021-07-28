@@ -12,8 +12,8 @@ import imgArrow from "../img/right-arrow.svg";
 const Stories = () => {
   return (
     <div className="stories">
-      <Story title="Chris Thib" img={imgProfil} mini={imgProfil} />
-      <Story title="Elon Musk" img={imgElon} mini={imgElon} />
+      <Story title="Chris Thib" mini={imgProfil} />
+      <Story title="Elon Musk" mini={imgElon} />
       <Story title="Steve Jobs" img={imgSteve} mini={imgSteve} />
       <Story title="Albert Einstein" img={imgAlbert} mini={imgAlbert} />
       <Story title="Bill Gates" img={imgBill} mini={imgBill} />
