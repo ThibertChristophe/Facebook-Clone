@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 const HeaderMiddleWidget = () => {
-  const [cache, setCache] = useState("headerMiddleWidget");
   window.addEventListener("scroll", () => {
     if (window.pageYOffset >= 20) {
-      setCache("headerMiddleWidget cache");
+      document.querySelector(".headerMiddleWidget").classList.add("cache");
     } else {
-      setCache("headerMiddleWidget");
+      document.querySelector(".headerMiddleWidget").classList.remove("cache");
     }
   });
 
   return (
-    <div className={cache}>
+    <div className="headerMiddleWidget">
       <div className="headerMiddleWidget-menu">
         <a className="headerMiddleWidget-menu-btn active">Accueil</a>
         <a className="headerMiddleWidget-menu-btn">Favoris</a>
