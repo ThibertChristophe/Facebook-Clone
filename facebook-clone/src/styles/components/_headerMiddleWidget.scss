@@ -3,6 +3,7 @@
   height: 55px;
   display: flex;
   border-bottom: 1px solid #3e4042;
+  transition: all 0.5s ease-out;
   .headerMiddleWidget-menu {
     width: 90%;
     display: flex;
@@ -18,6 +19,7 @@
       font-weight: 600;
       color: #8a8d91;
       cursor: pointer;
+      transition: all 0.1s ease-out;
       &:hover {
         background-color: #8a8d9144;
       }
@@ -39,4 +41,9 @@
 .active {
   color: #4395ff !important;
   background-color: #3f5c883f;
+}
+
+.cache {
+  position: absolute;
+  top: -55px;
 }
