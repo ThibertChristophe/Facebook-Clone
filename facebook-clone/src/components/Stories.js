@@ -14,7 +14,7 @@ const Stories = () => {
     <div className="stories">
       <Story title="Chris Thib" mini={imgProfil} />
       <Story title="Elon Musk" mini={imgElon} />
-      <Story title="Steve Jobs" img={imgSteve} mini={imgSteve} />
+
       <Story title="Albert Einstein" img={imgAlbert} mini={imgAlbert} />
       <Story title="Bill Gates" img={imgBill} mini={imgBill} />
       <Story title="Barack Obama" img={imgBarack} mini={imgBarack} />
