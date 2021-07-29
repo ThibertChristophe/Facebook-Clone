@@ -1,8 +1,9 @@
 .widget-left {
   position: fixed;
   width: 350px;
-  padding: 5px 0 0 15px;
+  padding: 5px 0 0 0;
   height: 100%;
+  margin-top: 10px;
   .widget-left-footer {
     position: absolute;
     bottom: 90px;

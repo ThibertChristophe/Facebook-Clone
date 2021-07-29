@@ -1,0 +1,49 @@
+.whatNew {
+  width: 100%;
+  height: 125px;
+  background-color: #242526;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  .whatNew-content {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #3a3b3c;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    .whatNew-img {
+      border-radius: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+      img {
+        border-radius: 20px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .whatNew-input {
+      width: 100%;
+      font-size: 17px;
+      height: 40px;
+      width: 100%;
+      background-color: #3a3b3c;
+      border: none;
+      border-radius: 50px;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: rgb(197, 197, 197);
+    }
+  }
+  .whatNew-buttons {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
