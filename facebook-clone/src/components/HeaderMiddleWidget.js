@@ -1,4 +1,5 @@
 import React from "react";
+import imgOption from "../img/option.svg";
 
 const HeaderMiddleWidget = () => {
   return (
@@ -9,7 +10,9 @@ const HeaderMiddleWidget = () => {
         <a className="headerMiddleWidget-menu-btn">Récent</a>
       </div>
       <div className="headerMiddleWidget-option">
-        <button className="option"></button>
+        <button className="option">
+          <img src={imgOption} alt="" />
+        </button>
       </div>
     </div>
   );
