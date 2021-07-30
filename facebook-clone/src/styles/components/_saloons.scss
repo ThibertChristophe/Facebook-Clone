@@ -1,0 +1,45 @@
+.saloons {
+  width: 100%;
+  height: 55px;
+  background-color: #242526;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  .createSaloon {
+    width: 160px;
+    height: 35px;
+    margin-right: 15px;
+    button {
+      width: 100%;
+      height: 100%;
+      color: #4395ff;
+      font-weight: 600;
+      border-radius: 20px;
+      background-color: transparent;
+      border: 1px solid #3c4d63;
+      cursor: pointer;
+      background: url(../../img/palette3.png);
+      &:hover {
+        background-color: #45484b;
+      }
+    }
+  }
+  .listContact {
+    width: 480px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    .img {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+      background-color: #3c4d63;
+    }
+  }
+  .saloons-btn-next {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+}

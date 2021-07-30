@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderMiddleWidget from "./HeaderMiddleWidget";
+import Saloons from "./Saloons";
 import Stories from "./Stories";
 import WhatNew from "./WhatNew";
 
@@ -12,7 +13,7 @@ const WidgetMiddle = () => {
       {/* What news  */}
       <WhatNew />
       {/* Salon */}
-
+      <Saloons />
       {/* Fil */}
     </div>
   );
