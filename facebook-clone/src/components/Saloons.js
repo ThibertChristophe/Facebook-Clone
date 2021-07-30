@@ -1,11 +1,13 @@
 import React from "react";
 import Button_circle from "./Button_circle";
-import imgArrow from "../img/right-arrow.svg";
+import imgArrow from "../img/next.svg";
 const Saloons = () => {
   return (
     <div className="saloons">
       <div className="createSaloon">
-        <button>Créer un salon</button>
+        <button>
+          <span className="camera"></span>Créer un salon
+        </button>
       </div>
       <div className="listContact">
         <div className="img"></div>

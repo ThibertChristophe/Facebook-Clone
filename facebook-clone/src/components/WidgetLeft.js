@@ -10,6 +10,8 @@ import imgWatch from "../img/watch.png";
 import imgEvent from "../img/event.png";
 import imgSouvenir from "../img/souvenir.png";
 import imgArrowDown from "../img/arrow-down-simple.svg";
+import imgRaccourcis1 from "../img/raccourcis.jpg";
+import Raccourcis from "./Raccourcis";
 
 const WidgetLeft = () => {
   return (
@@ -24,6 +26,10 @@ const WidgetLeft = () => {
       <WidgetButton title="Évènements" img={imgEvent} />
       <WidgetButton title="Souvenirs" img={imgSouvenir} />
       <WidgetButton title="Voir plus" img={imgArrowDown} />
+      <div className="raccourcis-containt">
+        <h3>Vos raccourcis</h3>
+        <Raccourcis img={imgRaccourcis1} />
+      </div>
       <div className="widget-left-footer">
         <p>
           Confidentialité · Conditions générales · Publicités · Choix

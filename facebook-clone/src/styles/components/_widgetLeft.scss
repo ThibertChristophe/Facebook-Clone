@@ -1,7 +1,7 @@
 .widget-left {
   position: fixed;
   width: 350px;
-  padding: 5px 0 0 0;
+  padding: 5px 0 0 10px;
   height: 100%;
   margin-top: 10px;
   .widget-left-footer {
@@ -9,6 +9,20 @@
     bottom: 90px;
     p {
       font-size: 13px;
+    }
+  }
+  .raccourcis-containt {
+    border-top: 1px solid #3e4042;
+    width: 95%;
+    height: 300px;
+    margin: 15px 0 0 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      padding-left: 10px;
     }
   }
 }

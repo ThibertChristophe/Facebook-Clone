@@ -7,10 +7,13 @@
   align-items: center;
   padding: 10px 15px;
   .createSaloon {
-    width: 160px;
+    width: 175px;
     height: 35px;
     margin-right: 15px;
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 100%;
       color: #4395ff;
@@ -19,9 +22,18 @@
       background-color: transparent;
       border: 1px solid #3c4d63;
       cursor: pointer;
-      background: url(../../img/palette3.png);
       &:hover {
         background-color: #45484b;
+        border: 1px solid #526a88;
+      }
+      .camera {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        background: url(../../img/palette3.png);
+        background-position: 0px -219px;
+        background-size: auto;
       }
     }
   }
@@ -30,11 +42,29 @@
     height: 40px;
     display: flex;
     justify-content: space-between;
+    position: relative;
     .img {
       height: 40px;
       width: 40px;
       border-radius: 20px;
       background-color: #3c4d63;
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        filter: brightness(110%);
+      }
+      &::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #31a24c;
+        display: block;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        border: 1px solid black;
+      }
     }
   }
   .saloons-btn-next {
