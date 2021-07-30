@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderMiddleWidget from "./HeaderMiddleWidget";
+import Posts from "./Posts";
 import Saloons from "./Saloons";
 import Stories from "./Stories";
 import WhatNew from "./WhatNew";
@@ -15,6 +16,7 @@ const WidgetMiddle = () => {
       {/* Salon */}
       <Saloons />
       {/* Fil */}
+      <Posts />
     </div>
   );
 };
