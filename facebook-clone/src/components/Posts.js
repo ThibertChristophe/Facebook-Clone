@@ -26,6 +26,17 @@ const Posts = (props) => {
         aliquid! Minus aperiam sit numquam totam reiciendis facere nobis iure
         perferendis.
       </div>
+      <div className="posts-img"></div>
+      <div className="posts-footer">
+        <div className="posts-footer-like">
+          <div className="posts-footer-like-list"></div>
+          <div className="posts-footer-like-libelle"></div>
+        </div>
+        <div className="posts-footer-btn">
+          <div className="posts-footer-btn-like"></div>
+          <div className="posts-footer-btn-comment"></div>
+        </div>
+      </div>
     </div>
   );
 };

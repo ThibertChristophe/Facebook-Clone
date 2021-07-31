@@ -1,6 +1,6 @@
 .posts {
   width: 100%;
-  height: 125px;
+  min-height: 125px;
   background-color: #242526;
   border-radius: 10px;
   margin: 12.5px 0;
@@ -68,5 +68,15 @@
   }
   .posts-content {
     padding: 0px 15px;
+    margin-bottom: 15px;
+  }
+  .posts-img {
+    background-color: #76797c;
+    width: 100%;
+    height: 200px;
+  }
+  .posts-footer {
+    width: 100%;
+    height: 50px;
   }
 }
