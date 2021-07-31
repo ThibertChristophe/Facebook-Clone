@@ -18,9 +18,6 @@
       width: 100%;
       height: 100%;
     }
-    &:hover {
-      transform: scale(1.01);
-    }
   }
   .img-mini {
     z-index: 2;
@@ -46,5 +43,22 @@
     width: 90px;
     color: white;
     font-weight: 600;
+  }
+  .story-btnAdd {
+    background-color: #4395ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    border: 5px solid #18191a;
+    img {
+      width: 17px;
+    }
   }
 }
