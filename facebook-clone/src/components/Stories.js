@@ -15,9 +15,9 @@ const Stories = () => {
       <Story title="Chris Thib" mini={imgProfil} />
       <Story title="Elon Musk" mini={imgElon} />
 
-      <Story title="Albert Einstein" img={imgAlbert} mini={imgAlbert} />
-      <Story title="Bill Gates" img={imgBill} mini={imgBill} />
-      <Story title="Barack Obama" img={imgBarack} mini={imgBarack} />
+      <Story title="Albert Einstein" mini={imgAlbert} />
+      <Story title="Bill Gates" mini={imgBill} />
+      <Story title="Barack Obama" mini={imgBarack} />
       <div className="stories-btn-next">
         <Button_circle Icon={imgArrow} />
       </div>

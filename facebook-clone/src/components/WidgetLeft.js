@@ -14,6 +14,16 @@ import imgRaccourcis1 from "../img/raccourcis.jpg";
 import Raccourcis from "./Raccourcis";
 
 const WidgetLeft = () => {
+  function showRaccourcis(e) {
+    const btn = e.target.querySelector(".raccourcis-containt-btnModify");
+    console.log(btn);
+    btn.classList.add("show");
+  }
+  function disapearRaccourcis(e) {
+    const btn = e.target.querySelector(".raccourcis-containt-btnModify");
+    console.log(btn);
+    btn.classList.remove("show");
+  }
   return (
     <div className="widget-left">
       <WidgetButton title="Chris Thib" img={img_profil} />
@@ -27,7 +37,14 @@ const WidgetLeft = () => {
       <WidgetButton title="Souvenirs" img={imgSouvenir} />
       <WidgetButton title="Voir plus" img={imgArrowDown} />
       <div className="raccourcis-containt">
-        <h3>Vos raccourcis</h3>
+        <div
+          className="raccourcis-containt-title"
+          onMouseEnter={showRaccourcis}
+          onMouseLeave={disapearRaccourcis}
+        >
+          <h3>Vos raccourcis</h3>
+          <button className="raccourcis-containt-btnModify">Modifier</button>
+        </div>
         <Raccourcis img={imgRaccourcis1} />
       </div>
       <div className="widget-left-footer">

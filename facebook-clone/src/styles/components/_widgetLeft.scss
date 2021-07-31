@@ -15,14 +15,35 @@
     border-top: 1px solid #3e4042;
     width: 95%;
     height: 300px;
-    margin: 15px 0 0 0;
-    padding-top: 20px;
+    margin: 10px 0 0 0;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     h3 {
       font-size: 17px;
       font-weight: 600;
       padding-left: 10px;
+    }
+    .raccourcis-containt-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 36px;
+      .raccourcis-containt-btnModify {
+        display: none;
+        color: #4395ff;
+        width: 75px;
+        height: 34px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: transparent;
+        &:hover {
+          background-color: #40414279;
+        }
+      }
+      .show {
+        display: block;
+      }
     }
   }
 }
