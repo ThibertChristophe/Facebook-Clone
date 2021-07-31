@@ -25,6 +25,15 @@ const Story = (props) => {
     }
   }
 
+  function displayTitle() {
+    if (props.first === true) {
+      // plus petite police et centré
+      return <span className="story-title-first">{props.title}</span>;
+    } else {
+      return <span>{props.title}</span>;
+    }
+  }
+
   function displayImg() {
     if (props.img !== undefined) {
       return <img src={props.img} alt="" />;
@@ -36,7 +45,7 @@ const Story = (props) => {
       <div class="fond" alt="">
         {displayImg()}
       </div>
-      <span>{props.title}</span>
+      {displayTitle()}
     </div>
   );
 };
