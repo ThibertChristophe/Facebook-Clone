@@ -23,8 +23,13 @@
       display: flex;
       flex-direction: column;
       width: 85%;
-      a {
+      a h4 {
         color: white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      a {
         &:hover {
           text-decoration: underline;
         }
@@ -69,6 +74,7 @@
   .posts-content {
     padding: 0px 15px;
     margin-bottom: 15px;
+    color: white;
   }
   .posts-img {
     background-color: #76797c;
