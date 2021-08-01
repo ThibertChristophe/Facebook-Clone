@@ -4,6 +4,7 @@
   background-color: #242526;
   border-radius: 10px;
   margin: 12.5px 0;
+  padding-bottom: 5px;
   .posts-header {
     display: flex;
     align-items: center;
@@ -82,7 +83,73 @@
     height: 200px;
   }
   .posts-footer {
-    width: 100%;
-    height: 50px;
+    width: 95%;
+    min-height: 50px;
+    margin: 10px 15px;
+    .posts-footer-like {
+      border-bottom: 1px solid #3a3b3c;
+      display: flex;
+      width: 100%;
+      padding: 0 0 10px 0;
+      justify-content: space-between;
+      .posts-footer-like-left {
+        display: flex;
+      }
+      .posts-footer-like-right {
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+      .posts-footer-like-list {
+        margin-right: 10px;
+      }
+      .posts-footer-like-libelle {
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .posts-footer-btn {
+      height: 40px;
+      border-bottom: 1px solid #3a3b3c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .posts-footer-btn-gen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 280px;
+        height: 80%;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          background-color: #76797c56;
+        }
+      }
+      .posts-footer-btn-like {
+        background-image: url(../../img/palette4.png);
+        background-position: 0 -191px;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-size: auto;
+        margin-right: 10px;
+        filter: invert(50%) brightness(150%);
+      }
+      .posts-footer-btn-comment {
+        background-image: url(../../img/palette4.png);
+        background-position: 0 -153px;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-size: auto;
+        margin-right: 10px;
+        filter: invert(50%) brightness(150%);
+      }
+    }
   }
 }

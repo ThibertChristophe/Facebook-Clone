@@ -1,5 +1,6 @@
 import React from "react";
 import imgEarth from "../img/earth.svg";
+import imgLike from "../img/like.svg";
 
 const Posts = (props) => {
   function displayIMG() {}
@@ -29,12 +30,29 @@ const Posts = (props) => {
       <div className="posts-img"></div>
       <div className="posts-footer">
         <div className="posts-footer-like">
-          <div className="posts-footer-like-list"></div>
-          <div className="posts-footer-like-libelle"></div>
+          <div className="posts-footer-like-left">
+            <div className="posts-footer-like-list">
+              <div className="posts-footer-img-like">
+                <img src={imgLike} alt="" width="18" />
+              </div>
+            </div>
+            <div className="posts-footer-like-libelle">
+              <a href="">27</a>
+            </div>
+          </div>
+          <div className="posts-footer-like-right">
+            <a href="">2 commentaires</a>
+          </div>
         </div>
         <div className="posts-footer-btn">
-          <div className="posts-footer-btn-like"></div>
-          <div className="posts-footer-btn-comment"></div>
+          <div className="posts-footer-btn-gen">
+            <span className="posts-footer-btn-like"></span>
+            J'aime
+          </div>
+          <div className="posts-footer-btn-gen">
+            <span className="posts-footer-btn-comment"></span>
+            Commenter
+          </div>
         </div>
       </div>
     </div>
