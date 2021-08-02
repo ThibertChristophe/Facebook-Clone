@@ -12,9 +12,21 @@
     flex-direction: column;
     justify-content: space-between;
     .widget-sponso-card {
-      background-color: #3e4042;
       height: 145px;
       border-radius: 5px;
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      img {
+        width: 135px;
+        height: 135px;
+        margin-right: 10px;
+        border-radius: 15px;
+        background-color: #000000;
+      }
+      &:hover {
+        background-color: #3e4042;
+      }
     }
   }
 }
