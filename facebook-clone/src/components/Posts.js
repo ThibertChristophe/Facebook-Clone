@@ -53,6 +53,10 @@ const Posts = (props) => {
             <span className="posts-footer-btn-comment"></span>
             Commenter
           </div>
+          <div className="posts-footer-btn-gen">
+            <span className="posts-footer-btn-share"></span>
+            Partager
+          </div>
         </div>
       </div>
     </div>

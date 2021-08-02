@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import WidgetLeft from "../components/WidgetLeft";
 import WidgetMiddle from "../components/WidgetMiddle";
+import WidgetRight from "../components/WidgetRight";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <div className="content">
         <WidgetLeft />
         <WidgetMiddle />
+        <WidgetRight />
       </div>
     </div>
   );

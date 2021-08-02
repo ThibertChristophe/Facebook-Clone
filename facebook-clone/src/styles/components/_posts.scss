@@ -4,7 +4,6 @@
   background-color: #242526;
   border-radius: 10px;
   margin: 12.5px 0;
-  padding-bottom: 5px;
   .posts-header {
     display: flex;
     align-items: center;
@@ -111,7 +110,7 @@
     }
     .posts-footer-btn {
       height: 40px;
-      border-bottom: 1px solid #3a3b3c;
+      //border-bottom: 1px solid #3a3b3c;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -142,6 +141,17 @@
       .posts-footer-btn-comment {
         background-image: url(../../img/palette4.png);
         background-position: 0 -153px;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-size: auto;
+        margin-right: 10px;
+        filter: invert(50%) brightness(150%);
+      }
+      .posts-footer-btn-share {
+        background-image: url(../../img/palette4.png);
+        background-position: 0 -210px;
         background-repeat: no-repeat;
         width: 18px;
         height: 18px;

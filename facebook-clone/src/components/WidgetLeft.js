@@ -24,6 +24,7 @@ const WidgetLeft = () => {
     console.log(btn);
     btn.classList.remove("show");
   }
+
   return (
     <div className="widget-left">
       <WidgetButton title="Chris Thib" img={img_profil} />
