@@ -27,16 +27,18 @@ const WidgetLeft = () => {
 
   return (
     <div className="widget-left">
-      <WidgetButton title="Chris Thib" img={img_profil} />
-      <WidgetButton title="COVID-19 - Centre d'information" img={imgCovid} />
-      <WidgetButton title="Amis" img={imgAmis} />
-      <WidgetButton title="Watch" img={imgWatch} />
-      <WidgetButton title="Vidéo en direct" img={imgLive} />
-      <WidgetButton title="Groupes" img={imgGroup} notif="2 nouveaux" />
-      <WidgetButton title="Marketplace" img={imgMarketplace} />
-      <WidgetButton title="Évènements" img={imgEvent} />
-      <WidgetButton title="Souvenirs" img={imgSouvenir} />
-      <WidgetButton title="Voir plus" img={imgArrowDown} next />
+      <div className="widget-left-menu">
+        <WidgetButton title="Chris Thib" img={img_profil} />
+        <WidgetButton title="COVID-19 - Centre d'information" img={imgCovid} />
+        <WidgetButton title="Amis" img={imgAmis} />
+        <WidgetButton title="Watch" img={imgWatch} />
+        <WidgetButton title="Vidéo en direct" img={imgLive} />
+        <WidgetButton title="Groupes" img={imgGroup} notif="2 nouveaux" />
+        <WidgetButton title="Marketplace" img={imgMarketplace} />
+        <WidgetButton title="Évènements" img={imgEvent} />
+        <WidgetButton title="Souvenirs" img={imgSouvenir} />
+        <WidgetButton title="Voir plus" img={imgArrowDown} next />
+      </div>
       <div className="raccourcis-containt">
         <div
           className="raccourcis-containt-title"

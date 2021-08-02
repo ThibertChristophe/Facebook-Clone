@@ -4,17 +4,12 @@
   padding: 5px 0 0 5px;
   height: 100%;
   margin-top: 10px;
-  .widget-left-footer {
-    position: absolute;
-    bottom: 90px;
-    p {
-      font-size: 13px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
   .raccourcis-containt {
     border-top: 1px solid #3e4042;
     width: 95%;
-    height: 300px;
+    height: 28%;
     margin: 10px 0 0 0;
     padding-top: 10px;
     display: flex;
@@ -24,7 +19,6 @@
       font-weight: 600;
       padding-left: 10px;
     }
-
     .raccourcis-containt-title {
       display: flex;
       justify-content: space-between;
@@ -45,6 +39,11 @@
       .show {
         display: block;
       }
+    }
+  }
+  .widget-left-footer {
+    p {
+      font-size: 13px;
     }
   }
 }
