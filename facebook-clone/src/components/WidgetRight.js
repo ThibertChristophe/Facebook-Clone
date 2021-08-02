@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "./Contact";
 
 const WidgetRight = () => {
   return (
@@ -9,10 +10,11 @@ const WidgetRight = () => {
           <div className="widget-right-contact-btnList"></div>
         </div>
         <div className="widget-right-contact-list">
-          <div className="contact">
-            <div className="contact-img"></div>
-            <div className="contact-name">Prénom Nom</div>
-          </div>
+          <Contact name="Prénom Nom" online />
+          <Contact name="Prénom Nom" online />
+          <Contact name="Prénom Nom" online />
+          <Contact name="Prénom Nom" online />
+          <Contact name="Prénom Nom" online />
         </div>
       </div>
     </div>
