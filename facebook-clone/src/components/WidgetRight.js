@@ -1,10 +1,12 @@
 import React from "react";
 import Contact from "./Contact";
 import ButtonTransparent from "./ButtonTransparent";
+import WidgetSponsor from "./WidgetSponsor";
 
 const WidgetRight = () => {
   return (
     <div className="widget-right">
+      <WidgetSponsor />
       <div className="widget-right-contact">
         <div className="widget-right-contact-header">
           <div className="widget-right-contact-title">Contacts</div>

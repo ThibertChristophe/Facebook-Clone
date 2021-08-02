@@ -1,0 +1,20 @@
+.widget-sponsors {
+  margin-bottom: 15px;
+  width: 100%;
+  p {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .widget-sponso-list {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .widget-sponso-card {
+      background-color: #3e4042;
+      height: 145px;
+      border-radius: 5px;
+    }
+  }
+}
