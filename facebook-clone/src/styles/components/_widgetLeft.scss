@@ -1,7 +1,7 @@
 .widget-left {
   position: fixed;
   width: 350px;
-  padding: 5px 0 0 10px;
+  padding: 5px 0 0 5px;
   height: 100%;
   margin-top: 10px;
   .widget-left-footer {
@@ -24,6 +24,7 @@
       font-weight: 600;
       padding-left: 10px;
     }
+
     .raccourcis-containt-title {
       display: flex;
       justify-content: space-between;

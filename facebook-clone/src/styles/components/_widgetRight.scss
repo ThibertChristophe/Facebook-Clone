@@ -11,11 +11,15 @@
     padding-top: 10px;
     .widget-right-contact-header {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
       margin-bottom: 10px;
       .widget-right-contact-title {
         font-size: 17px;
+      }
+      .widget-right-contact-btnList {
+        display: flex;
+        justify-content: space-between;
+        width: 110px;
       }
     }
   }

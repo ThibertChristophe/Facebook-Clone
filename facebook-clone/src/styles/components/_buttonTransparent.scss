@@ -1,0 +1,38 @@
+.btn-transparent {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .camera {
+    background-image: url(../../img/palette3.png);
+    background-position: -46px -220px;
+    background-size: auto;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    filter: invert(100%) contrast(50%);
+  }
+  .loupe {
+    background-image: url(../../img/loupe.svg);
+    background-size: auto;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  .dot {
+    background-image: url(../../img/more.svg);
+    background-size: auto;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  &:hover {
+    background-color: #57595c81;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "./Contact";
+import ButtonTransparent from "./ButtonTransparent";
 
 const WidgetRight = () => {
   return (
@@ -7,7 +8,11 @@ const WidgetRight = () => {
       <div className="widget-right-contact">
         <div className="widget-right-contact-header">
           <div className="widget-right-contact-title">Contacts</div>
-          <div className="widget-right-contact-btnList"></div>
+          <div className="widget-right-contact-btnList">
+            <ButtonTransparent class="camera" />
+            <ButtonTransparent class="loupe" />
+            <ButtonTransparent class="dot" />
+          </div>
         </div>
         <div className="widget-right-contact-list">
           <Contact name="Prénom Nom" online />
