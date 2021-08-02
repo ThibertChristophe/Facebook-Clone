@@ -36,7 +36,7 @@ const WidgetLeft = () => {
       <WidgetButton title="Marketplace" img={imgMarketplace} />
       <WidgetButton title="Évènements" img={imgEvent} />
       <WidgetButton title="Souvenirs" img={imgSouvenir} />
-      <WidgetButton title="Voir plus" img={imgArrowDown} />
+      <WidgetButton title="Voir plus" img={imgArrowDown} next />
       <div className="raccourcis-containt">
         <div
           className="raccourcis-containt-title"

@@ -1,6 +1,14 @@
 import React from "react";
 
 const WidgetButton = (props) => {
+  function btnNext() {
+    if (props.next !== undefined) {
+      return <div className="voirPlus"></div>;
+    } else {
+      return <img src={props.img} alt="" />;
+    }
+  }
+
   function displayNotif() {
     // Si on a une notif
     if (props.notif !== undefined) {
@@ -10,7 +18,8 @@ const WidgetButton = (props) => {
 
   return (
     <div className="widget-btn">
-      <img src={props.img} alt="" />
+      {btnNext()}
+
       <div className="widget-btn-libelle">
         <div className="widget-btn-title">{props.title}</div>
         {displayNotif()}
