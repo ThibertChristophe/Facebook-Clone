@@ -21,6 +21,9 @@
       filter: brightness(120%);
     }
   }
+  &:active {
+    filter: brightness(80%);
+  }
   .active-btn-cirle {
     background-color: #0269fa2c;
   }

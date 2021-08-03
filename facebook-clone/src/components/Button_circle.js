@@ -4,7 +4,7 @@ const Button_circle = (Icon) => {
   const [actif, setACtif] = useState("");
 
   // Ouvre la popup de menu
-  function openMenu1() {
+  function openMenu() {
     if (Icon.add !== undefined) {
       document.querySelector(".popup").classList.toggle("showMenu");
       if (actif !== "") {
@@ -16,7 +16,7 @@ const Button_circle = (Icon) => {
   }
   return (
     <div className="button_circle">
-      <button onClick={openMenu1} className={actif}>
+      <button onClick={openMenu} className={actif}>
         <img src={Icon.Icon} alt="" />
       </button>
     </div>
