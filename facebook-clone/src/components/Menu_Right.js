@@ -10,7 +10,7 @@ const Menu_Right = () => {
   return (
     <div className="menu_right">
       <Button_profil Name="Chris" />
-      <Button_circle Icon={img_plus} />
+      <Button_circle Icon={img_plus} add />
       <Button_circle Icon={img_messenger} />
       <Button_circle Icon={img_notif} />
       <Button_circle Icon={img_arrow} />

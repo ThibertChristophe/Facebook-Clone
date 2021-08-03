@@ -7,7 +7,7 @@ const WhatNew = () => {
     <div className="whatNew">
       <div className="whatNew-content">
         <div className="whatNew-img">
-          <img src={imgProfil} alt="" srcset="" />
+          <img src={imgProfil} alt="" />
         </div>
         <div className="whatNew-input">Quoi de neuf, Chris ?</div>
       </div>

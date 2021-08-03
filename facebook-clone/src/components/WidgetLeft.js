@@ -16,12 +16,10 @@ import Raccourcis from "./Raccourcis";
 const WidgetLeft = () => {
   function showRaccourcis(e) {
     const btn = e.target.querySelector(".raccourcis-containt-btnModify");
-    console.log(btn);
     btn.classList.add("show");
   }
   function disapearRaccourcis(e) {
     const btn = e.target.querySelector(".raccourcis-containt-btnModify");
-    console.log(btn);
     btn.classList.remove("show");
   }
 
