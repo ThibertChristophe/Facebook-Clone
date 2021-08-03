@@ -18,7 +18,10 @@
       width: 17px;
     }
     &:hover {
-      background-color: #4f5052;
+      filter: brightness(120%);
     }
+  }
+  .active-btn-cirle {
+    background-color: #0269fa2c;
   }
 }
