@@ -3,8 +3,6 @@ import imgProfil from "../img/profil.jpg";
 import ButtonLogo from "./ButtonLogo";
 
 const WhatNew = () => {
-  const name = "Chris";
-
   return (
     <div className="whatNew">
       <div className="whatNew-content">

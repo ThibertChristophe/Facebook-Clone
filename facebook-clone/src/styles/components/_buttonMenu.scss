@@ -1,0 +1,22 @@
+.btn-menu {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 55px;
+  padding: 5px;
+  .btn-menu-text {
+    margin-left: 10px;
+    .btn-menu-text-title {
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .btn-menu-text-subText {
+      font-size: 13px;
+    }
+  }
+  &:hover {
+    background-color: #8a8d9144;
+  }
+}

@@ -2,9 +2,7 @@ import React from "react";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 
-const Posts = (props) => {
-  function displayIMG() {}
-
+const Posts = () => {
   return (
     <div className="posts">
       <div className="posts-header">

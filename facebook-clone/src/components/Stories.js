@@ -2,7 +2,6 @@ import React from "react";
 import Story from "./Story";
 import imgProfil from "../img/profil.jpg";
 import imgElon from "../img/elon_musk.JPG";
-import imgSteve from "../img/steve_jobs.JPG";
 import imgAlbert from "../img/einstein.JPG";
 import imgBill from "../img/bill_gate.JPG";
 import imgBarack from "../img/barack.JPG";
