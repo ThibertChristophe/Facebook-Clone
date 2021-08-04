@@ -44,18 +44,9 @@ const Posts = () => {
           </div>
         </div>
         <div className="posts-footer-btn">
-          <div className="posts-footer-btn-gen">
-            <span className="posts-footer-btn-like"></span>
-            J'aime
-          </div>
-          <div className="posts-footer-btn-gen">
-            <span className="posts-footer-btn-comment"></span>
-            Commenter
-          </div>
-          <div className="posts-footer-btn-gen">
-            <span className="posts-footer-btn-share"></span>
-            Partager
-          </div>
+          <ButtonPost type="like" />
+          <ButtonPost type="comment" />
+          <ButtonPost type="share" />
         </div>
       </div>
     </div>

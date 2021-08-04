@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ButtonPost = (props) => {
   const [classA, setClassA] = useState("");
   const [libelle, setLibelle] = useState("");
 
-  function displayBtn() {
+  useEffect(() => {
     switch (props.type) {
       case "like":
         setClassA("posts-footer-btn-like");
@@ -18,10 +18,11 @@ const ButtonPost = (props) => {
         setClassA("posts-footer-btn-share");
         setLibelle("Partager");
         break;
-
       default:
+        break;
     }
-  }
+  });
+
   return (
     <div className="btn-post">
       <span className={classA}></span>
