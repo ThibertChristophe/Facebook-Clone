@@ -25,11 +25,13 @@
       width: 85%;
       a h4 {
         color: white;
+        width: fit-content;
         &:hover {
           text-decoration: underline;
         }
       }
       a {
+        width: fit-content;
         &:hover {
           text-decoration: underline;
         }

@@ -1,6 +1,7 @@
 import React from "react";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
+import ButtonPost from "./ButtonPost";
 
 const Posts = () => {
   return (
