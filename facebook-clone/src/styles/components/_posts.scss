@@ -4,6 +4,7 @@
   background-color: #242526;
   border-radius: 10px;
   margin: 12.5px 0;
+
   .posts-header {
     display: flex;
     align-items: center;
@@ -116,52 +117,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      .posts-footer-btn-gen {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 280px;
-        height: 80%;
-        border-radius: 5px;
-        font-weight: 600;
-        cursor: pointer;
-        &:hover {
-          background-color: #76797c56;
-        }
-      }
-      .posts-footer-btn-like {
-        background-image: url(../../img/palette4.png);
-        background-position: 0 -191px;
-        background-repeat: no-repeat;
-        width: 18px;
-        height: 18px;
-        display: inline-block;
-        background-size: auto;
-        margin-right: 10px;
-        filter: invert(50%) brightness(150%);
-      }
-      .posts-footer-btn-comment {
-        background-image: url(../../img/palette4.png);
-        background-position: 0 -153px;
-        background-repeat: no-repeat;
-        width: 18px;
-        height: 18px;
-        display: inline-block;
-        background-size: auto;
-        margin-right: 10px;
-        filter: invert(50%) brightness(150%);
-      }
-      .posts-footer-btn-share {
-        background-image: url(../../img/palette4.png);
-        background-position: 0 -210px;
-        background-repeat: no-repeat;
-        width: 18px;
-        height: 18px;
-        display: inline-block;
-        background-size: auto;
-        margin-right: 10px;
-        filter: invert(50%) brightness(150%);
-      }
+      margin-top: 1px;
     }
   }
 }
