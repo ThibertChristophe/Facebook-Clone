@@ -14,12 +14,12 @@ import imgRaccourcis1 from "../img/raccourcis.jpg";
 import Raccourcis from "./Raccourcis";
 
 const WidgetLeft = () => {
-  function showRaccourcis(e) {
-    const btn = e.target.querySelector(".raccourcis-containt-btnModify");
+  function showRaccourcis() {
+    const btn = document.querySelector(".raccourcis-containt-btnModify");
     btn.classList.add("show");
   }
-  function disapearRaccourcis(e) {
-    const btn = e.target.querySelector(".raccourcis-containt-btnModify");
+  function disapearRaccourcis() {
+    const btn = document.querySelector(".raccourcis-containt-btnModify");
     btn.classList.remove("show");
   }
 

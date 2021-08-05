@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div className="home">
       <Header />
-      <PopUp />
       <div className="content">
         <WidgetLeft />
         <WidgetMiddle />
