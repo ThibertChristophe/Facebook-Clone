@@ -1,34 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const ButtonPost = (props) => {
-  const [classA, setClassA] = useState("");
-  const [libelle, setLibelle] = useState("");
-
-  useEffect(() => {
+  /**
+   * Change le libelle et l'image en fonction du type de bouton
+   */
+  function displayBtn() {
     switch (props.type) {
       case "like":
-        setClassA("posts-footer-btn-like");
-        setLibelle("J'aime");
-        break;
+        return (
+          <div>
+            <span className="posts-footer-btn-like"></span>
+            <span>J'aime</span>
+          </div>
+        );
       case "comment":
-        setClassA("posts-footer-btn-comment");
-        setLibelle("Commenter");
-        break;
+        return (
+          <div>
+            <span className="posts-footer-btn-comment"></span>
+            <span>Commenter</span>
+          </div>
+        );
       case "share":
-        setClassA("posts-footer-btn-share");
-        setLibelle("Partager");
-        break;
+        return (
+          <div>
+            <span className="posts-footer-btn-share"></span>
+            <span>Partager</span>
+          </div>
+        );
       default:
-        break;
+        return;
     }
-  });
+  }
 
-  return (
-    <div className="btn-post">
-      <span className={classA}></span>
-      {libelle}
-    </div>
-  );
+  return <div className="btn-post">{displayBtn()}</div>;
 };
 
 export default ButtonPost;

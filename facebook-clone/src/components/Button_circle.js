@@ -10,29 +10,25 @@ const Button_circle = (props) => {
    */
   function openMenu() {
     // Cas du bouton add
-    if (props.add !== undefined) {
+    if (props.type === "add") {
       // Ici on va retirer la popup
       if (actif !== "") {
         // Met le bouton en inactif (CSS)
         setACtif("");
         // Si bouton devant afficher un popup
-        if (props.wPopup !== undefined) {
-          setPop("");
-        }
+        setPop("");
       } else {
         // Met le bouton en actif (CSS)
         setACtif("active-btn-cirle");
         // Fait apparaitre la popup "menu"
         // Si bouton devant afficher un popup
-        if (props.wPopup !== undefined) {
-          setPop(() => {
-            return (
-              <div className="btn-circle-popup">
-                <PopUp />
-              </div>
-            );
-          });
-        }
+        setPop(() => {
+          return (
+            <div className="btn-circle-popup">
+              <PopUp title="Créer" content="menu" />
+            </div>
+          );
+        });
       }
     }
   }

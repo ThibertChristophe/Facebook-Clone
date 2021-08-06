@@ -18,7 +18,7 @@ const Story = (props) => {
       );
     } else {
       return (
-        <div class="img-mini">
+        <div className="img-mini">
           <img src={props.mini} alt="" />
         </div>
       );
@@ -42,7 +42,7 @@ const Story = (props) => {
   return (
     <div className="story">
       {displayFirst()}
-      <div class="fond" alt="">
+      <div className="fond" alt="">
         {displayImg()}
       </div>
       {displayTitle()}
