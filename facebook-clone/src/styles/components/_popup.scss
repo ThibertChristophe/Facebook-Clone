@@ -1,8 +1,8 @@
 .popup {
   //display: none;
+  position: absolute;
   flex-direction: column;
   justify-content: space-between;
-  //position: fixed;
   width: 360px;
   min-height: 250px;
   background-color: #242526;
