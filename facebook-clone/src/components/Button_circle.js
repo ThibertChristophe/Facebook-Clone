@@ -3,33 +3,37 @@ import PopUp from "./PopUp";
 
 const Button_circle = (props) => {
   const [actif, setACtif] = useState("");
+  const [pop, setPop] = useState("");
 
-  // Ouvre la popup de menu
+  /**
+   * Ouvre ou ferme la popup de menu
+   */
   function openMenu() {
+    // Cas du bouton add
     if (props.add !== undefined) {
+      // Ici on va retirer la popup
       if (actif !== "") {
-        if (props.wPopup !== undefined) {
-          displayPopup(false);
-        }
+        // Met le bouton en inactif (CSS)
         setACtif("");
-      } else {
-        // Fait apparaitre la popup "menu"
+        // Si bouton devant afficher un popup
         if (props.wPopup !== undefined) {
-          displayPopup(true);
+          setPop("");
         }
+      } else {
+        // Met le bouton en actif (CSS)
         setACtif("active-btn-cirle");
+        // Fait apparaitre la popup "menu"
+        // Si bouton devant afficher un popup
+        if (props.wPopup !== undefined) {
+          setPop(() => {
+            return (
+              <div className="btn-circle-popup">
+                <PopUp />
+              </div>
+            );
+          });
+        }
       }
-    }
-  }
-
-  function displayPopup(param) {
-    const btn = document.querySelector(".button_circle");
-    if (param) {
-      const divPopup = document.createElement("div");
-      divPopup.className = "btn-circle-popup";
-      btn.appendChild(divPopup);
-    } else {
-      btn.removeChild(document.querySelector(".btn-circle-popup"));
     }
   }
 
@@ -38,6 +42,7 @@ const Button_circle = (props) => {
       <button onClick={openMenu} className={actif}>
         <img src={props.Icon} alt="" />
       </button>
+      {pop}
     </div>
   );
 };
