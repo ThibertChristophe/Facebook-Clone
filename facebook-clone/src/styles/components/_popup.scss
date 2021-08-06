@@ -1,6 +1,6 @@
 .popup {
   //display: none;
-  position: absolute;
+  position: fixed;
   flex-direction: column;
   justify-content: space-between;
   width: 360px;
@@ -8,7 +8,7 @@
   background-color: #242526;
   border-radius: 10px;
   top: 58px;
-  left: 80%;
+  right: 20px;
   padding: 15px 10px;
   z-index: 2;
   h1 {
