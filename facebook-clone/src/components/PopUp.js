@@ -1,5 +1,6 @@
 import React from "react";
 import PopUpMenu from "./PopUpMenu";
+import PopUpMessenger from "./PopUpMessenger";
 
 const PopUp = (props) => {
   function displayContent() {
@@ -7,7 +8,7 @@ const PopUp = (props) => {
       case "menu":
         return <PopUpMenu />;
       case "messenger":
-        return;
+        return <PopUpMessenger />;
       case "notif":
         return;
       case "compte":
@@ -19,7 +20,9 @@ const PopUp = (props) => {
 
   return (
     <div className="popup">
-      <h1>{props.title}</h1>
+      <div className="popup-header">
+        <h1>{props.title}</h1>
+      </div>
       {displayContent()}
     </div>
   );

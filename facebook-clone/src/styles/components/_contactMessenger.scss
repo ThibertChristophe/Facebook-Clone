@@ -1,0 +1,26 @@
+.contact-messenger {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .contact-messenger-img {
+    border-radius: 50px;
+    overflow: hidden;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    img {
+      width: 55px;
+    }
+  }
+  .contact-messenger-text {
+    height: 100%;
+    .name {
+      color: #e4e6eb;
+      font-size: 15px;
+    }
+    .hist {
+      color: #b0b3b8;
+      font-size: 13px;
+    }
+  }
+}

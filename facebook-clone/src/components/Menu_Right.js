@@ -9,6 +9,7 @@ import PopUp from "./PopUp";
 
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
+  const [popupOpen, setPopupOpen] = useState([]);
 
   function openMenu() {
     if (pop !== "") {
