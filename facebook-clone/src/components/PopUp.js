@@ -1,8 +1,5 @@
 import React from "react";
-import PopUpMenu from "./PopUpMenu";
-import PopUpMessenger from "./PopUpMessenger";
 import ButtonTransparent from "./ButtonTransparent";
-import PopUpNotif from "./PopUpNotif";
 
 const PopUp = ({ content, title, children }) => {
   function displayBtn() {
