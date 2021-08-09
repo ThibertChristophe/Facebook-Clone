@@ -2,6 +2,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 7px 0;
+  border-radius: 10px;
+
+  padding: 10px;
   .contact-messenger-img {
     border-radius: 50px;
     overflow: hidden;
@@ -14,6 +18,10 @@
   }
   .contact-messenger-text {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
     .name {
       color: #e4e6eb;
       font-size: 15px;
@@ -22,5 +30,8 @@
       color: #b0b3b8;
       font-size: 13px;
     }
+  }
+  &:hover {
+    background-color: #8a8d9144;
   }
 }

@@ -1,9 +1,12 @@
 .popup-messenger {
   padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
   .popup-messenger-search {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     img {
       position: absolute;
       left: 25px;
@@ -19,6 +22,26 @@
       padding-left: 40px;
       &::placeholder {
         color: rgb(197, 197, 197);
+      }
+    }
+  }
+  .popup-messenger-contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .popup-messenger-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #38589849;
+    height: 45px;
+    a {
+      color: #2d88ff;
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

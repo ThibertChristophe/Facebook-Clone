@@ -13,8 +13,14 @@ const PopUpMessenger = () => {
           name="Barack Obama"
           history="Discussion vidéo terminée . 27min"
         />
+        <ContactMessenger
+          name="Barack Obama"
+          history="Discussion vidéo terminée . 27min"
+        />
       </div>
-      <div className="popup-messenger-footer"></div>
+      <div className="popup-messenger-footer">
+        <a href="">Tout voir dans messenger</a>
+      </div>
     </div>
   );
 };

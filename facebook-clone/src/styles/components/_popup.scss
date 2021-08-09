@@ -9,13 +9,23 @@
   border-radius: 10px;
   top: 58px;
   right: 20px;
-  padding: 15px 10px;
+  padding: 15px 10px 0 10px;
   z-index: 2;
   h1 {
     font-size: 24px;
     color: #e4e6eb;
     margin-bottom: 10px;
     padding-left: 5px;
+  }
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .popup-header-btn-list {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
   }
 }
 .showMenu {
