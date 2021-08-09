@@ -6,6 +6,9 @@ import img_notif from "../img/bell.svg";
 import img_arrow from "../img/down-arrow.svg";
 import Button_profil from "./Button_profil";
 import PopUp from "./PopUp";
+import PopUpMenu from "./PopUpMenu";
+import PopUpMessenger from "./PopUpMessenger";
+import PopUpNotif from "./PopUpNotif";
 
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
@@ -17,7 +20,9 @@ const Menu_Right = () => {
     } else {
       setPop(
         <div>
-          <PopUp content="menu" title="Créez" />
+          <PopUp content="menu" title="Créez">
+            <PopUpMenu />
+          </PopUp>
         </div>
       );
     }
@@ -29,7 +34,22 @@ const Menu_Right = () => {
     } else {
       setPop(
         <div>
-          <PopUp content="messenger" title="Messenger" />
+          <PopUp content="messenger" title="Messenger">
+            <PopUpMessenger />
+          </PopUp>
+        </div>
+      );
+    }
+  }
+  function openNotif() {
+    if (pop !== "") {
+      setPop("");
+    } else {
+      setPop(
+        <div>
+          <PopUp content="notif" title="Notifications">
+            <PopUpNotif />
+          </PopUp>
         </div>
       );
     }
@@ -45,8 +65,10 @@ const Menu_Right = () => {
         <div onClick={openMessenger}>
           <Button_circle Icon={img_messenger} type="messenger" />
         </div>
+        <div onClick={openNotif}>
+          <Button_circle Icon={img_notif} type="notif" />
+        </div>
 
-        <Button_circle Icon={img_notif} type="notif" />
         <Button_circle Icon={img_arrow} type="compte" />
       </div>
       {/* Sous-menu ici */}
