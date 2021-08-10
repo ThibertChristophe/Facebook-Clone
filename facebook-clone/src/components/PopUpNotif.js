@@ -1,4 +1,5 @@
 import React from "react";
+import Notification from "./Notification";
 
 const PopUpNotif = () => {
   return (
@@ -7,7 +8,13 @@ const PopUpNotif = () => {
         <span>Plus tôt</span>
         <a href="">Voir tout</a>
       </div>
-      <div className="popup-notif-notif-list"></div>
+      <div className="popup-notif-notif-list">
+        <Notification notif="1ere notif" history="history" />
+        <Notification notif="1ere notif" history="history" />
+        <Notification notif="1ere notif" history="history" />
+        <Notification notif="1ere notif" history="history" />
+        <Notification notif="1ere notif" history="history" />
+      </div>
     </div>
   );
 };

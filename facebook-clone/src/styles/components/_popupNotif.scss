@@ -2,6 +2,24 @@
   padding: 0 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 250px;
+  .popup-notif-header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+    span {
+      font-weight: 600;
+      font-size: 17px;
+      color: white;
+    }
+    a {
+      color: #2d88ff;
+    }
+  }
+  .popup-notif-notif-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+  }
 }
