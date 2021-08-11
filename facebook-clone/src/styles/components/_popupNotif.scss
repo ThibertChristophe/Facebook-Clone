@@ -6,8 +6,8 @@
   .popup-notif-header {
     display: flex;
     justify-content: space-between;
-    border: 1px solid blue;
     margin-bottom: 10px;
+    align-items: center;
     span {
       font-weight: 600;
       font-size: 17px;
@@ -15,11 +15,15 @@
     }
     a {
       color: #2d88ff;
+      padding: 5px;
+      border-radius: 5px;
+      &:hover {
+        background-color: #57595c81;
+      }
     }
   }
   .popup-notif-notif-list {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
   }
 }
