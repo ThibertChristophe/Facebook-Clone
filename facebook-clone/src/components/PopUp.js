@@ -1,7 +1,16 @@
 import React from "react";
 import ButtonTransparent from "./ButtonTransparent";
 
+/**
+ * Container de popup
+ * @param {*} param0
+ * @returns
+ */
 const PopUp = ({ content, title, children }) => {
+  /**
+   * Affiche les boutons du header de la popup en fonction du contenu
+   * @returns component ButtonTransparent
+   */
   function displayBtn() {
     switch (content) {
       case "messenger":
@@ -29,6 +38,7 @@ const PopUp = ({ content, title, children }) => {
         <h1>{title}</h1>
         {displayBtn()}
       </div>
+      {/* Children de la props = contenu dans les balises de la props*/}
       {children}
     </div>
   );
