@@ -1,6 +1,6 @@
 import React from "react";
 import Notification from "./Notification";
-import barackObama from "../img/barack.JPG";
+
 const PopUpNotif = () => {
   return (
     <div className="popup-notif">

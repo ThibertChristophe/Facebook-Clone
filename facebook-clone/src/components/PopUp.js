@@ -12,6 +12,12 @@ const PopUp = ({ content, title, children }) => {
             <ButtonTransparent class="loupe" />
           </div>
         );
+      case "notif":
+        return (
+          <div className="popup-header-btn-list">
+            <ButtonTransparent class="dot" />
+          </div>
+        );
       default:
         return;
     }
