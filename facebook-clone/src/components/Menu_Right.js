@@ -9,6 +9,7 @@ import PopUp from "./PopUp";
 import PopUpMenu from "./PopUpMenu";
 import PopUpMessenger from "./PopUpMessenger";
 import PopUpNotif from "./PopUpNotif";
+import PopUpCompte from "./PopUpCompte";
 
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
@@ -54,7 +55,19 @@ const Menu_Right = () => {
       );
     }
   }
-
+  function openCompte() {
+    if (pop !== "") {
+      setPop("");
+    } else {
+      setPop(
+        <div>
+          <PopUp content="compte">
+            <PopUpCompte />
+          </PopUp>
+        </div>
+      );
+    }
+  }
   return (
     <div>
       <div className="menu_right">
@@ -68,8 +81,9 @@ const Menu_Right = () => {
         <div onClick={openNotif}>
           <Button_circle Icon={img_notif} type="notif" />
         </div>
-
-        <Button_circle Icon={img_arrow} type="compte" />
+        <div onClick={openCompte}>
+          <Button_circle Icon={img_arrow} type="compte" />
+        </div>
       </div>
       {/* Sous-menu ici */}
       {pop}
