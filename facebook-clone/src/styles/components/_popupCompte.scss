@@ -66,11 +66,11 @@
   }
   .popup-compte-option-list {
     display: flex;
+    padding-bottom: 5px;
     .popup-compte-option {
       display: flex;
       flex-direction: column;
       width: 100%;
-      border: 1px solid red;
     }
   }
   .popup-compte-separator {

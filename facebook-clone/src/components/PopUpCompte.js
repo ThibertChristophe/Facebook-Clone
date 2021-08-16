@@ -31,6 +31,10 @@ const PopUpCompte = () => {
       <div className="popup-compte-separator"></div>
       <div className="popup-compte-option-list">
         <div className="popup-compte-option">
+          <ButtonMenu
+            title="Changer de compte"
+            desc="Se connecter en tant que Nom Prénom"
+          />
           <ButtonMenu title="Paramètre et confidentialité" />
           <ButtonMenu title="Aide et assistance" />
           <ButtonMenu title="Affichage et accessibilité" />
