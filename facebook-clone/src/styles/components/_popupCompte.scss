@@ -1,4 +1,5 @@
 .popup-compte {
+  min-height: 250px;
   .popup-compte-profil {
     display: flex;
     align-items: center;
@@ -7,7 +8,6 @@
     height: 80px;
     padding: 10px;
     margin-top: -10px;
-
     .popup-compte-profil-img {
       width: 60px;
       height: 60px;
@@ -32,5 +32,51 @@
     &:hover {
       background-color: #8a8d9144;
     }
+  }
+  .popup-compte-avis {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    .popup-compte-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3c3c3d;
+      border-radius: 35px;
+      width: 37px;
+      height: 37px;
+      margin-right: 10px;
+    }
+    .popup-compte-avis-text {
+      width: 80%;
+      .popup-compte-avis-text-sub {
+        font-size: 13px;
+      }
+      strong {
+        font-size: 15px;
+        color: #e4e6eb;
+      }
+    }
+    &:hover {
+      background-color: #8a8d9144;
+    }
+  }
+  .popup-compte-option-list {
+    display: flex;
+    height: 50px;
+    .popup-compte-option {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      border: 1px solid red;
+    }
+  }
+  .popup-compte-separator {
+    margin: 10px 0;
+    border-top: 1px solid grey;
   }
 }

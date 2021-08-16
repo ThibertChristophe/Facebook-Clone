@@ -32,6 +32,16 @@
     background-repeat: no-repeat;
     display: inline-block;
   }
+  .exclamation {
+    background-image: url(../../img/palette6.png);
+    background-position: 0px -270px;
+    background-size: auto;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    filter: invert(100%) contrast(50%);
+  }
   &:hover {
     background-color: #57595c81;
   }

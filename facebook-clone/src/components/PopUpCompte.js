@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonTransparent from "./ButtonTransparent";
 
 const PopUpCompte = () => {
   return (
@@ -12,13 +13,21 @@ const PopUpCompte = () => {
           <a href="">Voir votre profil</a>
         </div>
       </div>
+      <div className="popup-compte-separator"></div>
       <div className="popup-compte-avis">
-        <img src="" alt="" />
+        <div className="popup-compte-img">
+          <ButtonTransparent class="exclamation" />
+        </div>
         <div className="popup-compte-avis-text">
-          <p>Donner votre avis</p>
-          <p>Aidez-nous à améliorer la nouvelle version de Facebook.</p>
+          <p>
+            <strong>Donner votre avis</strong>
+          </p>
+          <p className="popup-compte-avis-text-sub">
+            Aidez-nous à améliorer la nouvelle version de Facebook.
+          </p>
         </div>
       </div>
+      <div className="popup-compte-separator"></div>
       <div className="popup-compte-option-list">
         <div className="popup-compte-option">
           <img src="" alt="" />
