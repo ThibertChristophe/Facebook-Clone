@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonTransparent from "./ButtonTransparent";
+import ButtonMenu from "./ButtonMenu";
 
 const PopUpCompte = () => {
   return (
@@ -30,8 +31,10 @@ const PopUpCompte = () => {
       <div className="popup-compte-separator"></div>
       <div className="popup-compte-option-list">
         <div className="popup-compte-option">
-          <img src="" alt="" />
-          <p>Paramètre et confidentialité</p>
+          <ButtonMenu title="Paramètre et confidentialité" />
+          <ButtonMenu title="Aide et assistance" />
+          <ButtonMenu title="Affichage et accessibilité" />
+          <ButtonMenu title="Se déconnecter" />
         </div>
       </div>
       <div className="popup-compte-footer"></div>
