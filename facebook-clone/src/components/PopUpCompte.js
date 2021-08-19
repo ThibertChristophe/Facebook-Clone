@@ -41,7 +41,31 @@ const PopUpCompte = () => {
           <ButtonMenu title="Se déconnecter" />
         </div>
       </div>
-      <div className="popup-compte-footer"></div>
+      <div className="popup-compte-footer">
+        <ul>
+          <li>
+            <a href="">Confidentialité</a>
+          </li>
+          <li>
+            <a href="">Conditions générales</a>
+          </li>
+          <li>
+            <a href="">Publicités</a>
+          </li>
+          <li>
+            <a href="">Choix publicitaires</a>
+          </li>
+          <li>
+            <a href="">Cookies</a>
+          </li>
+          <li>
+            <a href="">Plus</a>
+          </li>
+          <li>
+            <a href="">Facebook © 2021</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

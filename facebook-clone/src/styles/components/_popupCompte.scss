@@ -73,6 +73,29 @@
       width: 100%;
     }
   }
+  .popup-compte-footer {
+    width: 100%;
+    padding-bottom: 10px;
+    ul {
+      li {
+        display: inline-block;
+        a {
+          font-size: 13px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        margin-right: 5px;
+        &:not(:nth-child(1)) {
+          &::before {
+            content: "· ";
+            width: 2px;
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
   .popup-compte-separator {
     margin: 10px 0;
     border-top: 1px solid grey;
