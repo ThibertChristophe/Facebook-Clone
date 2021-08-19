@@ -1,15 +1,15 @@
 import React from "react";
 import Button_circle from "./Button_circle";
 
-const ButtonMenu = (props) => {
+const ButtonMenu = ({ img, title, desc }) => {
   return (
     <div className="btn-menu">
       <div className="btn-menu-img">
-        <Button_circle Icon={props.img} />
+        <Button_circle Icon={img} />
       </div>
       <div className="btn-menu-text">
-        <div className="btn-menu-text-title">{props.title}</div>
-        <div className="btn-menu-text-subText">{props.desc}</div>
+        <div className="btn-menu-text-title">{title}</div>
+        <div className="btn-menu-text-subText">{desc}</div>
       </div>
     </div>
   );
