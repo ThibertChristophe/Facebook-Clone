@@ -1,6 +1,10 @@
 import React from "react";
 import ButtonTransparent from "./ButtonTransparent";
 import ButtonMenu from "./ButtonMenu";
+import param from "../img/parametres-gear.svg";
+import help from "../img/help.svg";
+import moon from "../img/moon.svg";
+import exit from "../img/logout.svg";
 
 const PopUpCompte = () => {
   return (
@@ -35,10 +39,10 @@ const PopUpCompte = () => {
             title="Changer de compte"
             desc="Se connecter en tant que Nom Prénom"
           />
-          <ButtonMenu title="Paramètre et confidentialité" />
-          <ButtonMenu title="Aide et assistance" />
-          <ButtonMenu title="Affichage et accessibilité" />
-          <ButtonMenu title="Se déconnecter" />
+          <ButtonMenu title="Paramètre et confidentialité" img={param} />
+          <ButtonMenu title="Aide et assistance" img={help} />
+          <ButtonMenu title="Affichage et accessibilité" img={moon} />
+          <ButtonMenu title="Se déconnecter" img={exit} />
         </div>
       </div>
       <div className="popup-compte-footer">

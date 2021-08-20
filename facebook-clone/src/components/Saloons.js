@@ -20,7 +20,7 @@ const Saloons = () => {
         <div className="img"></div>
       </div>
       <div className="saloons-btn-next">
-        <Button_circle Icon={imgArrow} />
+        <Button_circle Icon={imgArrow} withoutOver="true" />
       </div>
     </div>
   );

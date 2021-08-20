@@ -17,7 +17,7 @@ const Stories = () => {
       <Story title="Bill Gates" mini={imgBill} />
       <Story title="Barack Obama" mini={imgBarack} />
       <div className="stories-btn-next">
-        <Button_circle Icon={imgArrow} />
+        <Button_circle Icon={imgArrow} withoutOver="true" />
       </div>
     </div>
   );
