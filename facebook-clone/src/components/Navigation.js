@@ -1,6 +1,5 @@
 import React from "react";
 import LogoNav from "../components/LogoNav";
-import { NavLink } from "react-router-dom";
 import LogoNav_friends from "./LogoNav_friends";
 import LogoNav_play from "./LogoNav_play";
 import LogoNav_market from "./LogoNav_market";
