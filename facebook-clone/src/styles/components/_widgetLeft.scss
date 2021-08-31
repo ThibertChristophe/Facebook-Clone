@@ -1,12 +1,11 @@
 .widget-left {
-  width: 350px;
-  padding: 5px 0 0 5px;
-  height: 91vh;
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
   justify-content: space-between;
+  width: 350px;
+  height: 91vh;
+  padding: 5px 0 0 5px;
+  margin-top: 10px;
   .raccourcis-containt {
     border-top: 1px solid #3e4042;
     width: 95%;

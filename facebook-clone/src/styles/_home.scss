@@ -4,7 +4,16 @@
 }
 .content {
   display: flex;
-  //position: relative;
   min-height: 100vh;
-  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+  .content-middle {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .content-sticky {
+    position: sticky;
+    top: 60px;
+  }
 }

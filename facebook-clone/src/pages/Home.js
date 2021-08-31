@@ -9,9 +9,15 @@ const Home = () => {
     <div className="home">
       <Header />
       <div className="content">
-        <WidgetLeft />
-        <WidgetMiddle />
-        <WidgetRight />
+        <div className="content-sticky">
+          <WidgetLeft />
+        </div>
+        <div className="content-middle">
+          <WidgetMiddle />
+        </div>
+        <div className="content-sticky">
+          <WidgetRight />
+        </div>
       </div>
     </div>
   );
