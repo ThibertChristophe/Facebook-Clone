@@ -1,5 +1,5 @@
 .logoNav_group {
-  width: 125px;
+  width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -7,6 +7,7 @@
   border-radius: 10px;
   transition: all 0.15s ease;
   position: relative;
+  cursor: pointer;
   img {
     margin-top: 5px;
     width: 24px;

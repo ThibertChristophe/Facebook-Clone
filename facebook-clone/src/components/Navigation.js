@@ -9,21 +9,15 @@ import LogoNav_group from "./LogoNav_group";
 const Navigation = () => {
   return (
     <div className="navigation">
-      <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav />
-      </NavLink>
-      <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav_friends />
-      </NavLink>
-      <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav_play />
-      </NavLink>
-      <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav_market />
-      </NavLink>
-      <NavLink exact to="/" activeClassName="nav-active">
-        <LogoNav_group />
-      </NavLink>
+      <LogoNav />
+
+      <LogoNav_friends />
+
+      <LogoNav_play />
+
+      <LogoNav_market />
+
+      <LogoNav_group />
     </div>
   );
 };
