@@ -1,7 +1,6 @@
 .widget-middle {
-  position: relative;
   width: 600px;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 0;
+  border: 1px solid green;
+  display: block;
 }

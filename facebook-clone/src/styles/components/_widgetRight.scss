@@ -1,11 +1,11 @@
 .widget-right {
-  position: fixed;
   height: 100vh;
   width: 350px;
   margin-right: 10px;
   font-weight: 600;
   margin-top: 20px;
   right: 0px;
+  border: 1px solid red;
   .widget-right-contact {
     border-top: 1px solid #3e4042;
     padding-top: 10px;

@@ -73,16 +73,20 @@ const Menu_Right = () => {
       <div className="menu_right">
         <Button_profil Name="Chris" />
         <div onClick={openMenu}>
-          <Button_circle Icon={img_plus} type="add" />
+          <Button_circle Icon={img_plus} type="add" withoutOver="true" />
         </div>
         <div onClick={openMessenger}>
-          <Button_circle Icon={img_messenger} type="messenger" />
+          <Button_circle
+            Icon={img_messenger}
+            type="messenger"
+            withoutOver="true"
+          />
         </div>
         <div onClick={openNotif}>
-          <Button_circle Icon={img_notif} type="notif" />
+          <Button_circle Icon={img_notif} type="notif" withoutOver="true" />
         </div>
         <div onClick={openCompte}>
-          <Button_circle Icon={img_arrow} type="compte" />
+          <Button_circle Icon={img_arrow} type="compte" withoutOver="true" />
         </div>
       </div>
       {/* Sous-menu ici */}
