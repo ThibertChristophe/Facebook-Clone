@@ -14,9 +14,9 @@ import PopUpCompte from "./PopUpCompte";
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
 
+  // Detection de click sur la page en dehors des boutons du menu
   useEffect(() => {
     document.addEventListener("click", (e) => {
-      console.log(e.target.className);
       if (
         e.target.className === "content-middle" ||
         e.target.className === "header"
