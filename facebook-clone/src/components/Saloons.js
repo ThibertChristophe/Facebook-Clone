@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import Button_circle from "./Button_circle";
 import imgArrow from "../img/next.svg";
 
 const Saloons = () => {
-  const [classlist, setClasslist] = useState("listContact");
+  function defillement() {
+    const listDeContact = document.querySelectorAll(".listContact > .img");
+    const totalPixel = (40 * listDeContact.length) / 2 + 10;
+    document.querySelector(".listContact").style.left = -totalPixel + "px";
+    document.querySelector(".saloons-btn-next").classList.toggle("hide");
+    document.querySelector(".saloons-btn-previous").classList.toggle("show");
+  }
 
-  function clickNext() {
-    setClasslist("listContact defille");
+  function previous() {
+    document.querySelector(".listContact").style.left = "10px";
     document.querySelector(".saloons-btn-next").classList.toggle("hide");
     document.querySelector(".saloons-btn-previous").classList.toggle("show");
   }
 
   return (
     <div className="saloons">
-      <div className="saloons-btn-previous">
+      <div className="saloons-btn-previous" onClick={previous}>
         <Button_circle Icon={imgArrow} withoutOver="true" renverse />
       </div>
-      <div className={classlist}>
+      <div className="listContact">
         <div className="createSaloon">
           <button>
             <span className="camera"></span>Créer un salon
@@ -36,8 +42,10 @@ const Saloons = () => {
         <div className="img"></div>
         <div className="img"></div>
         <div className="img"></div>
+        <div className="img"></div>
+        <div className="img"></div>
       </div>
-      <div className="saloons-btn-next" onClick={clickNext}>
+      <div className="saloons-btn-next" onClick={defillement}>
         <Button_circle Icon={imgArrow} withoutOver="true" />
       </div>
     </div>

@@ -8,20 +8,20 @@
   padding: 10px 15px;
   margin-bottom: 12.5px;
   position: relative;
-  //overflow-x: hidden;
-
+  overflow-x: hidden;
   .listContact {
     min-width: 580px;
     height: 40px;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    border: 1px solid green;
+
     align-items: center;
-    transition: all 2s ease;
+    transition: all 0.5s ease;
     .createSaloon {
       width: 155px;
       height: 35px;
+      margin-right: 5px;
       button {
         display: flex;
         justify-content: center;
@@ -85,10 +85,6 @@
     cursor: pointer;
     z-index: 5;
     display: none;
-  }
-  .defille {
-    left: -200px;
-    transition: all 2s ease;
   }
   .show {
     display: block;

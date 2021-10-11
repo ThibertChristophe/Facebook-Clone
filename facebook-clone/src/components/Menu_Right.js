@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button_circle from "./Button_circle";
 import img_plus from "../img/plus.svg";
 import img_messenger from "../img/messenger.svg";
@@ -13,60 +13,55 @@ import PopUpCompte from "./PopUpCompte";
 
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
-  const [popupOpen, setPopupOpen] = useState([]);
+
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      console.log(e.target.className);
+      if (
+        e.target.className === "content-middle" ||
+        e.target.className === "header"
+      ) {
+        setPop("");
+      }
+    });
+  });
 
   function openMenu() {
-    if (pop !== "") {
-      setPop("");
-    } else {
-      setPop(
-        <div>
-          <PopUp content="menu" title="Créez">
-            <PopUpMenu />
-          </PopUp>
-        </div>
-      );
-    }
+    setPop(
+      <div>
+        <PopUp content="menu" title="Créez">
+          <PopUpMenu />
+        </PopUp>
+      </div>
+    );
   }
 
   function openMessenger() {
-    if (pop !== "") {
-      setPop("");
-    } else {
-      setPop(
-        <div>
-          <PopUp content="messenger" title="Messenger">
-            <PopUpMessenger />
-          </PopUp>
-        </div>
-      );
-    }
+    setPop(
+      <div>
+        <PopUp content="messenger" title="Messenger">
+          <PopUpMessenger />
+        </PopUp>
+      </div>
+    );
   }
   function openNotif() {
-    if (pop !== "") {
-      setPop("");
-    } else {
-      setPop(
-        <div>
-          <PopUp content="notif" title="Notifications">
-            <PopUpNotif />
-          </PopUp>
-        </div>
-      );
-    }
+    setPop(
+      <div>
+        <PopUp content="notif" title="Notifications">
+          <PopUpNotif />
+        </PopUp>
+      </div>
+    );
   }
   function openCompte() {
-    if (pop !== "") {
-      setPop("");
-    } else {
-      setPop(
-        <div>
-          <PopUp content="compte">
-            <PopUpCompte />
-          </PopUp>
-        </div>
-      );
-    }
+    setPop(
+      <div>
+        <PopUp content="compte">
+          <PopUpCompte />
+        </PopUp>
+      </div>
+    );
   }
   return (
     <div>
