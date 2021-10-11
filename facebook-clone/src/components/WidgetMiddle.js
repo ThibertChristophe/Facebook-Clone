@@ -16,7 +16,10 @@ const WidgetMiddle = () => {
       {/* Salon */}
       <Saloons />
       {/* Fil */}
-      <Posts />
+      <Posts titre="Post 1" />
+      <Posts titre="Post 2" />
+      <Posts titre="Post 3" />
+      <Posts titre="Post 4" />
     </div>
   );
 };

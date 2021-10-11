@@ -3,14 +3,14 @@ import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
 
-const Posts = () => {
+const Posts = ({ titre }) => {
   return (
     <div className="posts">
       <div className="posts-header">
         <div className="posts-header-img"></div>
         <div className="posts-header-title">
           <a href="">
-            <h4>Titre</h4>
+            <h4>{titre}</h4>
           </a>
           <div className="posts-header-subTitle">
             <a href="">
