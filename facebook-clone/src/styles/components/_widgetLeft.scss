@@ -44,6 +44,12 @@
   .widget-left-footer {
     p {
       font-size: 13px;
+      a {
+        font-size: 13px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

@@ -55,8 +55,9 @@ const WidgetLeft = () => {
       </div>
       <div className="widget-left-footer">
         <p>
-          Confidentialité · Conditions générales · Publicités · Choix
-          publicitaires · Cookies · · Facebook © 2021
+          <a href="">Confidentialité</a> · <a href="">Conditions générales</a> ·{" "}
+          <a href="">Publicités</a> ·<a href="">Choix publicitaires</a> ·{" "}
+          <a href="">Cookies</a> · <a href="">Plus</a> · Facebook © 2021
         </p>
       </div>
     </div>
