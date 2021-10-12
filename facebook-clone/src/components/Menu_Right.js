@@ -23,6 +23,7 @@ const Menu_Right = () => {
         e.target.className === "header"
       ) {
         setPop("");
+        setWhoIsOpen("");
       }
     });
   });
