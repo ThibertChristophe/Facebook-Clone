@@ -13,6 +13,7 @@ import PopUpCompte from "./PopUpCompte";
 
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
+  const [whoisOpen, setWhoIsOpen] = useState("");
 
   // Detection de click sur la page en dehors des boutons du menu
   useEffect(() => {
@@ -27,41 +28,65 @@ const Menu_Right = () => {
   });
 
   function openMenu() {
-    setPop(
-      <div>
-        <PopUp content="menu" title="Créez">
-          <PopUpMenu />
-        </PopUp>
-      </div>
-    );
+    if (whoisOpen === "menu") {
+      setPop("");
+      setWhoIsOpen("");
+    } else {
+      setWhoIsOpen("menu");
+      setPop(
+        <div>
+          <PopUp content="menu" title="Créez">
+            <PopUpMenu />
+          </PopUp>
+        </div>
+      );
+    }
   }
 
   function openMessenger() {
-    setPop(
-      <div>
-        <PopUp content="messenger" title="Messenger">
-          <PopUpMessenger />
-        </PopUp>
-      </div>
-    );
+    if (whoisOpen === "messenger") {
+      setPop("");
+      setWhoIsOpen("");
+    } else {
+      setWhoIsOpen("messenger");
+      setPop(
+        <div>
+          <PopUp content="messenger" title="Messenger">
+            <PopUpMessenger />
+          </PopUp>
+        </div>
+      );
+    }
   }
   function openNotif() {
-    setPop(
-      <div>
-        <PopUp content="notif" title="Notifications">
-          <PopUpNotif />
-        </PopUp>
-      </div>
-    );
+    if (whoisOpen === "notif") {
+      setPop("");
+      setWhoIsOpen("");
+    } else {
+      setWhoIsOpen("notif");
+      setPop(
+        <div>
+          <PopUp content="notif" title="Notifications">
+            <PopUpNotif />
+          </PopUp>
+        </div>
+      );
+    }
   }
   function openCompte() {
-    setPop(
-      <div>
-        <PopUp content="compte">
-          <PopUpCompte />
-        </PopUp>
-      </div>
-    );
+    if (whoisOpen === "compte") {
+      setPop("");
+      setWhoIsOpen("");
+    } else {
+      setWhoIsOpen("compte");
+      setPop(
+        <div>
+          <PopUp content="compte">
+            <PopUpCompte />
+          </PopUp>
+        </div>
+      );
+    }
   }
   return (
     <div>
