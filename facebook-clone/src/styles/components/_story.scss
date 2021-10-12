@@ -35,9 +35,12 @@
     background-color: #454546;
     border: 3px solid #4395ff;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
-      width: 100%;
-      height: 100%;
+      width: 120%;
+      height: 120%;
     }
   }
   span {
