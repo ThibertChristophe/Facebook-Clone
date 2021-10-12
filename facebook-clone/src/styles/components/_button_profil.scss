@@ -2,10 +2,11 @@
   height: 80%;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
   width: 80px;
   border-radius: 20px;
   cursor: pointer;
+  padding: 0 4px;
   img {
     width: 30px;
     border-radius: 20px;
