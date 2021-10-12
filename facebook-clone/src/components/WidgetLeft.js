@@ -41,16 +41,16 @@ const WidgetLeft = () => {
           <WidgetButton title="Souvenirs" img={imgSouvenir} />
           <WidgetButton title="Voir plus" img={imgArrowDown} next />
         </div>
-        <div className="raccourcis-containt">
-          <div
-            className="raccourcis-containt-title"
-            onMouseEnter={showRaccourcis}
-            onMouseLeave={disapearRaccourcis}
-          >
+        <div
+          className="raccourcis-containt"
+          onMouseEnter={showRaccourcis}
+          onMouseLeave={disapearRaccourcis}
+        >
+          <div className="raccourcis-containt-title">
             <h3>Vos raccourcis</h3>
             <button className="raccourcis-containt-btnModify">Modifier</button>
           </div>
-          <Raccourcis img={imgRaccourcis1} />
+          <Raccourcis img={imgRaccourcis1} title="NodeJS experience" />
         </div>
       </div>
       <div className="widget-left-footer">

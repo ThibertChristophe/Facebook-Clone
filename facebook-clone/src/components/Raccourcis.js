@@ -1,10 +1,10 @@
 import React from "react";
 
-const Raccourcis = (props) => {
+const Raccourcis = ({ img, title }) => {
   return (
     <div className="raccourcis">
-      <img className="raccourcis-img" src={props.img} />
-      <div className="raccourcis-libelle">NodeJS Developers</div>
+      <img className="raccourcis-img" src={img} />
+      <div className="raccourcis-libelle">{title}</div>
     </div>
   );
 };
