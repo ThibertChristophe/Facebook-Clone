@@ -9,7 +9,7 @@
   .raccourcis-containt {
     border-top: 1px solid #3e4042;
     width: 95%;
-    height: 28%;
+    min-height: fit-content;
     margin: 10px 0 0 0;
     padding-top: 10px;
     display: flex;
