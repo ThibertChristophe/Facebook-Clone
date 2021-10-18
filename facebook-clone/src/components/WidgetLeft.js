@@ -11,9 +11,22 @@ import imgEvent from "../img/event.png";
 import imgSouvenir from "../img/souvenir.png";
 import imgArrowDown from "../img/arrow-down-simple.svg";
 import imgRaccourcis1 from "../img/raccourcis.jpg";
+import imgClimat from "../img/climat.png";
+import imgCard from "../img/card.png";
+import imgFavoris from "../img/favori.png";
+import imgForum from "../img/helpForum.png";
+import imgPlays from "../img/plays.png";
+import imgMsg from "../img/messenger.png";
+import imgMeteo from "../img/meteo.png";
+import imgOculus from "../img/oculus.png";
+import imgOffre from "../img/emploi.png";
+import imgPub from "../img/pub.png";
 import Raccourcis from "./Raccourcis";
+import { useState } from "react";
 
 const WidgetLeft = () => {
+  const [allBtn, setAllBtn] = useState("");
+
   function showRaccourcis() {
     const btn = document.querySelector(".raccourcis-containt-btnModify");
     btn.classList.add("show");
@@ -21,6 +34,26 @@ const WidgetLeft = () => {
   function disapearRaccourcis() {
     const btn = document.querySelector(".raccourcis-containt-btnModify");
     btn.classList.remove("show");
+  }
+
+  function allList() {
+    setAllBtn(
+      <>
+        <WidgetButton
+          title="Centre d'information sur les sciences du climat"
+          img={imgClimat}
+        />
+        <WidgetButton title="Facebook Pay" img={imgCard} />
+        <WidgetButton title="Favoris" img={imgFavoris} />
+        <WidgetButton title="Forum d'aide" img={imgForum} />
+        <WidgetButton title="Jouer à des jeux" img={imgPlays} />
+        <WidgetButton title="Messenger" img={imgMsg} />
+        <WidgetButton title="Météo" img={imgMeteo} />
+        <WidgetButton title="Oculus" img={imgOculus} />
+        <WidgetButton title="Offres d'emploi" img={imgOffre} />
+        <WidgetButton title="Publicités" img={imgPub} />
+      </>
+    );
   }
 
   return (
@@ -39,7 +72,10 @@ const WidgetLeft = () => {
           <WidgetButton title="Marketplace" img={imgMarketplace} />
           <WidgetButton title="Évènements" img={imgEvent} />
           <WidgetButton title="Souvenirs" img={imgSouvenir} />
-          <WidgetButton title="Voir plus" img={imgArrowDown} next />
+          {allBtn}
+          <div onClick={allList}>
+            <WidgetButton title="Voir plus" img={imgArrowDown} next />
+          </div>
         </div>
         <div
           className="raccourcis-containt"
