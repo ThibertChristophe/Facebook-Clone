@@ -9,6 +9,25 @@
   .widget-left-content {
     min-height: 200px;
     overflow: auto;
+    // scroll bar de cette div à styliser
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 10px;
+      &:hover {
+        background: rgba(124, 124, 124, 0.247);
+      }
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #656768;
+      border-radius: 10px;
+    }
   }
   .raccourcis-containt {
     border-top: 1px solid #3e4042;
