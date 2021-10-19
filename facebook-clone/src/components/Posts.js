@@ -1,16 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
+import PostsPopUp from "./PostsPopUp";
 
 const Posts = ({ titre }) => {
+  const [popup, setPopup] = useState("");
+
   return (
     <div className="posts">
       <div className="posts-header">
         <div className="posts-header-img"></div>
-        <div className="posts-header-title">
+        <div
+          className="posts-header-title"
+          onMouseLeave={() => {
+            setPopup("");
+          }}
+        >
+          {/* Affichage de la popup ici*/}
+          {popup}
           <a href="">
-            <h4>{titre}</h4>
+            <h4
+              onMouseEnter={() => {
+                setPopup(
+                  <div
+                    className="posts-popup"
+                    onMouseLeave={() => {
+                      setPopup("");
+                    }}
+                  >
+                    <PostsPopUp />
+                  </div>
+                );
+              }}
+            >
+              {titre}
+            </h4>
           </a>
           <div className="posts-header-subTitle">
             <a href="">
