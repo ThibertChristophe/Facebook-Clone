@@ -25,35 +25,55 @@ import Raccourcis from "./Raccourcis";
 import { useState } from "react";
 
 const WidgetLeft = () => {
+  // code jsx contenant les boutons
   const [allBtn, setAllBtn] = useState("");
+  // changement du titre du bouton "Voir plus"
+  const [titleBtn, setTitleBtn] = useState("Voir plus");
 
+  /**
+   * Affiche le bouton modifier de la partie raccourcis
+   */
   function showRaccourcis() {
     const btn = document.querySelector(".raccourcis-containt-btnModify");
     btn.classList.add("show");
   }
+  /**
+   * Cache le bouton modifier de la partie raccourcis
+   */
   function disapearRaccourcis() {
     const btn = document.querySelector(".raccourcis-containt-btnModify");
     btn.classList.remove("show");
   }
 
-  function allList() {
-    setAllBtn(
-      <>
-        <WidgetButton
-          title="Centre d'information sur les sciences du climat"
-          img={imgClimat}
-        />
-        <WidgetButton title="Facebook Pay" img={imgCard} />
-        <WidgetButton title="Favoris" img={imgFavoris} />
-        <WidgetButton title="Forum d'aide" img={imgForum} />
-        <WidgetButton title="Jouer à des jeux" img={imgPlays} />
-        <WidgetButton title="Messenger" img={imgMsg} />
-        <WidgetButton title="Météo" img={imgMeteo} />
-        <WidgetButton title="Oculus" img={imgOculus} />
-        <WidgetButton title="Offres d'emploi" img={imgOffre} />
-        <WidgetButton title="Publicités" img={imgPub} />
-      </>
-    );
+  /**
+   * Affiche ou cache les boutons supplémentaires du menu
+   */
+  function displayAllBtn() {
+    // On rend visible
+    if (allBtn === "") {
+      setAllBtn(
+        <>
+          <WidgetButton
+            title="Centre d'information sur les sciences du climat"
+            img={imgClimat}
+          />
+          <WidgetButton title="Facebook Pay" img={imgCard} />
+          <WidgetButton title="Favoris" img={imgFavoris} />
+          <WidgetButton title="Forum d'aide" img={imgForum} />
+          <WidgetButton title="Jouer à des jeux" img={imgPlays} />
+          <WidgetButton title="Messenger" img={imgMsg} />
+          <WidgetButton title="Météo" img={imgMeteo} />
+          <WidgetButton title="Oculus" img={imgOculus} />
+          <WidgetButton title="Offres d'emploi" img={imgOffre} />
+          <WidgetButton title="Publicités" img={imgPub} />
+        </>
+      );
+      setTitleBtn("Voir moins");
+    } else {
+      // On cache les menu supplementaires
+      setAllBtn("");
+      setTitleBtn("Voir plus");
+    }
   }
 
   return (
@@ -61,22 +81,25 @@ const WidgetLeft = () => {
       <div className="widget-left-content">
         <div className="widget-left-menu">
           <WidgetButton title="Chris Thib" img={img_profil} />
+          <WidgetButton title="Amis" img={imgAmis} />
           <WidgetButton
             title="COVID-19 - Centre d'information"
             img={imgCovid}
           />
-          <WidgetButton title="Amis" img={imgAmis} />
           <WidgetButton title="Watch" img={imgWatch} />
           <WidgetButton title="Vidéo en direct" img={imgLive} />
           <WidgetButton title="Groupes" img={imgGroup} notif="2 nouveaux" />
           <WidgetButton title="Marketplace" img={imgMarketplace} />
           <WidgetButton title="Évènements" img={imgEvent} />
           <WidgetButton title="Souvenirs" img={imgSouvenir} />
+          {/* Suite des boutons pas encore visible par défaut*/}
           {allBtn}
-          <div onClick={allList}>
-            <WidgetButton title="Voir plus" img={imgArrowDown} next />
+          {/****/}
+          <div onClick={displayAllBtn}>
+            <WidgetButton title={titleBtn} img={imgArrowDown} next />
           </div>
         </div>
+        {/* Raccourcis */}
         <div
           className="raccourcis-containt"
           onMouseEnter={showRaccourcis}
