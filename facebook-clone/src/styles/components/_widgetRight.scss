@@ -4,6 +4,27 @@
   margin-right: 10px;
   font-weight: 600;
   margin-top: 20px;
+  overflow: auto;
+  // scroll bar de cette div à styliser
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+    &:hover {
+      background: rgba(124, 124, 124, 0.247);
+    }
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #656768;
+  }
+
   .widget-right-contact {
     border-top: 1px solid #3e4042;
     padding-top: 10px;
