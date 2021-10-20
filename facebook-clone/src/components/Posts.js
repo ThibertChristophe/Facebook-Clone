@@ -5,38 +5,20 @@ import ButtonPost from "./ButtonPost";
 import PostsPopUp from "./PostsPopUp";
 
 const Posts = ({ titre }) => {
-  const [popup, setPopup] = useState("");
-
   return (
     <div className="posts">
       <div className="posts-header">
         <div className="posts-header-img"></div>
-        <div
-          className="posts-header-title"
-          onMouseLeave={() => {
-            setPopup("");
-          }}
-        >
-          {/* Affichage de la popup ici*/}
-          {popup}
-          <a href="">
-            <h4
-              onMouseEnter={() => {
-                setPopup(
-                  <div
-                    className="posts-popup"
-                    onMouseLeave={() => {
-                      setPopup("");
-                    }}
-                  >
-                    <PostsPopUp />
-                  </div>
-                );
-              }}
-            >
+        <div className="posts-header-title">
+          <h4>
+            <a href="">
+              {/* Affichage de la popup ici*/}
+              <div className="posts-popup">
+                <PostsPopUp />
+              </div>
               {titre}
-            </h4>
-          </a>
+            </a>
+          </h4>
           <div className="posts-header-subTitle">
             <a href="">
               <span>5 h</span>

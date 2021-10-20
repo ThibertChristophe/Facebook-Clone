@@ -10,6 +10,7 @@
     left: -40px;
     position: absolute;
     z-index: 5;
+    display: none;
   }
   .posts-header {
     display: flex;
@@ -30,7 +31,11 @@
       display: flex;
       flex-direction: column;
       width: 85%;
-      a h4 {
+      // On affiche la pop up au mouseover du lien h4>a
+      h4 a:hover .posts-popup {
+        display: block;
+      }
+      h4 a {
         color: white;
         width: fit-content;
         &:hover {
