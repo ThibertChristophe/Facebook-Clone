@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonAction from "./ButtonAction";
+import friends from "../img/friends_grey.png";
 
 const PostsPopUp = (props) => {
   return (
@@ -11,10 +12,12 @@ const PostsPopUp = (props) => {
         <div className="postsPopUp-content-right">
           <div className="postsPopUp-content-title">Nom prenom</div>
           <div className="postsPopUp-content-p1">
+            <img src={friends} alt="" />
             Est devenu(e) ami(e) avec Prenom nom et 2 autres personnes
           </div>
           <div className="postsPopUp-content-p2">
-            3 amis communs, dont Prenom nom et Prénom Nom
+            <img src={friends} alt="" />3 amis communs, dont Prenom nom et
+            Prénom Nom
           </div>
         </div>
       </div>
