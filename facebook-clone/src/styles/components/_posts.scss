@@ -129,6 +129,10 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 1px;
+      width: 100%;
+      .footer__btn {
+        width: 33%;
+      }
     }
   }
 }

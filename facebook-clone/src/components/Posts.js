@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
 import PostsPopUp from "./PostsPopUp";
 
 const Posts = ({ titre }) => {
+  const [like, setlike] = useState(0);
+  const [liked, setLiked] = useState(false);
+
+  function likePost() {
+    if (liked) {
+      setlike(like - 1);
+      setLiked(false);
+    } else {
+      setlike(like + 1);
+      setLiked(true);
+    }
+  }
+
   return (
     <div className="posts">
       <div className="posts-header">
@@ -14,7 +27,7 @@ const Posts = ({ titre }) => {
             <a href="">
               {/* Affichage de la popup ici*/}
               <div className="posts-popup">
-                <PostsPopUp />
+                <PostsPopUp nom="Nom" prenom="Prénom" />
               </div>
               {titre}
             </a>
@@ -43,7 +56,7 @@ const Posts = ({ titre }) => {
               </div>
             </div>
             <div className="posts-footer-like-libelle">
-              <a href="">27</a>
+              <a href="">{like}</a>
             </div>
           </div>
           <div className="posts-footer-like-right">
@@ -51,9 +64,15 @@ const Posts = ({ titre }) => {
           </div>
         </div>
         <div className="posts-footer-btn">
-          <ButtonPost type="like" />
-          <ButtonPost type="comment" />
-          <ButtonPost type="share" />
+          <div className="footer__btn" onClick={likePost}>
+            <ButtonPost type="like" />
+          </div>
+          <div className="footer__btn">
+            <ButtonPost type="comment" />
+          </div>
+          <div className="footer__btn">
+            <ButtonPost type="share" />
+          </div>
         </div>
       </div>
     </div>

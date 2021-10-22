@@ -10,7 +10,9 @@ const PostsPopUp = ({ nom, prenom }) => {
           {/* <img src="" alt="img" /> */}
         </div>
         <div className="postsPopUp-content-right">
-          <div className="postsPopUp-content-title">Nom prenom</div>
+          <div className="postsPopUp-content-title">
+            {nom} {prenom}
+          </div>
           <div className="postsPopUp-content-p1">
             <img src={friends} alt="" />
             Est devenu(e) ami(e) avec Prenom nom et 2 autres personnes
@@ -22,7 +24,7 @@ const PostsPopUp = ({ nom, prenom }) => {
         </div>
       </div>
       <div className="postsPopUp-footer">
-        <ButtonAction title="Amis" />
+        <ButtonAction title="Amis" img={friends} />
         <ButtonAction title="Message" bleu />
         <ButtonAction title="..." small />
       </div>
