@@ -2,7 +2,7 @@ import React from "react";
 import ButtonAction from "./ButtonAction";
 import friends from "../img/friends_grey.png";
 
-const PostsPopUp = (props) => {
+const PostsPopUp = ({ nom, prenom }) => {
   return (
     <div className="postsPopUp">
       <div className="postsPopUp-content">
@@ -23,8 +23,8 @@ const PostsPopUp = (props) => {
       </div>
       <div className="postsPopUp-footer">
         <ButtonAction title="Amis" />
-        <ButtonAction title="Message" />
-        <ButtonAction title="..." />
+        <ButtonAction title="Message" bleu />
+        <ButtonAction title="..." small />
       </div>
     </div>
   );
