@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const ButtonAction = ({ title, bleu, small }) => {
   const [colorBlue, setcolorBlue] = useState("");
   const [taille, setTaille] = useState("buttonAction");
-  let listClass = "contain";
+  let listClass = useRef("contain");
 
   useEffect(() => {
     if (bleu) {
-      listClass += " bleu";
+      listClass.current += " bleu";
     }
     if (small) {
       setTaille("buttonAction small");
     }
-    setcolorBlue(listClass);
-  });
+    setcolorBlue(listClass.current);
+  }, [bleu, small]);
 
   return (
     <>

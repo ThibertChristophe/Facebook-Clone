@@ -12,7 +12,7 @@ const Button_circle = ({ Icon, withoutOver, renverse }) => {
       listC += " renverse";
     }
     setListofClass(listC);
-  });
+  }, [withoutOver, renverse]);
 
   return (
     <div className="button_circle">

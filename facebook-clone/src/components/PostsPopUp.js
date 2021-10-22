@@ -7,7 +7,7 @@ const PostsPopUp = ({ nom, prenom }) => {
     <div className="postsPopUp">
       <div className="postsPopUp-content">
         <div className="postsPopUp-content-left">
-          <img src="" alt="img" />
+          {/* <img src="" alt="img" /> */}
         </div>
         <div className="postsPopUp-content-right">
           <div className="postsPopUp-content-title">Nom prenom</div>
