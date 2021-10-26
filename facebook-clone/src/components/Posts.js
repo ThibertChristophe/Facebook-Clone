@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Comment from "./Comment";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
@@ -72,6 +73,40 @@ const Posts = ({ titre }) => {
           </div>
           <div className="footer__btn">
             <ButtonPost type="share" />
+          </div>
+        </div>
+        <div className="posts__footer__comment">
+          <div className="posts__footer__comment__sort">Les plus récents</div>
+          <div className="posts__footer__comment__myComment">
+            <div className="posts__footer__comment__myComment__profil"></div>
+            <div className="posts__footer__comment__myComment__inputEtLogo">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Ecrivez un commentaire..."
+              />
+              <div className="posts__footer__comment__myComment__inputEtLogo__logo">
+                <div className="btnComment"></div>
+                <div className="btnComment"></div>
+                <div className="btnComment"></div>
+              </div>
+            </div>
+          </div>
+          <div className="posts__footer__comment__list">
+            {/* A mettre en composant Comments.js */}
+            <div className="comment_containt">
+              <Comment />
+            </div>
+            {/* END Comment */}
+          </div>
+          <div className="posts__footer__comment__footer">
+            <div className="posts__footer__comment__footer__moreComment">
+              Afficher 7autres commentaires
+            </div>
+            <div className="posts__footer__comment__footer__count">
+              1 sur 65
+            </div>
           </div>
         </div>
       </div>
