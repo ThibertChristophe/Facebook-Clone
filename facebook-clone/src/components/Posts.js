@@ -19,6 +19,14 @@ const Posts = ({ titre }) => {
     }
   }
 
+  /** Valide le commentaire */
+  const validComment = (e) => {
+    if (e.key === "Enter") {
+      console.log(e.target);
+      e.target.value = "";
+    }
+  };
+
   return (
     <div className="posts">
       <div className="posts-header">
@@ -61,7 +69,7 @@ const Posts = ({ titre }) => {
             </div>
           </div>
           <div className="posts-footer-like-right">
-            <a href="">2 commentaires</a>
+            <span className="numberComment">2 commentaires</span>
           </div>
         </div>
         <div className="posts-footer-btn">
@@ -85,6 +93,7 @@ const Posts = ({ titre }) => {
                 name=""
                 id=""
                 placeholder="Ecrivez un commentaire..."
+                onKeyPress={validComment}
               />
               <div className="posts__footer__comment__myComment__inputEtLogo__logo">
                 <div className="btnComment"></div>
@@ -102,7 +111,7 @@ const Posts = ({ titre }) => {
           </div>
           <div className="posts__footer__comment__footer">
             <div className="posts__footer__comment__footer__moreComment">
-              Afficher 7autres commentaires
+              <span className="moreComment">Afficher 7autres commentaires</span>
             </div>
             <div className="posts__footer__comment__footer__count">
               1 sur 65
