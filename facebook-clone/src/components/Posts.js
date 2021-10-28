@@ -9,6 +9,7 @@ const Posts = ({ titre }) => {
   const [like, setlike] = useState(0);
   const [liked, setLiked] = useState(false);
 
+  /** Like ou dislike un post */
   function likePost() {
     if (liked) {
       setlike(like - 1);
@@ -19,13 +20,12 @@ const Posts = ({ titre }) => {
     }
   }
 
-  /** Valide le commentaire */
-  const validComment = (e) => {
+  /** Valide le commentaire et reset l'input*/
+  function validComment(e) {
     if (e.key === "Enter") {
-      console.log(e.target);
       e.target.value = "";
     }
-  };
+  }
 
   return (
     <div className="posts">
