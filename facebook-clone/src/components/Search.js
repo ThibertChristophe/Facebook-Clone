@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import LogoFacebook from "./LogoFacebook";
 
 const Search = () => {
@@ -8,18 +8,22 @@ const Search = () => {
 
   const [logoFacebook, setlogoFacebook] = useState(<LogoFacebook />);
 
+  const popup = useRef(null);
+
   const priseFocus = (e) => {
-    const pop = document.querySelector(".search__popup");
+    // On bouge le placeholder du champ
     e.target.style = "padding-left: 10px;";
-    pop.style.display = "block";
+    // On fait apparaitre la popup de recherche recentes
+    popup.current.style.display = "block";
+    // On cache l'image de loupe
     setLogoLoupe("");
+    // On cache le logo facebook
     setlogoFacebook("");
   };
 
   const sortieFocus = (e) => {
-    const pop = document.querySelector(".search__popup");
     e.target.style = "padding-left: 40px;";
-    pop.style.display = "none";
+    popup.current.style.display = "none";
     setLogoLoupe(<img src="./img/loupe.svg" width="20px" alt="" />);
     setlogoFacebook(<LogoFacebook />);
   };
@@ -36,7 +40,7 @@ const Search = () => {
           onBlur={sortieFocus}
         />
       </div>
-      <div className="search__popup">
+      <div className="search__popup" ref={popup}>
         <div className="search__popup__header">
           <span>Recherches récentes</span>
           <button>Modifier</button>
