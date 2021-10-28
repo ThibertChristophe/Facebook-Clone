@@ -96,9 +96,15 @@ const Posts = ({ titre }) => {
                 onKeyPress={validComment}
               />
               <div className="posts__footer__comment__myComment__inputEtLogo__logo">
-                <div className="btnComment"></div>
-                <div className="btnComment"></div>
-                <div className="btnComment"></div>
+                <div className="btnComment">
+                  <div className="btnComment__imgSmile smallbBtn"></div>
+                </div>
+                <div className="btnComment">
+                  <div className="btnComment__imgPhoto smallbBtn"></div>
+                </div>
+                <div className="btnComment">
+                  <div className="btnComment__imgGIF smallbBtn"></div>
+                </div>
               </div>
             </div>
           </div>

@@ -13,12 +13,19 @@ export default function Comment() {
         </div>
         <div className="comment__contentRight__footer">
           <ul>
-            <li>J'aime</li>
-            <li>Répondre</li>
-            <li>4h</li>
+            <li>
+              <span>J'aime</span>
+            </li>
+            <li>
+              <span>Répondre</span>
+            </li>
+            <li>
+              <span>4h</span>
+            </li>
           </ul>
         </div>
       </div>
+      <div className="comment__btn">...</div>
     </div>
   );
 }

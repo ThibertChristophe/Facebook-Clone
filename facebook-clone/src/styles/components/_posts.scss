@@ -185,16 +185,46 @@
           transform: translateY(-50%);
           display: flex;
           .btnComment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 35px;
             height: 100%;
-            background-color: rgba(104, 104, 104, 0.76);
+            // background-color: rgba(104, 104, 104, 0.76);
             border-radius: 50%;
             cursor: pointer;
             &:hover {
-              background-color: rgba(104, 104, 104, 0.76);
+              background-color: rgba(104, 104, 104, 0.315);
+            }
+
+            .smallbBtn {
+              width: 16px;
+              height: 16px;
+              background-color: transparent;
+              background-image: url("../../img/palette8.png");
+              background-repeat: no-repeat;
+              background-size: auto;
+              filter: invert(62%) sepia(98%) saturate(12%) brightness(90%)
+                contrast(96%);
+            }
+
+            &__imgSmile {
+              background-position: 0px -459px;
+            }
+            &__imgPhoto {
+              background-position: 0px -408px;
+            }
+            &__imgGIF {
+              background-position: 0px -476px;
             }
           }
         }
+      }
+    }
+    &__list {
+      width: 100%;
+      .comment_containt {
+        width: 100%;
       }
     }
     &__footer {
