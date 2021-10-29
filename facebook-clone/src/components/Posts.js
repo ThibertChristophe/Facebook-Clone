@@ -53,7 +53,7 @@ const Posts = ({ titre }) => {
    * @param {string} text
    */
   function addComment(text) {
-    const commentaire = <Comment content={text} />;
+    const commentaire = <Comment content={text} time />;
     const newComment = [...listComment, commentaire];
     setListComment(newComment);
   }
@@ -105,7 +105,10 @@ const Posts = ({ titre }) => {
             </div>
           </div>
           <div className="posts-footer-like-right">
-            <span className="numberComment" onClick={displayMoreComment}>
+            <span
+              className="numberComment no-select"
+              onClick={displayMoreComment}
+            >
               {nbComment} commentaire
             </span>
           </div>

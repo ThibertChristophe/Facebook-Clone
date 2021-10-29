@@ -10,21 +10,21 @@ const ButtonPost = (props) => {
         return (
           <div>
             <span className="posts-footer-btn-like"></span>
-            <span>J'aime</span>
+            <span className="no-select">J'aime</span>
           </div>
         );
       case "comment":
         return (
           <div>
             <span className="posts-footer-btn-comment"></span>
-            <span>Commenter</span>
+            <span className="no-select">Commenter</span>
           </div>
         );
       case "share":
         return (
           <div>
             <span className="posts-footer-btn-share"></span>
-            <span>Partager</span>
+            <span className="no-select">Partager</span>
           </div>
         );
       default:

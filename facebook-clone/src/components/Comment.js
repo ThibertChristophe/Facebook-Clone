@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-export default function Comment({ content }) {
+export default function Comment({ content, time }) {
   const [commentaire, setCommentaire] = useState("");
+  const [timing, setTiming] = useState("");
 
   useEffect(() => {
     if (content === "" || content === undefined) {
@@ -9,7 +10,13 @@ export default function Comment({ content }) {
     } else {
       setCommentaire(content);
     }
-  }, []);
+
+    if (time === "" || time === undefined) {
+      setTiming("4h");
+    } else {
+      setTiming("A l'instant");
+    }
+  });
 
   return (
     <div className="comment">
@@ -28,7 +35,7 @@ export default function Comment({ content }) {
               <span>Répondre</span>
             </li>
             <li>
-              <span>4h</span>
+              <span>{timing}</span>
             </li>
           </ul>
         </div>
