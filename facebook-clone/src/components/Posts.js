@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Comment from "./Comment";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
@@ -8,8 +8,17 @@ import PostsPopUp from "./PostsPopUp";
 const Posts = ({ titre }) => {
   const [like, setlike] = useState(0);
   const [liked, setLiked] = useState(false);
+  const [nbComment, setNbComment] = useState(0);
 
+  // Reference vers la div des commentaires
   const blockComment = useRef(null);
+
+  // Liste de commentaire avec un premier com par defaut
+  const [listComment, setListComment] = useState([
+    <div className="comment_containt">
+      <Comment />
+    </div>,
+  ]);
 
   /** Like ou dislike un post */
   function likePost() {
@@ -22,13 +31,15 @@ const Posts = ({ titre }) => {
     }
   }
 
-  /** Valide le commentaire et reset l'input*/
+  /** Valide le commentaire, l'ajoute et reset l'input*/
   function validComment(e) {
     if (e.key === "Enter") {
+      addComment(e.target.value);
       e.target.value = "";
     }
   }
 
+  // Affiche les commentaires
   function displayMoreComment() {
     if (blockComment.current.style.display === "none") {
       blockComment.current.style.display = "block";
@@ -36,6 +47,21 @@ const Posts = ({ titre }) => {
       blockComment.current.style.display = "none";
     }
   }
+
+  /**
+   * Ajoute un commentaire au tableau de commentaire
+   * @param {string} text
+   */
+  function addComment(text) {
+    const commentaire = <Comment content={text} />;
+    const newComment = [...listComment, commentaire];
+    setListComment(newComment);
+  }
+
+  // Quand la liste change => on actualise notre compteur de commentaire
+  useEffect(() => {
+    setNbComment(listComment.length);
+  }, [listComment]);
 
   return (
     <div className="posts">
@@ -80,7 +106,7 @@ const Posts = ({ titre }) => {
           </div>
           <div className="posts-footer-like-right">
             <span className="numberComment" onClick={displayMoreComment}>
-              1 commentaire
+              {nbComment} commentaire
             </span>
           </div>
         </div>
@@ -88,7 +114,7 @@ const Posts = ({ titre }) => {
           <div className="footer__btn" onClick={likePost}>
             <ButtonPost type="like" />
           </div>
-          <div className="footer__btn">
+          <div className="footer__btn" onClick={displayMoreComment}>
             <ButtonPost type="comment" />
           </div>
           <div className="footer__btn">
@@ -121,10 +147,14 @@ const Posts = ({ titre }) => {
             </div>
           </div>
           <div className="posts__footer__comment__list">
-            {/* A mettre en composant Comments.js */}
-            <div className="comment_containt">
-              <Comment />
-            </div>
+            {/* Comments.js */}
+            {listComment.map((com, index) => {
+              return (
+                <div className="comment_containt" key={index}>
+                  {com}
+                </div>
+              );
+            })}
             {/* END Comment */}
           </div>
           <div className="posts__footer__comment__footer">
