@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Comment from "./Comment";
 import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
@@ -8,6 +8,8 @@ import PostsPopUp from "./PostsPopUp";
 const Posts = ({ titre }) => {
   const [like, setlike] = useState(0);
   const [liked, setLiked] = useState(false);
+
+  const blockComment = useRef(null);
 
   /** Like ou dislike un post */
   function likePost() {
@@ -24,6 +26,14 @@ const Posts = ({ titre }) => {
   function validComment(e) {
     if (e.key === "Enter") {
       e.target.value = "";
+    }
+  }
+
+  function displayMoreComment() {
+    if (blockComment.current.style.display === "none") {
+      blockComment.current.style.display = "block";
+    } else {
+      blockComment.current.style.display = "none";
     }
   }
 
@@ -69,7 +79,9 @@ const Posts = ({ titre }) => {
             </div>
           </div>
           <div className="posts-footer-like-right">
-            <span className="numberComment">2 commentaires</span>
+            <span className="numberComment" onClick={displayMoreComment}>
+              1 commentaire
+            </span>
           </div>
         </div>
         <div className="posts-footer-btn">
@@ -83,7 +95,7 @@ const Posts = ({ titre }) => {
             <ButtonPost type="share" />
           </div>
         </div>
-        <div className="posts__footer__comment">
+        <div className="posts__footer__comment" ref={blockComment}>
           <div className="posts__footer__comment__sort">Les plus récents</div>
           <div className="posts__footer__comment__myComment">
             <div className="posts__footer__comment__myComment__profil"></div>
