@@ -163,6 +163,7 @@ const Posts = ({ titre }) => {
                 </div>
               );
             })}
+
             {/* END Comment */}
           </div>
           <div className="posts__footer__comment__footer">
