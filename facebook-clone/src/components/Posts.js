@@ -9,6 +9,7 @@ const Posts = ({ titre }) => {
   const [like, setlike] = useState(0);
   const [liked, setLiked] = useState(false);
   const [nbComment, setNbComment] = useState(0);
+  const [show, setShow] = useState(false);
 
   // Reference vers la div des commentaires
   const blockComment = useRef(null);
@@ -41,12 +42,16 @@ const Posts = ({ titre }) => {
 
   // Affiche les commentaires
   function displayMoreComment() {
-    if (blockComment.current.style.display === "none") {
+    setShow(show ? false : true);
+  }
+  // Use effect pour montrer les commentaire
+  useEffect(() => {
+    if (show) {
       blockComment.current.style.display = "block";
     } else {
       blockComment.current.style.display = "none";
     }
-  }
+  }, [show]);
 
   /**
    * Ajoute un commentaire au tableau de commentaire

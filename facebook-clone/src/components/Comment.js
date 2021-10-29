@@ -16,7 +16,7 @@ export default function Comment({ content, time }) {
     } else {
       setTiming("A l'instant");
     }
-  });
+  }, []);
 
   return (
     <div className="comment">
