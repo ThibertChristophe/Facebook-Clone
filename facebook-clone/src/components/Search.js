@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import LogoFacebook from "./LogoFacebook";
+import Button_circle from "./Button_circle";
+import imgArrow from "../img/right-arrow.svg";
 
 const Search = () => {
   const [logoLoupe, setLogoLoupe] = useState(
@@ -40,7 +42,11 @@ const Search = () => {
           onBlur={sortieFocus}
         />
       </div>
+
       <div className="search__popup" ref={popup}>
+        <div className="search__popup__btnBack">
+          <Button_circle Icon={imgArrow} withoutOver="true" renverse />
+        </div>
         <div className="search__popup__header">
           <span>Recherches récentes</span>
           <button>Modifier</button>
