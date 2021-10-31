@@ -119,8 +119,8 @@ const Posts = ({ titre }) => {
           </div>
         </div>
         <div className="posts-footer-btn">
-          <div className="footer__btn" onClick={likePost}>
-            <ButtonPost type="like" />
+          <div className="footer__btn active-btn" onClick={likePost}>
+            <ButtonPost type="like" active={liked} />
           </div>
           <div className="footer__btn" onClick={displayMoreComment}>
             <ButtonPost type="comment" />

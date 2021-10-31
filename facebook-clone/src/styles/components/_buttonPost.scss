@@ -10,6 +10,7 @@
   &:hover {
     background-color: #76797c56;
   }
+
   .posts-footer-btn-like {
     background-image: url(../../img/palette4.png);
     background-position: 0 -191px;
@@ -20,7 +21,28 @@
     background-size: auto;
     margin-right: 10px;
     filter: invert(50%) brightness(150%);
+    transition: animation 0.2s ease;
   }
+  .active-img {
+    background-position: 0 -172px;
+    animation-name: pouce;
+    animation-duration: 0.5s;
+    filter: invert(45%) sepia(98%) saturate(500%) hue-rotate(175deg)
+      brightness(90%) contrast(96%);
+  }
+
+  @keyframes pouce {
+    0% {
+      transform: rotate(0eg) scale(100%);
+    }
+    50% {
+      transform: rotate(-15deg) scale(120%);
+    }
+    100% {
+      transform: rotate(0eg) scale(100%);
+    }
+  }
+
   .posts-footer-btn-comment {
     background-image: url(../../img/palette4.png);
     background-position: 0 -153px;
@@ -31,6 +53,9 @@
     background-size: auto;
     margin-right: 10px;
     filter: invert(50%) brightness(150%);
+  }
+  .active-btn {
+    color: #2d88ff;
   }
   .posts-footer-btn-share {
     background-image: url(../../img/palette4.png);

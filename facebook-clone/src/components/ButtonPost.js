@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const ButtonPost = (props) => {
+  const [actif, setActif] = useState("");
+  const [move, setMove] = useState("");
+
+  useEffect(() => {
+    if (props.active === true) {
+      setActif("active-btn");
+      setMove("active-img");
+    } else {
+      setActif("");
+      setMove("");
+    }
+  }, [props.active]);
+
   /**
    * Change le libelle et l'image en fonction du type de bouton
    */
@@ -9,8 +22,8 @@ const ButtonPost = (props) => {
       case "like":
         return (
           <div>
-            <span className="posts-footer-btn-like"></span>
-            <span className="no-select">J'aime</span>
+            <span className={"posts-footer-btn-like " + move}></span>
+            <span className={"no-select " + actif}>J'aime</span>
           </div>
         );
       case "comment":
@@ -32,7 +45,7 @@ const ButtonPost = (props) => {
     }
   }
 
-  return <div className="btn-post">{displayBtn()}</div>;
+  return <div className="btn-post active-btn">{displayBtn()}</div>;
 };
 
 export default ButtonPost;
