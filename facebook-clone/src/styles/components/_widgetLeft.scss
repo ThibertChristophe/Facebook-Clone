@@ -2,10 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 350px;
   width: 350px;
   height: 91vh;
   padding: 5px 0 0 5px;
   margin-top: 10px;
+  @media all and (max-width: 1450px) {
+    min-width: 250px;
+  }
   .widget-left-content {
     min-height: 200px;
     overflow: auto;

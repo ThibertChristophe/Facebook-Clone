@@ -1,5 +1,8 @@
 .widget-middle {
-  width: 600px;
+  max-width: 700px;
   z-index: 0;
   margin: 0 17px;
+  @media all and (max-width: 1240px) {
+    min-width: 400px;
+  }
 }

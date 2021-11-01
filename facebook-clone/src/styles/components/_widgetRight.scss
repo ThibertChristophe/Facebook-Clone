@@ -5,6 +5,10 @@
   font-weight: 600;
   margin-top: 20px;
   overflow: auto;
+
+  @media all and (max-width: 1450px) {
+    min-width: 250px;
+  }
   // scroll bar de cette div à styliser
   &::-webkit-scrollbar {
     width: 8px;
