@@ -1,14 +1,12 @@
 .widget-right {
+  max-width: $taille-right;
+  min-width: 250px;
   height: 90vh;
-  width: $taille-right;
   margin-right: 10px;
   font-weight: 600;
   margin-top: 20px;
   overflow: auto;
 
-  @media all and (max-width: 1450px) {
-    min-width: 250px;
-  }
   // scroll bar de cette div à styliser
   &::-webkit-scrollbar {
     width: 8px;
@@ -32,6 +30,7 @@
   .widget-right-contact {
     border-top: 1px solid #3e4042;
     padding-top: 10px;
+
     .widget-right-contact-header {
       display: flex;
       justify-content: space-between;

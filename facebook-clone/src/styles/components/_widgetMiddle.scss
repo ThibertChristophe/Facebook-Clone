@@ -1,8 +1,8 @@
 .widget-middle {
-  max-width: $taille-mid;
+  width: $taille-mid;
   z-index: 0;
   margin: 0 17px;
-  @media all and (max-width: 1240px) {
-    min-width: 400px;
-  }
+  // @media all and (max-width: 1240px) {
+  //   min-width: 400px;
+  // }
 }
