@@ -92,7 +92,10 @@ const Menu_Right = () => {
   return (
     <div>
       <div className="menu_right">
-        <Button_profil Name="Chris" />
+        <div className="menu_right__profil">
+          <Button_profil Name="Chris" />
+        </div>
+
         <div onClick={openMenu}>
           <Button_circle Icon={img_plus} type="add" withoutOver="true" />
         </div>

@@ -5,6 +5,12 @@
   width: $taille-right;
   height: 100%;
   padding: 5px 0;
-
   padding-left: 80px;
+  @media screen and (max-width: 1240px) {
+    width: 262px;
+    &__profil {
+      display: none;
+      justify-content: left;
+    }
+  }
 }

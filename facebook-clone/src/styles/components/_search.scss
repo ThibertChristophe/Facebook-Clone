@@ -1,10 +1,15 @@
 .search {
   width: $taille-left;
+
   &__content {
     display: flex;
     align-items: center;
     width: 280px;
     justify-content: flex-end;
+    @media screen and (max-width: 1240px) {
+      width: 80px;
+      justify-content: space-between;
+    }
   }
   img {
     position: absolute;
@@ -20,10 +25,13 @@
     border: none;
     border-radius: 50px;
     padding-left: 40px;
-    transition: all 0.3s ease;
+    transition: padding 0.3s ease;
     z-index: 3;
     &::placeholder {
       color: rgb(197, 197, 197);
+    }
+    @media screen and (max-width: 1240px) {
+      width: 40px;
     }
   }
   &__popup {
