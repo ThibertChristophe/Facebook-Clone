@@ -12,7 +12,7 @@ const Stories = () => {
   const [listStory, setListStory] = useState([]);
   const [listComplete, setListComplete] = useState([]);
 
-  const [move, setMove] = useState(0);
+  const [move, setMove] = useState(window.innerWidth);
 
   /**
    * Crée les stories
@@ -70,6 +70,17 @@ const Stories = () => {
     }
   }, []);
 
+  /** Listener de Resize */
+  useEffect(() => {
+    function handleResize() {
+      setMove(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   /** Responsive */
   useEffect(() => {
     if (move < 1450 && listStory.length === 5) {
@@ -90,10 +101,6 @@ const Stories = () => {
     }
   }, [move]);
 
-  window.addEventListener("resize", () => {
-    setMove(window.innerWidth);
-  });
-
   return (
     <div className="stories">
       <div className="stories__card">
@@ -102,8 +109,8 @@ const Stories = () => {
 
       {/*List de story*/}
       {listStory.map((story, index) => (
-        <div className="stories__card">
-          <Story title={story.name} mini={story.img} key={index} />
+        <div className="stories__card" key={index}>
+          <Story title={story.name} mini={story.img} />
         </div>
       ))}
       <div className="stories-btn-next">
