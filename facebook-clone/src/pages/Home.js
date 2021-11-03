@@ -9,13 +9,13 @@ const Home = () => {
     <div className="home">
       <Header />
       <div className="content">
-        <div className="content-sticky">
+        <div className="content-sticky content-left">
           <WidgetLeft />
         </div>
         <div className="content-middle">
           <WidgetMiddle />
         </div>
-        <div className="content-sticky">
+        <div className="content-sticky content-right">
           <WidgetRight />
         </div>
       </div>

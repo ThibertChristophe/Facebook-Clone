@@ -19,6 +19,16 @@
     flex-grow: 1;
     max-width: $taille-right;
   }
+  @media screen and (max-width: 1080px) {
+    .content-left {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 885px) {
+    .content-right {
+      display: none;
+    }
+  }
 }
 .no-select {
   -webkit-touch-callout: none;

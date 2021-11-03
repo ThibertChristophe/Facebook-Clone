@@ -12,7 +12,7 @@ const Stories = () => {
   const [listStory, setListStory] = useState([]);
   const [listComplete, setListComplete] = useState([]);
 
-  const [move, setMove] = useState(window.innerWidth);
+  const [move, setMove] = useState(0);
 
   /**
    * Crée les stories
@@ -20,77 +20,79 @@ const Stories = () => {
   function getStories() {
     // Endroit où fetch sur l'api
     setListStory([]);
-    setListComplete([]);
-    setListStory((listStory) => [
-      ...listStory,
+
+    setListStory((current) => [
+      ...current,
       { name: "Elon Musk", img: imgElon },
     ]);
-    setListStory((listStory) => [
-      ...listStory,
+
+    setListStory((current) => [
+      ...current,
       { name: "Albert Einstein", img: imgAlbert },
     ]);
-    setListStory((listStory) => [
-      ...listStory,
+
+    setListStory((current) => [
+      ...current,
       { name: "Bill Gates", img: imgBill },
     ]);
-    setListStory((listStory) => [
-      ...listStory,
+
+    setListStory((current) => [
+      ...current,
       { name: "Barack Obama", img: imgBarack },
     ]);
-    setListStory((listStory) => [...listStory, { name: "Monsieur Mystère" }]);
-    return true;
+
+    setListStory((current) => [...current, { name: "Monsieur Mystère" }]);
+    //////////////
+    setListComplete([]);
+    setListComplete((current) => [
+      ...current,
+      { name: "Elon Musk", img: imgElon },
+    ]);
+
+    setListComplete((current) => [
+      ...current,
+      { name: "Albert Einstein", img: imgAlbert },
+    ]);
+
+    setListComplete((current) => [
+      ...current,
+      { name: "Bill Gates", img: imgBill },
+    ]);
+
+    setListComplete((current) => [
+      ...current,
+      { name: "Barack Obama", img: imgBarack },
+    ]);
+
+    setListComplete((current) => [...current, { name: "Monsieur Mystère" }]);
   }
 
   /**
-   * useEffect au chargement
+   * Copie intacte
    */
   useEffect(() => {
-    // On créé notre liste de story
-    if (getStories()) {
-      setListComplete((listComplete) => [
-        ...listComplete,
-        { name: "Elon Musk", img: imgElon },
-      ]);
-      setListComplete((listComplete) => [
-        ...listComplete,
-        { name: "Albert Einstein", img: imgAlbert },
-      ]);
-      setListComplete((listComplete) => [
-        ...listComplete,
-        { name: "Bill Gates", img: imgBill },
-      ]);
-      setListComplete((listComplete) => [
-        ...listComplete,
-        { name: "Barack Obama", img: imgBarack },
-      ]);
-      setListComplete((listComplete) => [
-        ...listComplete,
-        { name: "Monsieur Mystère" },
-      ]);
-    }
+    // On créé notre liste de story complete
+    getStories();
   }, []);
 
   /** Listener de Resize */
   useEffect(() => {
-    function handleResize() {
+    window.addEventListener("resize", () => {
       setMove(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
+    });
   }, []);
 
   /** Responsive */
   useEffect(() => {
     if (move < 1450 && listStory.length === 5) {
-      setListStory(listStory.slice(0, listStory.length - 1));
+      setListStory(listComplete.slice(0, listComplete.length - 1));
       return;
     }
     if (move < 1170 && listStory.length === 4) {
-      setListStory(listStory.slice(0, listStory.length - 1));
+      setListStory(listComplete.slice(0, listComplete.length - 2));
       return;
     }
+
     if (move > 1170 && listStory.length === 3) {
       setListStory(listComplete.slice(0, listComplete.length - 1));
       return;

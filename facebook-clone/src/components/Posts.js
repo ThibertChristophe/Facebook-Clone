@@ -5,7 +5,7 @@ import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
 import PostsPopUp from "./PostsPopUp";
 
-const Posts = ({ titre }) => {
+const Posts = ({ titre, img }) => {
   const [like, setlike] = useState(0);
   const [liked, setLiked] = useState(false);
   const [nbComment, setNbComment] = useState(0);
@@ -96,7 +96,9 @@ const Posts = ({ titre }) => {
         aliquid! Minus aperiam sit numquam totam reiciendis facere nobis iure
         perferendis.
       </div>
-      <div className="posts-img"></div>
+      <div className="posts-img">
+        <img src={img} alt="" />
+      </div>
       <div className="posts-footer">
         <div className="posts-footer-like">
           <div className="posts-footer-like-left">
