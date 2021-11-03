@@ -10,10 +10,17 @@ import imgArrow from "../img/right-arrow.svg";
 
 const Stories = () => {
   const [listStory, setListStory] = useState([]);
+  const [listComplete, setListComplete] = useState([]);
 
-  useEffect(() => {
-    // On créé notre liste de story
+  const [move, setMove] = useState(0);
+
+  /**
+   * Crée les stories
+   */
+  function getStories() {
+    // Endroit où fetch sur l'api
     setListStory([]);
+    setListComplete([]);
     setListStory((listStory) => [
       ...listStory,
       { name: "Elon Musk", img: imgElon },
@@ -31,20 +38,73 @@ const Stories = () => {
       { name: "Barack Obama", img: imgBarack },
     ]);
     setListStory((listStory) => [...listStory, { name: "Monsieur Mystère" }]);
+    return true;
+  }
+
+  /**
+   * useEffect au chargement
+   */
+  useEffect(() => {
+    // On créé notre liste de story
+    if (getStories()) {
+      setListComplete((listComplete) => [
+        ...listComplete,
+        { name: "Elon Musk", img: imgElon },
+      ]);
+      setListComplete((listComplete) => [
+        ...listComplete,
+        { name: "Albert Einstein", img: imgAlbert },
+      ]);
+      setListComplete((listComplete) => [
+        ...listComplete,
+        { name: "Bill Gates", img: imgBill },
+      ]);
+      setListComplete((listComplete) => [
+        ...listComplete,
+        { name: "Barack Obama", img: imgBarack },
+      ]);
+      setListComplete((listComplete) => [
+        ...listComplete,
+        { name: "Monsieur Mystère" },
+      ]);
+    }
   }, []);
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 1450 && listStory.length === 5) {
-      // setListStory(listStory.slice(0, listStory.length - 1));
+  /** Responsive */
+  useEffect(() => {
+    if (move < 1450 && listStory.length === 5) {
+      setListStory(listStory.slice(0, listStory.length - 1));
+      return;
     }
+    if (move < 1170 && listStory.length === 4) {
+      setListStory(listStory.slice(0, listStory.length - 1));
+      return;
+    }
+    if (move > 1170 && listStory.length === 3) {
+      setListStory(listComplete.slice(0, listComplete.length - 1));
+      return;
+    }
+    if (move > 1450 && listStory.length === 4) {
+      setListStory(listComplete.slice());
+      return;
+    }
+  }, [move]);
+
+  window.addEventListener("resize", () => {
+    setMove(window.innerWidth);
   });
 
   return (
     <div className="stories">
-      <Story title="Créer une story" first mini={imgProfil} />
+      <div className="stories__card">
+        <Story title="Créer une story" first mini={imgProfil} />
+      </div>
+
       {/*List de story*/}
       {listStory.map((story, index) => (
-        <Story title={story.name} mini={story.img} key={index} />
+        <div className="stories__card">
+          <Story title={story.name} mini={story.img} key={index} />
+        </div>
       ))}
       <div className="stories-btn-next">
         <Button_circle Icon={imgArrow} withoutOver="true" />

@@ -8,7 +8,10 @@ const WidgetMiddle = () => {
   return (
     <div className="widget-middle">
       {/* Stories */}
-      <Stories />
+      <div className="widget-middle__stories">
+        <Stories />
+      </div>
+
       {/* What news  */}
       <WhatNew />
       {/* Salon */}
