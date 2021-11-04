@@ -54,15 +54,15 @@ const Search = () => {
   };
 
   useEffect(() => {
-    // console.log(recherche);
     if (recherche !== "") {
       const listtriee = completeList.filter((e) => {
         return e.toLowerCase().startsWith(recherche);
       });
-      // console.log(listtriee);
       setContactList(listtriee);
+    } else {
+      setContactList(completeList);
     }
-  }, [recherche]);
+  }, [recherche, completeList]);
 
   return (
     <div className="search">
@@ -92,7 +92,7 @@ const Search = () => {
           {contactList.map((contact, i) => {
             return (
               <div className="contact_card" key={i}>
-                <SearchContact nom={contact} key={i} />
+                <SearchContact nom={contact} />
               </div>
             );
           })}
