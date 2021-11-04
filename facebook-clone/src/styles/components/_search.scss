@@ -39,11 +39,12 @@
     display: none;
     position: absolute;
     background-color: #242526;
-    height: 500px;
+    min-height: 500px;
     width: 310px;
     left: 0;
     top: 0;
     padding-top: 50px;
+    padding-bottom: 5px;
     -webkit-box-shadow: 7px 8px 7px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 7px 8px 7px 0px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 10px 10px;
@@ -73,6 +74,10 @@
           background-color: #3a3b3c;
         }
       }
+    }
+    &__content {
+      padding: 0 5px;
+      overflow: auto;
     }
   }
 }

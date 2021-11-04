@@ -1,7 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import LogoFacebook from "./LogoFacebook";
 import Button_circle from "./Button_circle";
 import imgArrow from "../img/right-arrow.svg";
+import SearchContact from "./SearchContact";
 
 const Search = () => {
   const [logoLoupe, setLogoLoupe] = useState(
@@ -11,6 +12,28 @@ const Search = () => {
   const [logoFacebook, setlogoFacebook] = useState(<LogoFacebook />);
 
   const popup = useRef(null);
+
+  const [contactList, setContactList] = useState([]);
+  const [completeList, setCompleteList] = useState([]);
+
+  const [recherche, setRecherche] = useState("");
+
+  useEffect(() => {
+    setContactList((contact) => [...contact, "Chris"]);
+    setContactList((contact) => [...contact, "Caro"]);
+    setContactList((contact) => [...contact, "Chloe"]);
+    setContactList((contact) => [...contact, "Nom Prénom"]);
+    setContactList((contact) => [...contact, "Nom Prénom"]);
+    setContactList((contact) => [...contact, "Nom Prénom"]);
+    setContactList((contact) => [...contact, "Nom Prénom"]);
+    setCompleteList((contact) => [...contact, "Chris"]);
+    setCompleteList((contact) => [...contact, "Caro"]);
+    setCompleteList((contact) => [...contact, "Chloe"]);
+    setCompleteList((contact) => [...contact, "Nom Prénom"]);
+    setCompleteList((contact) => [...contact, "Nom Prénom"]);
+    setCompleteList((contact) => [...contact, "Nom Prénom"]);
+    setCompleteList((contact) => [...contact, "Nom Prénom"]);
+  }, []);
 
   const priseFocus = (e) => {
     // On bouge le placeholder du champ
@@ -30,6 +53,17 @@ const Search = () => {
     setlogoFacebook(<LogoFacebook />);
   };
 
+  useEffect(() => {
+    // console.log(recherche);
+    if (recherche !== "") {
+      const listtriee = completeList.filter((e) => {
+        return e.toLowerCase().startsWith(recherche);
+      });
+      // console.log(listtriee);
+      setContactList(listtriee);
+    }
+  }, [recherche]);
+
   return (
     <div className="search">
       <div className="search__content">
@@ -40,6 +74,9 @@ const Search = () => {
           placeholder="Rechercher sur Facebook "
           onFocusCapture={priseFocus}
           onBlur={sortieFocus}
+          onKeyUp={(e) => {
+            setRecherche(e.target.value);
+          }}
         />
       </div>
 
@@ -50,6 +87,15 @@ const Search = () => {
         <div className="search__popup__header">
           <span>Recherches récentes</span>
           <button>Modifier</button>
+        </div>
+        <div className="search__popup__content">
+          {contactList.map((contact, i) => {
+            return (
+              <div className="contact_card" key={i}>
+                <SearchContact nom={contact} key={i} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

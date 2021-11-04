@@ -5,7 +5,7 @@ import Stories from "./Stories";
 import WhatNew from "./WhatNew";
 
 const WidgetMiddle = () => {
-  const key = "69f07742-d9fc-4151-8f3f-1a92ca63afbf";
+  // const key = "69f07742-d9fc-4151-8f3f-1a92ca63afbf";
   const NB_STORIES = 4;
   const [stories, setStories] = useState([]);
 
@@ -28,7 +28,6 @@ const WidgetMiddle = () => {
       <div className="widget-middle__stories">
         <Stories />
       </div>
-
       {/* What news  */}
       <WhatNew />
       {/* Salon */}
