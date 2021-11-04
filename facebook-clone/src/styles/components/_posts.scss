@@ -12,6 +12,14 @@
     z-index: 5;
     display: none;
   }
+  .posts-popup-fromImg {
+    top: -235px;
+    left: -150px;
+    position: absolute;
+    z-index: 5;
+    display: none;
+    transition: display 0.5s ease;
+  }
   .posts-header {
     display: flex;
     align-items: center;
@@ -23,8 +31,8 @@
       height: 40px;
       margin-right: 7px;
       cursor: pointer;
-      &:hover {
-        filter: brightness(110%);
+      &:hover .posts-popup-fromImg {
+        display: block;
       }
     }
     .posts-header-title {

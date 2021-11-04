@@ -71,7 +71,11 @@ const Posts = ({ titre, img }) => {
   return (
     <div className="posts">
       <div className="posts-header">
-        <div className="posts-header-img"></div>
+        <div className="posts-header-img">
+          <div className="posts-popup-fromImg">
+            <PostsPopUp nom="Nom" prenom="Prénom" />
+          </div>
+        </div>
         <div className="posts-header-title">
           <h4>
             <a href="">
