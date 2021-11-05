@@ -136,6 +136,11 @@
       }
       .posts-footer-like-list {
         margin-right: 10px;
+        display: flex;
+        align-items: center;
+        img {
+          border: 1px solid #242526;
+        }
       }
       .posts-footer-like-libelle {
         a:hover {
@@ -152,7 +157,29 @@
       margin-top: 1px;
       width: 100%;
       .footer__btn {
+        position: relative;
         width: 33%;
+        &:hover .footer__btn__popupLike {
+          opacity: 100;
+          top: -45px;
+          z-index: 5;
+        }
+        &__popupLike {
+          display: flex;
+          opacity: 0;
+          position: absolute;
+          width: fit-content;
+          border-radius: 20px;
+          background-color: #242526;
+          z-index: -5;
+          top: 0px;
+          transition: all 0.2s ease;
+          transition-delay: 550ms;
+          img {
+            margin: 0 3px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }

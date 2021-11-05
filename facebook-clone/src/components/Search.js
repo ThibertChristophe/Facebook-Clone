@@ -5,32 +5,38 @@ import imgArrow from "../img/right-arrow.svg";
 import SearchContact from "./SearchContact";
 
 const Search = () => {
+  // Logo de la loupe
   const [logoLoupe, setLogoLoupe] = useState(
     <img src="./img/loupe.svg" width="20px" alt="" />
   );
 
+  // Logo facebook
   const [logoFacebook, setlogoFacebook] = useState(<LogoFacebook />);
 
+  // La popup qui apparait lorsqu'on commence a faire une recherche
   const popup = useRef(null);
 
+  // Les listes de contacts
   const [contactList, setContactList] = useState([]);
   const [completeList, setCompleteList] = useState([]);
 
+  // Contient ce que l'user tappe en recherche
   const [recherche, setRecherche] = useState("");
 
+  /** On charge nos liste */
   useEffect(() => {
     setContactList((contact) => [...contact, "Chris"]);
     setContactList((contact) => [...contact, "Caro"]);
     setContactList((contact) => [...contact, "Chloe"]);
-    setContactList((contact) => [...contact, "Nom Prénom"]);
-    setContactList((contact) => [...contact, "Nom Prénom"]);
+    setContactList((contact) => [...contact, "Bernard"]);
+    setContactList((contact) => [...contact, "Lucie"]);
     setContactList((contact) => [...contact, "Nom Prénom"]);
     setContactList((contact) => [...contact, "Nom Prénom"]);
     setCompleteList((contact) => [...contact, "Chris"]);
     setCompleteList((contact) => [...contact, "Caro"]);
     setCompleteList((contact) => [...contact, "Chloe"]);
-    setCompleteList((contact) => [...contact, "Nom Prénom"]);
-    setCompleteList((contact) => [...contact, "Nom Prénom"]);
+    setCompleteList((contact) => [...contact, "Bernard"]);
+    setCompleteList((contact) => [...contact, "Lucie"]);
     setCompleteList((contact) => [...contact, "Nom Prénom"]);
     setCompleteList((contact) => [...contact, "Nom Prénom"]);
   }, []);
@@ -46,6 +52,7 @@ const Search = () => {
     setlogoFacebook("");
   };
 
+  /** Sortie de focus du champs de recherche */
   const sortieFocus = (e) => {
     e.target.style = "padding-left: 40px;";
     popup.current.style.display = "none";
@@ -53,6 +60,7 @@ const Search = () => {
     setlogoFacebook(<LogoFacebook />);
   };
 
+  /** useEffect sur l'input pour rechercher dynamiquement dans la liste */
   useEffect(() => {
     if (recherche !== "") {
       const listtriee = completeList.filter((e) => {

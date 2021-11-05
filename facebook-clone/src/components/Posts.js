@@ -4,6 +4,14 @@ import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
 import PostsPopUp from "./PostsPopUp";
+////
+import bigLike from "../img/likeBig.png";
+import love from "../img/love.png";
+import solidaire from "../img/solidaire.png";
+import haha from "../img/haha.png";
+import wouah from "../img/Wouah.png";
+import triste from "../img/triste.png";
+import fache from "../img/fache.png";
 
 const Posts = ({ titre, img }) => {
   const [like, setlike] = useState(0);
@@ -14,6 +22,7 @@ const Posts = ({ titre, img }) => {
   // Reference vers la div des commentaires
   const blockComment = useRef(null);
 
+  const popUpLike = useRef();
   // Liste de commentaire avec un premier com par defaut
   const [listComment, setListComment] = useState([
     <div className="comment_containt">
@@ -108,7 +117,10 @@ const Posts = ({ titre, img }) => {
           <div className="posts-footer-like-left">
             <div className="posts-footer-like-list">
               <div className="posts-footer-img-like">
-                <img src={imgLike} alt="" width="18" />
+                <img src={imgLike} alt="" width="19" />
+              </div>
+              <div className="posts-footer-img-like">
+                <img src={imgLike} alt="" width="19" />
               </div>
             </div>
             <div className="posts-footer-like-libelle">
@@ -126,6 +138,15 @@ const Posts = ({ titre, img }) => {
         </div>
         <div className="posts-footer-btn">
           <div className="footer__btn active-btn" onClick={likePost}>
+            <div className="footer__btn__popupLike" ref={popUpLike}>
+              <img src={bigLike} alt="" />
+              <img src={love} alt="" />
+              <img src={solidaire} alt="" />
+              <img src={haha} alt="" />
+              <img src={wouah} alt="" />
+              <img src={triste} alt="" />
+              <img src={fache} alt="" />
+            </div>
             <ButtonPost type="like" active={liked} />
           </div>
           <div className="footer__btn" onClick={displayMoreComment}>
@@ -174,7 +195,9 @@ const Posts = ({ titre, img }) => {
           </div>
           <div className="posts__footer__comment__footer">
             <div className="posts__footer__comment__footer__moreComment">
-              <span className="moreComment">Afficher 7autres commentaires</span>
+              <span className="moreComment">
+                Afficher 7 autres commentaires
+              </span>
             </div>
             <div className="posts__footer__comment__footer__count">
               1 sur 65
