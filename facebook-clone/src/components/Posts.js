@@ -119,9 +119,6 @@ const Posts = ({ titre, img }) => {
               <div className="posts-footer-img-like">
                 <img src={imgLike} alt="" width="19" />
               </div>
-              <div className="posts-footer-img-like">
-                <img src={imgLike} alt="" width="19" />
-              </div>
             </div>
             <div className="posts-footer-like-libelle">
               <a href="">{like}</a>
