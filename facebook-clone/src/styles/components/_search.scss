@@ -1,6 +1,11 @@
 .search {
   width: $taille-left;
-
+  @media screen and (max-width: 1240px) {
+    width: 250px;
+  }
+  @media screen and (max-width: 1080px) {
+    width: 100px;
+  }
   &__content {
     display: flex;
     align-items: center;

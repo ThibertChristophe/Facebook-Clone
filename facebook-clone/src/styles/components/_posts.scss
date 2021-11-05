@@ -179,6 +179,10 @@
           img {
             margin: 0 3px;
             cursor: pointer;
+            transition: transform 0.2s ease;
+            &:hover {
+              transform: scale(120%);
+            }
           }
         }
       }

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import LogoFacebook from "./LogoFacebook";
-import Button_circle from "./Button_circle";
-import imgArrow from "../img/right-arrow.svg";
 import SearchContact from "./SearchContact";
 
 const Search = () => {
