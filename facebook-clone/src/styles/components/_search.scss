@@ -52,6 +52,16 @@
       position: absolute;
       left: 10px;
       top: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        background-color: #73747548;
+      }
     }
     &__header {
       margin-top: 10px;
