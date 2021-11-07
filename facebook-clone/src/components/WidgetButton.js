@@ -16,12 +16,20 @@ const WidgetButton = (props) => {
     }
   }
 
+  function handleClick() {
+    // Si on a cliquer sur le profil
+    if (props.profil !== undefined) {
+      // Renvoyer le component Profil.js
+    }
+  }
+
   return (
     <div className="widget-btn">
       {btnNext()}
-
       <div className="widget-btn-libelle">
-        <div className="widget-btn-title">{props.title}</div>
+        <div className="widget-btn-title" onClick={handleClick}>
+          {props.title}
+        </div>
         {displayNotif()}
       </div>
     </div>

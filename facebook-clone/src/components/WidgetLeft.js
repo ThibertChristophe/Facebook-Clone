@@ -23,6 +23,7 @@ import imgOffre from "../img/emploi.png";
 import imgPub from "../img/pub.png";
 import Raccourcis from "./Raccourcis";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const WidgetLeft = () => {
   // code jsx contenant les boutons
@@ -80,7 +81,9 @@ const WidgetLeft = () => {
     <div className="widget-left">
       <div className="widget-left-content">
         <div className="widget-left-menu">
-          <WidgetButton title="Chris Thib" img={img_profil} />
+          <Link to="/Profil">
+            <WidgetButton title="Chris Thib" img={img_profil} profil />
+          </Link>
           <WidgetButton title="Amis" img={imgAmis} />
           <WidgetButton
             title="COVID-19 - Centre d'information"

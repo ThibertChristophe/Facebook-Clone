@@ -1,0 +1,28 @@
+.accueil {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  .content-middle {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+  }
+  .content-sticky {
+    position: sticky;
+    top: 60px;
+    flex-grow: 1;
+    max-width: $taille-right;
+  }
+  @media screen and (max-width: 1080px) {
+    .content-left {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 885px) {
+    .content-right {
+      display: none;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import LogoFacebook from "./LogoFacebook";
 import SearchContact from "./SearchContact";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   // Logo de la loupe
@@ -9,7 +10,11 @@ const Search = () => {
   );
 
   // Logo facebook
-  const [logoFacebook, setlogoFacebook] = useState(<LogoFacebook />);
+  const [logoFacebook, setlogoFacebook] = useState(
+    <Link to="/">
+      <LogoFacebook />
+    </Link>
+  );
 
   // La popup qui apparait lorsqu'on commence a faire une recherche
   const popup = useRef(null);

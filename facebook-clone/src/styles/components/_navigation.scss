@@ -2,6 +2,72 @@
   display: flex;
   width: $taille-mid;
   height: 100%;
-  padding: 2px 0;
   justify-content: space-between;
+
+  .logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(192, 192, 192, 0.192);
+    }
+  }
+  .logoNav {
+    img {
+      margin-top: 5px;
+      width: 24px;
+    }
+  }
+  .logoNav_friends {
+    img {
+      margin-top: 12px;
+      width: 27px;
+    }
+  }
+  .logoNav_play {
+    img {
+      margin-top: 5px;
+      width: 27px;
+    }
+  }
+  .logoNav_market {
+    img {
+      margin-top: 5px;
+      width: 24px;
+    }
+  }
+  .logoNav_group {
+    img {
+      margin-top: 5px;
+      width: 24px;
+    }
+
+    &::after {
+      content: "2";
+      width: 17px;
+      height: 17px;
+      background-color: red;
+      border-radius: 10px;
+      position: absolute;
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      top: 10px;
+      left: 70px;
+    }
+  }
+  .active {
+    border-bottom: 3px solid #569af2;
+    border-radius: 0;
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }

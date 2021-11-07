@@ -1,22 +1,29 @@
 import React from "react";
-import LogoNav from "../components/LogoNav";
-import LogoNav_friends from "./LogoNav_friends";
-import LogoNav_play from "./LogoNav_play";
-import LogoNav_market from "./LogoNav_market";
-import LogoNav_group from "./LogoNav_group";
+
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <div className="navigation">
-      <LogoNav />
+      <NavLink to="/" exact className="logoNav logo">
+        <img src="/img/home.svg" alt="" />
+      </NavLink>
 
-      <LogoNav_friends />
+      {/* <NavLink to="/Profil" exact className="logoNav logo"> */}
+      <img src="/img/friends.svg" alt="" />
+      {/* </NavLink> */}
 
-      <LogoNav_play />
+      <div className="logoNav_play logo">
+        <img src="/img/tv.svg" alt="" />
+      </div>
 
-      <LogoNav_market />
+      <div className="logoNav_market logo">
+        <img src="/img/shop.svg" alt="" />
+      </div>
 
-      <LogoNav_group />
+      <div className="logoNav_group logo">
+        <img src="/img/group.svg" alt="" />
+      </div>
     </div>
   );
 };

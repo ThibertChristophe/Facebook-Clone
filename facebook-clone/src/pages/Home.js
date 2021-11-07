@@ -1,23 +1,19 @@
 import React from "react";
 import Header from "../components/Header";
-import WidgetLeft from "../components/WidgetLeft";
-import WidgetMiddle from "../components/WidgetMiddle";
-import WidgetRight from "../components/WidgetRight";
+
+import { Switch, Route } from "react-router-dom";
+import Accueil from "../components/Accueil";
+import Profil from "../components/Profil";
 
 const Home = () => {
   return (
     <div className="home">
       <Header />
       <div className="content">
-        <div className="content-sticky content-left">
-          <WidgetLeft />
-        </div>
-        <div className="content-middle">
-          <WidgetMiddle />
-        </div>
-        <div className="content-sticky content-right">
-          <WidgetRight />
-        </div>
+        <Switch>
+          <Route path="/" exact component={Accueil} />
+          <Route path="/Profil" exact component={Profil} />
+        </Switch>
       </div>
     </div>
   );
