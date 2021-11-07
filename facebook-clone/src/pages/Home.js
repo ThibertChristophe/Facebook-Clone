@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-
 import { Switch, Route } from "react-router-dom";
 import Accueil from "../components/Accueil";
 import Profil from "../components/Profil";
