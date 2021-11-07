@@ -10,7 +10,9 @@ const Navigation = () => {
       </NavLink>
 
       {/* <NavLink to="/Profil" exact className="logoNav logo"> */}
-      <img src="/img/friends.svg" alt="" />
+      <div className="logoNav logo">
+        <img src="/img/friends.svg" alt="" />
+      </div>
       {/* </NavLink> */}
 
       <div className="logoNav_play logo">
