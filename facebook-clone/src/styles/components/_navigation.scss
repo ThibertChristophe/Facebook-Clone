@@ -3,7 +3,7 @@
   width: $taille-mid;
   height: 100%;
   justify-content: space-between;
-
+  padding: 2px 0;
   .logo {
     width: 20%;
     height: 100%;
@@ -19,33 +19,38 @@
     }
   }
   .logoNav {
-    img {
+    svg {
       margin-top: 5px;
       width: 24px;
+      fill: #c5c5c5;
     }
   }
   .logoNav_friends {
-    img {
+    svg {
       margin-top: 12px;
       width: 27px;
+      fill: #c5c5c5;
     }
   }
   .logoNav_play {
-    img {
+    svg {
       margin-top: 5px;
       width: 27px;
+      fill: #c5c5c5;
     }
   }
   .logoNav_market {
-    img {
+    svg {
       margin-top: 5px;
       width: 24px;
+      fill: #c5c5c5;
     }
   }
   .logoNav_group {
-    img {
+    svg {
       margin-top: 5px;
       width: 24px;
+      fill: #c5c5c5;
     }
 
     &::after {
@@ -63,9 +68,12 @@
     }
   }
   .active {
-    border-bottom: 3px solid #569af2;
+    box-shadow: 0 2px 0 #569af2;
     border-radius: 0;
     background-color: transparent;
+    svg {
+      fill: #569af2;
+    }
     &:hover {
       background-color: transparent;
     }
