@@ -4,7 +4,7 @@ const Profil = ({ name }) => {
   return (
     <div className="profil">
       <div className="profil__header">
-        <div className="profil__header__fond">
+        <div className="profil__header__couverture">
           <button>Changer la photo de couverture</button>
         </div>
         <div className="profil__header__mid">

@@ -1,4 +1,27 @@
 .profil {
-  width: 100%;
   height: 100vh;
+  margin: 0 auto;
+  &__header {
+    height: 680px;
+    background-color: #302938;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__couverture {
+      border: 1px solid red;
+      height: 460px;
+      width: 1250px;
+      background-color: grey;
+    }
+    &__mid {
+      border: 1px solid green;
+      width: 1250px;
+      height: 160px;
+    }
+    &__menu {
+      border: 1px solid blue;
+      width: 1250px;
+      height: 65px;
+    }
+  }
 }
