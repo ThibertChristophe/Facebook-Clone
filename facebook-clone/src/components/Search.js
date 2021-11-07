@@ -67,7 +67,7 @@ const Search = () => {
   useEffect(() => {
     if (recherche !== "") {
       const listtriee = completeList.filter((e) => {
-        return e.toLowerCase().startsWith(recherche);
+        return e.toLowerCase().startsWith(recherche.toLowerCase());
       });
       setContactList(listtriee);
     } else {
