@@ -4,12 +4,13 @@ import img_plus from "../img/plus.svg";
 import img_messenger from "../img/messenger.svg";
 import img_notif from "../img/bell.svg";
 import img_arrow from "../img/down-arrow.svg";
-import Button_profil from "./Button_profil";
 import PopUp from "./PopUp";
 import PopUpMenu from "./PopUpMenu";
 import PopUpMessenger from "./PopUpMessenger";
 import PopUpNotif from "./PopUpNotif";
 import PopUpCompte from "./PopUpCompte";
+import img_profil from "../img/profil.jpg";
+import { NavLink } from "react-router-dom";
 
 const Menu_Right = () => {
   const [pop, setPop] = useState("");
@@ -92,10 +93,10 @@ const Menu_Right = () => {
   return (
     <div>
       <div className="menu_right">
-        <div className="menu_right__profil">
-          <Button_profil Name="Chris" />
-        </div>
-
+        <NavLink to="Profil" className="menu_right__profil">
+          <img src={img_profil} alt="image profil" />
+          <span className="nom">Chris</span>
+        </NavLink>
         <div onClick={openMenu}>
           <Button_circle Icon={img_plus} type="add" withoutOver="true" />
         </div>
