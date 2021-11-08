@@ -1,5 +1,5 @@
 .profil {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   &__header {
     height: 680px;
@@ -22,6 +22,12 @@
         background-color: white;
         border-radius: 7px;
         font-weight: 600;
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
     &__mid {
@@ -61,6 +67,7 @@
             border-radius: 7px;
             width: 165px;
             height: 35px;
+            cursor: pointer;
           }
         }
       }
@@ -97,6 +104,9 @@
   &__body {
     height: 500px;
     border: 1px solid red;
+    width: 1220px;
+    margin: 0 auto;
+    padding-top: 10px;
   }
   .active {
     background-color: transparent;

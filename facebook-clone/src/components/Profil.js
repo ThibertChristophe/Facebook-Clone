@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import Saloons from "../components/Saloons";
 
 const Profil = ({ name }) => {
+  const [couv, setCouv] = useState("");
+
+  // Petite image aleatoire pour la couverture
+  useEffect(() => {
+    const loadCouverture = async () => {
+      const response = await fetch(
+        "https://api.thecatapi.com/v1/images/search"
+      );
+      const json = await response.json();
+      setCouv(json[0].url);
+    };
+    loadCouverture();
+  }, []);
+
   return (
     <div className="profil">
       <div className="profil__header">
         <div className="profil__header__couverture">
+          <img src={couv} alt="" />
           <button>Changer la photo de couverture</button>
         </div>
         <div className="profil__header__mid">
