@@ -29,7 +29,9 @@ const WidgetMiddle = () => {
         <Stories />
       </div>
       {/* What news  */}
-      <WhatNew />
+      <div className="widget-middle__whatnews">
+        <WhatNew />
+      </div>
       {/* Salon */}
       <Saloons />
       {/* Fil */}
