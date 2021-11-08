@@ -10,12 +10,15 @@ const Profil = ({ name }) => {
         <div className="profil__header__mid">
           <div className="profil__header__mid__imgProfil"></div>
           <div className="profil__header__mid__donnee">
-            <span>Nom Prénom</span>
+            <span className="name">Nom Prénom</span>
             <span>80 amis</span>
-          </div>
-          <div className="profil__header__mid__action">
-            <button>Ajouter à a story</button>
-            Modifieri le profil
+            <div className="profil__header__mid__action">
+              <span>Liste d'amis</span>
+              <div className="profil__header__mid__action__btn">
+                <button>Ajouter à a story</button>
+                <button>Modifier le profil</button>
+              </div>
+            </div>
           </div>
         </div>
         <div className="profil__header__menu">
