@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import Saloons from "../components/Saloons";
+import Publication from "./Publication";
+import plus from "../img/plus-rond.png";
+import edit from "../img/edit.png";
 
 const Profil = ({ name }) => {
   const [couv, setCouv] = useState("");
@@ -32,8 +35,14 @@ const Profil = ({ name }) => {
             <div className="profil__header__mid__action">
               <span>Liste d'amis</span>
               <div className="profil__header__mid__action__btn">
-                <button>Ajouter à a story</button>
-                <button>Modifier le profil</button>
+                <div className="addStory btnAction">
+                  <img src={plus} alt="" />
+                  <span>Ajouter à a story</span>
+                </div>
+                <div className="modifyProfil btnAction">
+                  <img src={edit} alt="" />
+                  <span>Modifier le profil</span>
+                </div>
               </div>
             </div>
           </div>
@@ -62,12 +71,12 @@ const Profil = ({ name }) => {
               <li>Plus</li>
             </NavLink>
           </ul>
-          <button>...</button>
+          <div>...</div>
         </div>
       </div>
       <div className="profil__body">
         <Switch>
-          <Route path="/Profil/" exact />
+          <Route path="/Profil/" exact component={Publication} />
           <Route path="/Profil/about" exact component={Saloons} />
         </Switch>
       </div>
