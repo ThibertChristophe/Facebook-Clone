@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink, Switch, Route } from "react-router-dom";
+import Saloons from "../components/Saloons";
 
 const Profil = ({ name }) => {
   return (
@@ -23,18 +25,37 @@ const Profil = ({ name }) => {
         </div>
         <div className="profil__header__menu">
           <ul>
-            <li>Publication</li>
-            <li>A propos</li>
-            <li>Amis</li>
-            <li>Photos</li>
-            <li>Archive stories</li>
-            <li>Vidéos</li>
-            <li>Plus</li>
+            <NavLink to="/Profil/" exact>
+              <li>Publication</li>
+            </NavLink>
+            <NavLink to="/Profil/about">
+              <li>A propos</li>
+            </NavLink>
+            <NavLink to="/Profil/amis">
+              <li>Amis</li>
+            </NavLink>
+            <NavLink to="/Profil/photos">
+              <li>Photos</li>
+            </NavLink>
+            <NavLink to="/Profil/stories">
+              <li>Archive stories</li>
+            </NavLink>
+            <NavLink to="/Profil/videos">
+              <li>Vidéos</li>
+            </NavLink>
+            <NavLink to="/Profil/plus">
+              <li>Plus</li>
+            </NavLink>
           </ul>
           <button>...</button>
         </div>
       </div>
-      <div className="profil__body"></div>
+      <div className="profil__body">
+        <Switch>
+          <Route path="/Profil/" exact />
+          <Route path="/Profil/about" exact component={Saloons} />
+        </Switch>
+      </div>
     </div>
   );
 };

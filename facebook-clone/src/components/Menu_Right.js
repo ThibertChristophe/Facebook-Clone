@@ -93,7 +93,7 @@ const Menu_Right = () => {
   return (
     <div>
       <div className="menu_right">
-        <NavLink to="Profil" className="menu_right__profil">
+        <NavLink to="/Profil/" className="menu_right__profil">
           <img src={img_profil} alt="image profil" />
           <span className="nom">Chris</span>
         </NavLink>

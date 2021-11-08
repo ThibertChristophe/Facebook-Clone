@@ -11,7 +11,8 @@ const Home = () => {
       <div className="content">
         <Switch>
           <Route path="/" exact component={Accueil} />
-          <Route path="/Profil" exact component={Profil} />
+          <Route path="/Profil/" exact component={Profil} />
+          <Route path="/Profil/*" exact component={Profil} />
         </Switch>
       </div>
     </div>
