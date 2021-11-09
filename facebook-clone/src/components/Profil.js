@@ -52,7 +52,7 @@ const Profil = ({ name }) => {
             <NavLink to="/Profil/" exact>
               <li>Publication</li>
             </NavLink>
-            <NavLink to="/Profil/about">
+            <NavLink to="/Profil/about" exact>
               <li>A propos</li>
             </NavLink>
             <NavLink to="/Profil/amis">

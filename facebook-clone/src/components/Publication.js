@@ -26,10 +26,65 @@ const Publication = () => {
           </div>
         </div>
         <div className="box publication__right__photos">
-          <h2>Photos</h2>
+          <div className="publication__right__photos__head">
+            <h2>Photos</h2>
+            <div className="btn-trans-bleu">Toutes les photos</div>
+          </div>
+          <div className="publication__right__photos__list">
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+            <div className="photo"></div>
+          </div>
         </div>
         <div className="box publication__right__amis">
-          <h2>Amis</h2>
+          <div className="publication__right__amis__head">
+            <h2>Amis</h2>
+            <div className="btn-trans-bleu">Tous les amis</div>
+          </div>
+          <div className="publication__right__amis__list">
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+            <div className="publication__right__amis__list__amiCard">
+              <div className="amiCard__photo"></div>
+              <div className="amiCard__name">Nom Prenom</div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="publication__left ">
@@ -51,16 +106,14 @@ const Publication = () => {
             </div>
           </div>
           <div className="publication__left__public__bot">
-            <div className="switch">
+            <NavLink to="/Profil/" exact className="switch">
               <img src="" alt="" />
-              <NavLink to="/Profil/" exact>
-                Vue Liste
-              </NavLink>
-            </div>
-            <div className="switch">
+              <span>Vue Liste</span>
+            </NavLink>
+            <NavLink to="/Profil/grid" exact className="switch">
               <img src="" alt="" />
               <span>Vue Grille</span>
-            </div>
+            </NavLink>
 
             <div className="publication__left__public__bot__grid"></div>
           </div>
