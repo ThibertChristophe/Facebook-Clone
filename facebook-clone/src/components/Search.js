@@ -82,8 +82,9 @@ const Search = () => {
         {logoLoupe}
         <input
           type="search"
-          placeholder="Rechercher sur Facebook "
+          placeholder="Rechercher sur Facebook"
           onFocusCapture={priseFocus}
+          onClick={priseFocus}
           onBlur={sortieFocus}
           onKeyUp={(e) => {
             if (e.key === "Escape") {

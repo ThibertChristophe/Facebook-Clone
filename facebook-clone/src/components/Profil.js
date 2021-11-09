@@ -52,7 +52,9 @@ const Profil = ({ name }) => {
           <ul>
             <NavLink
               to="/Profil/"
-              isActive={() => ["/Profil/", "/Profil/grid"].includes(pathname)}
+              isActive={() =>
+                ["/Profil", "/Profil/", "/Profil/grid"].includes(pathname)
+              }
               exact
             >
               <li>Publication</li>
