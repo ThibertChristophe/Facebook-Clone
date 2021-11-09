@@ -1,0 +1,41 @@
+.friends {
+  height: 675px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__list {
+    height: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    &__amiCard {
+      width: 145px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.1s ease;
+      .amiCard__photo {
+        flex: 2;
+        background-color: rgba(128, 128, 128, 0.589);
+        border-radius: 10px;
+        &:hover {
+          filter: brightness(110%);
+        }
+      }
+      .amiCard__name {
+        flex: 1;
+        padding-left: 2px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+    }
+  }
+}

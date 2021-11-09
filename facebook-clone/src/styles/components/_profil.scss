@@ -1,6 +1,21 @@
 .profil {
   margin: 0 auto;
   background-color: #18191a;
+  .btn-more {
+    background-color: #5c5c5c67;
+    width: 45px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    &:hover {
+      filter: brightness(115%);
+    }
+  }
   &__header {
     height: 680px;
     background-color: #242526;
@@ -50,6 +65,9 @@
         flex-direction: column;
         margin-left: 20px;
         flex: 2;
+        a:hover {
+          text-decoration: underline;
+        }
         .name {
           font-size: 32px;
           color: white;
@@ -59,7 +77,42 @@
       &__action {
         display: flex;
         justify-content: space-between;
-
+        margin-top: 5px;
+        .listFriends {
+          display: flex;
+          width: 200px;
+          align-items: center;
+          .listFriends__friend {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            background-color: gray;
+            border-radius: 50%;
+            border: 1px solid black;
+            cursor: pointer;
+            &:hover {
+              filter: brightness(110%);
+            }
+            &:hover .listFriends__friend__popup {
+              display: block;
+            }
+            &:nth-child(2) {
+              left: -5px;
+            }
+            &:nth-child(3) {
+              left: -10px;
+            }
+            &:nth-child(4) {
+              left: -15px;
+            }
+            &__popup {
+              display: none;
+              position: absolute;
+              top: 35px;
+              left: -150px;
+            }
+          }
+        }
         &__btn {
           display: flex;
           justify-content: space-between;

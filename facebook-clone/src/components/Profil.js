@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Switch, Route, useLocation } from "react-router-dom";
 import Saloons from "../components/Saloons";
+import PostsPopUp from "../components/PostsPopUp";
 import Publication from "./Publication";
 import plus from "../img/plus-rond.png";
 import edit from "../img/edit.png";
@@ -32,9 +33,36 @@ const Profil = ({ name }) => {
           <div className="profil__header__mid__imgProfil"></div>
           <div className="profil__header__mid__donnee">
             <span className="name">Nom Prénom</span>
-            <span>80 amis</span>
+            <span>
+              <a href="#">80 amis</a>
+            </span>
             <div className="profil__header__mid__action">
-              <span>Liste d'amis</span>
+              <div className="listFriends">
+                <div className="listFriends__friend">
+                  {/* Affichage de la popup ici*/}
+                  <div className="listFriends__friend__popup">
+                    <PostsPopUp nom="Nom" prenom="Prénom" />
+                  </div>
+                </div>
+                <div className="listFriends__friend">
+                  {" "}
+                  <div className="listFriends__friend__popup">
+                    <PostsPopUp nom="Nom" prenom="Prénom" />
+                  </div>
+                </div>
+                <div className="listFriends__friend">
+                  {" "}
+                  <div className="listFriends__friend__popup">
+                    <PostsPopUp nom="Nom" prenom="Prénom" />
+                  </div>
+                </div>
+                <div className="listFriends__friend">
+                  {" "}
+                  <div className="listFriends__friend__popup">
+                    <PostsPopUp nom="Nom" prenom="Prénom" />
+                  </div>
+                </div>
+              </div>
               <div className="profil__header__mid__action__btn">
                 <div className="addStory btnAction">
                   <img src={plus} alt="" />
@@ -78,7 +106,7 @@ const Profil = ({ name }) => {
               <li>Plus</li>
             </NavLink>
           </ul>
-          <div>...</div>
+          <div className="btn-more">...</div>
         </div>
       </div>
       <div className="profil__body">

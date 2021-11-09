@@ -3,6 +3,7 @@ import WhatNew from "./WhatNew";
 
 import Posts from "./Posts";
 import { NavLink, Switch, Route } from "react-router-dom";
+import Friends from "./Friends";
 
 const Publication = () => {
   return (
@@ -42,49 +43,8 @@ const Publication = () => {
             <div className="photo"></div>
           </div>
         </div>
-        <div className="box publication__right__amis">
-          <div className="publication__right__amis__head">
-            <h2>Amis</h2>
-            <div className="btn-trans-bleu">Tous les amis</div>
-          </div>
-          <div className="publication__right__amis__list">
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-            <div className="publication__right__amis__list__amiCard">
-              <div className="amiCard__photo"></div>
-              <div className="amiCard__name">Nom Prenom</div>
-            </div>
-          </div>
+        <div className="box ">
+          <Friends />
         </div>
       </div>
       <div className="publication__left ">
