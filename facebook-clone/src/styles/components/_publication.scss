@@ -11,7 +11,7 @@
     background-color: #242526;
     margin: 10px 5px;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px 15px;
   }
   .btn {
     background-color: #5c5c5c67;
@@ -56,11 +56,58 @@
   }
   &__left {
     flex: 1.8;
+
     &__whatnew {
       height: 130px;
     }
     &__public {
       height: 95px;
+      &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+          flex: 2;
+        }
+        &__listbtn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex: 1;
+          span {
+            font-weight: 600;
+            color: white;
+          }
+          .filtre {
+            justify-content: space-evenly;
+            width: 100px;
+            margin-right: 5px;
+          }
+          .pubBtn {
+            justify-content: space-evenly;
+            width: 200px;
+          }
+        }
+      }
+      &__bot {
+        border-top: 1px solid grey;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 5px;
+        margin-top: 5px;
+        .switch {
+          flex: 1;
+          display: flex;
+          height: 35px;
+
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    &__postsList {
+      margin: 0 5px;
     }
   }
 }
