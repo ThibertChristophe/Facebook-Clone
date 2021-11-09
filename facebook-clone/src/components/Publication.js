@@ -2,7 +2,7 @@ import React from "react";
 import WhatNew from "./WhatNew";
 
 import Posts from "./Posts";
-import { NavLink } from "react-router-dom";
+import { NavLink, Switch, Route } from "react-router-dom";
 
 const Publication = () => {
   return (
@@ -114,24 +114,28 @@ const Publication = () => {
               <img src="" alt="" />
               <span>Vue Grille</span>
             </NavLink>
-
             <div className="publication__left__public__bot__grid"></div>
           </div>
         </div>
-        <div className="publication__left__postsList">
-          <div className="publication__left__postsList__post">
-            <Posts titre="Nom Prénom" />
-          </div>
-          <div className="publication__left__postsList__post">
-            <Posts titre="Nom Prénom" />
-          </div>
-          <div className="publication__left__postsList__post">
-            <Posts titre="Nom Prénom" />
-          </div>
-          <div className="publication__left__postsList__post">
-            <Posts titre="Nom Prénom" />
-          </div>
-        </div>
+        <Switch>
+          <Route path="/Profil/" exact>
+            <div className="publication__left__postsList">
+              <div className="publication__left__postsList__post">
+                <Posts titre="Nom Prénom" />
+              </div>
+              <div className="publication__left__postsList__post">
+                <Posts titre="Nom Prénom" />
+              </div>
+              <div className="publication__left__postsList__post">
+                <Posts titre="Nom Prénom" />
+              </div>
+              <div className="publication__left__postsList__post">
+                <Posts titre="Nom Prénom" />
+              </div>
+            </div>
+          </Route>
+          <Route path="/Profil/grid" exact />
+        </Switch>
       </div>
     </div>
   );

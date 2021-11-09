@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Switch, Route } from "react-router-dom";
+import { NavLink, Switch, Route, useLocation } from "react-router-dom";
 import Saloons from "../components/Saloons";
 import Publication from "./Publication";
 import plus from "../img/plus-rond.png";
@@ -7,7 +7,8 @@ import edit from "../img/edit.png";
 
 const Profil = ({ name }) => {
   const [couv, setCouv] = useState("");
-
+  // extract pathname from location
+  const { pathname } = useLocation();
   // Petite image aleatoire pour la couverture
   useEffect(() => {
     const loadCouverture = async () => {
@@ -49,7 +50,11 @@ const Profil = ({ name }) => {
         </div>
         <div className="profil__header__menu">
           <ul>
-            <NavLink to="/Profil/" exact>
+            <NavLink
+              to="/Profil/"
+              isActive={() => ["/Profil/", "/Profil/grid"].includes(pathname)}
+              exact
+            >
               <li>Publication</li>
             </NavLink>
             <NavLink to="/Profil/about" exact>
@@ -77,6 +82,7 @@ const Profil = ({ name }) => {
       <div className="profil__body">
         <Switch>
           <Route path="/Profil/" exact component={Publication} />
+          <Route path="/Profil/grid" exact component={Publication} />
           <Route path="/Profil/about" exact component={Saloons} />
         </Switch>
       </div>
