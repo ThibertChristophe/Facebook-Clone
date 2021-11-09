@@ -11,7 +11,7 @@ const Search = () => {
 
   // Logo facebook
   const [logoFacebook, setlogoFacebook] = useState(
-    <Link to="/" exact>
+    <Link to="/">
       <LogoFacebook />
     </Link>
   );
