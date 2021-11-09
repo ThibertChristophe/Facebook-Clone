@@ -86,7 +86,12 @@ const Search = () => {
           onFocusCapture={priseFocus}
           onBlur={sortieFocus}
           onKeyUp={(e) => {
-            setRecherche(e.target.value);
+            if (e.key === "Escape") {
+              setRecherche(e.target.value);
+              sortieFocus(e);
+            } else {
+              setRecherche(e.target.value);
+            }
           }}
         />
       </div>
