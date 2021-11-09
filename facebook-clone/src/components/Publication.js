@@ -128,6 +128,9 @@ const Publication = () => {
           <div className="publication__left__postsList__post">
             <Posts titre="Nom Prénom" />
           </div>
+          <div className="publication__left__postsList__post">
+            <Posts titre="Nom Prénom" />
+          </div>
         </div>
       </div>
     </div>
