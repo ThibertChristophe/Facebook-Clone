@@ -1,0 +1,54 @@
+.about {
+  min-height: 100vh;
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+  }
+  ul li {
+    list-style: none;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: relative;
+    left: -10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 15px;
+    font-weight: 600;
+    &:hover {
+      background-color: rgba(110, 110, 110, 0.555);
+    }
+  }
+  &__header {
+    display: flex;
+    &__left {
+      border-right: 1px solid rgba(104, 104, 104, 0.555);
+      padding: 5px;
+      width: 23%;
+    }
+    &__right {
+      padding: 5px;
+      margin-left: 10px;
+    }
+  }
+  &__friends {
+    display: flex;
+    flex-direction: column;
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__action-btn {
+        display: flex;
+      }
+    }
+    &__onglet ul {
+      display: flex;
+    }
+  }
+}

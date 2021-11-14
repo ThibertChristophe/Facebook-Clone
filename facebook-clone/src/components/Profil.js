@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Switch, Route, useLocation } from "react-router-dom";
-import Saloons from "../components/Saloons";
+import About from "../components/About";
 import PostsPopUp from "../components/PostsPopUp";
 import Publication from "./Publication";
 import plus from "../img/plus-rond.png";
@@ -113,7 +113,7 @@ const Profil = ({ name }) => {
         <Switch>
           <Route path="/Profil/" exact component={Publication} />
           <Route path="/Profil/grid" exact component={Publication} />
-          <Route path="/Profil/about" exact component={Saloons} />
+          <Route path="/Profil/about" exact component={About} />
         </Switch>
       </div>
     </div>
