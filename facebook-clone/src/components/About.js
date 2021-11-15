@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import home from "../img/home.png";
 import localisation from "../img/localisation.png";
 import coeur from "../img/coeur.png";
@@ -8,13 +8,14 @@ import friends from "../img/amis-small.png";
 import FriendsVignette from "./FriendsVignette";
 
 const About = () => {
+  const { pathname } = useLocation();
   return (
     <div className="about">
       <div className="about__header box">
         <div className="about__header__left">
           <h2>À Propos</h2>
           <ul>
-            <NavLink to="/Profil/">
+            <NavLink to="/Profil/about">
               <li>
                 <span>Vue d'ensemble</span>
               </li>

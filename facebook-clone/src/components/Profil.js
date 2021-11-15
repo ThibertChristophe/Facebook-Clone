@@ -94,7 +94,13 @@ const Profil = ({ name }) => {
             >
               <li>Publication</li>
             </NavLink>
-            <NavLink to="/Profil/about" exact>
+            <NavLink
+              to="/Profil/about"
+              isActive={() =>
+                ["/Profil/about", "/Profil/about_work"].includes(pathname)
+              }
+              exact
+            >
               <li>A propos</li>
             </NavLink>
             <NavLink to="/Profil/amis">
