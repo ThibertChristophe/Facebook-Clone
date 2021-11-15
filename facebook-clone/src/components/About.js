@@ -19,13 +19,24 @@ const About = () => {
                 <span>Vue d'ensemble</span>
               </li>
             </NavLink>
-
-            <li>Emploi et scolarité</li>
-            <li>Lieux de résidence</li>
-            <li>Informations générales et coordonnées</li>
-            <li>Famille et relations</li>
-            <li>Détails sur vours</li>
-            <li>Évènements marquants</li>
+            <NavLink to="/Profil/about_work">
+              <li>Emploi et scolarité</li>
+            </NavLink>
+            <NavLink to="/Profil/about_place">
+              <li>Lieux de résidence</li>
+            </NavLink>
+            <NavLink to="/Profil/about_content">
+              <li>Informations générales et coordonnées</li>
+            </NavLink>
+            <NavLink to="/Profil/about_family">
+              <li>Famille et relations</li>
+            </NavLink>
+            <NavLink to="/Profil/about_detail">
+              <li>Détails sur vours</li>
+            </NavLink>
+            <NavLink to="/Profil/about_life_event">
+              <li>Évènements marquants</li>
+            </NavLink>
           </ul>
         </div>
         <div className="about__header__right">
@@ -136,7 +147,7 @@ const About = () => {
       </div>
       <div className="about__photo box">
         <div className="about__photo__head">
-          <h2>Amis</h2>
+          <h2>Photos</h2>
           <div className="about__photo__head__action-btn">
             <div>Invitations</div>
             <div>Retrouver des amis</div>
