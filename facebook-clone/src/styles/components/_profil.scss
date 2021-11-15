@@ -59,6 +59,12 @@
         border-radius: 50%;
         border: 1px solid black;
         background-color: grey;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       &__donnee {
         display: flex;
@@ -90,6 +96,7 @@
             border-radius: 50%;
             border: 1px solid black;
             cursor: pointer;
+            z-index: 10;
             &:hover {
               filter: brightness(110%);
             }

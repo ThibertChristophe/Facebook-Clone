@@ -8,6 +8,7 @@ import edit from "../img/edit.png";
 
 const Profil = ({ name }) => {
   const [couv, setCouv] = useState("");
+  const [profil, setProfil] = useState("");
   // extract pathname from location
   const { pathname } = useLocation();
   // Petite image aleatoire pour la couverture
@@ -19,7 +20,16 @@ const Profil = ({ name }) => {
       const json = await response.json();
       setCouv(json[0].url);
     };
+
+    const loadProfil = async () => {
+      const response = await fetch(
+        "https://api.thecatapi.com/v1/images/search"
+      );
+      const json = await response.json();
+      setProfil(json[0].url);
+    };
     loadCouverture();
+    loadProfil();
   }, []);
 
   return (
@@ -34,7 +44,7 @@ const Profil = ({ name }) => {
           <div className="profil__header__mid__donnee">
             <span className="name">Nom Prénom</span>
             <span>
-              <a href="#">80 amis</a>
+              <a href="#">80 Amis</a>
             </span>
             <div className="profil__header__mid__action">
               <div className="listFriends">
@@ -45,19 +55,16 @@ const Profil = ({ name }) => {
                   </div>
                 </div>
                 <div className="listFriends__friend">
-                  {" "}
                   <div className="listFriends__friend__popup">
                     <PostsPopUp nom="Nom" prenom="Prénom" />
                   </div>
                 </div>
                 <div className="listFriends__friend">
-                  {" "}
                   <div className="listFriends__friend__popup">
                     <PostsPopUp nom="Nom" prenom="Prénom" />
                   </div>
                 </div>
                 <div className="listFriends__friend">
-                  {" "}
                   <div className="listFriends__friend__popup">
                     <PostsPopUp nom="Nom" prenom="Prénom" />
                   </div>

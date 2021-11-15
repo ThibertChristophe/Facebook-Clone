@@ -1,5 +1,17 @@
 .about {
   min-height: 100vh;
+  .active li {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    background-color: #263951;
+    span {
+      color: $bleuClair;
+    }
+    &:hover {
+      background-color: #263951;
+    }
+  }
   h2 {
     font-size: 20px;
     font-weight: 700;
@@ -11,7 +23,7 @@
     min-height: 35px;
     display: flex;
     align-items: center;
-    margin: 5px 0;
+    margin: 10px 0;
     border-radius: 7px;
     padding: 5px 10px;
     position: relative;
@@ -21,7 +33,7 @@
     font-size: 15px;
     font-weight: 600;
     &:hover {
-      background-color: rgba(110, 110, 110, 0.555);
+      background-color: rgba(110, 110, 110, 0.404);
     }
   }
   &__header {
@@ -34,6 +46,62 @@
     &__right {
       padding: 5px;
       margin-left: 10px;
+      width: 77%;
+      ul li {
+        margin: 20px 0;
+        cursor: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+          background-color: transparent;
+        }
+        &:nth-child(1) {
+          margin: 0;
+        }
+      }
+      &__left {
+        display: flex;
+        align-items: center;
+      }
+      &__liRight {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 15px;
+        }
+      }
+      &__friends {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 10px;
+        &:hover {
+          background-color: rgba(110, 110, 110, 0.404);
+        }
+        &__friendsImg {
+          filter: invert(60%);
+        }
+        &__more {
+          background-color: #5c5c5c67;
+          width: 35px;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          font-weight: 700;
+          &:hover {
+            filter: brightness(115%);
+          }
+        }
+      }
     }
   }
   &__friends {
@@ -45,10 +113,51 @@
       align-items: center;
       &__action-btn {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn-blue {
+          color: $bleuClair;
+          font-weight: 600;
+          padding: 10px;
+          border-radius: 7px;
+          margin: 0 5px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          &:hover {
+            background-color: rgba(82, 82, 82, 0.377);
+          }
+        }
       }
     }
     &__onglet ul {
       display: flex;
+      li {
+        padding: 20px;
+      }
+    }
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+    &__footer {
+      margin-top: 10px;
+      width: 100%;
+      height: 45px;
+      button {
+        height: 40px;
+        width: 100%;
+        font-weight: 600;
+        color: white;
+        border-radius: 7px;
+        background-color: #4e4f50;
+        font-size: 18px;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(110%);
+        }
+      }
     }
   }
 }
