@@ -120,7 +120,7 @@ const About = () => {
       <div className="about__friends box">
         <div className="about__friends__head">
           <h2>Amis</h2>
-          <div className="about__friends__head__action-btn">
+          <div className="action-btn">
             <div className="btn-blue">Invitations</div>
             <div className="btn-blue">Retrouver des amis</div>
             <div className="btn-more">...</div>
@@ -148,10 +148,10 @@ const About = () => {
       <div className="about__photo box">
         <div className="about__photo__head">
           <h2>Photos</h2>
-          <div className="about__photo__head__action-btn">
-            <div>Invitations</div>
-            <div>Retrouver des amis</div>
-            <div>...</div>
+          <div className="action-btn">
+            <div className="btn-blue">Invitations</div>
+            <div className="btn-blue">Retrouver des amis</div>
+            <div className="btn-more">...</div>
           </div>
         </div>
       </div>
