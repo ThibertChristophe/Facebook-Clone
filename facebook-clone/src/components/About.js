@@ -78,8 +78,8 @@ const About = () => {
         </div>
       </div>
       {/*============ PHOTOS ===========*/}
-      <div className="about__photo box">
-        <div className="about__photo__head">
+      <div className="about__photos box">
+        <div className="about__photos__head">
           <h2>Photos</h2>
           <div className="action-btn">
             <div className="btn-blue">Ajouter des photos/vidéos</div>
@@ -98,6 +98,37 @@ const About = () => {
             <div className="about__photos__content__card__img"></div>
             <div className="about__photos__content__card__edit"></div>
           </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
+          </div>
+        </div>
+        <div className="about__friends__footer">
+          <button>Voir tout</button>
         </div>
       </div>
     </div>
