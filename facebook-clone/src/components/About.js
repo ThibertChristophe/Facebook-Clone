@@ -1,11 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import home from "../img/home.png";
-import localisation from "../img/localisation.png";
-import coeur from "../img/coeur.png";
-import phone from "../img/phone-grey.png";
-import friends from "../img/amis-small.png";
+import { NavLink, Switch, Route } from "react-router-dom";
+
 import FriendsVignette from "./FriendsVignette";
+import Posts from "../components/Posts";
+import Overview from "./Overview";
 
 const About = () => {
   return (
@@ -40,81 +38,13 @@ const About = () => {
           </ul>
         </div>
         <div className="about__header__right">
-          <ul>
-            <li>
-              <span>Lieu de travail</span>
-            </li>
-            <li>
-              <span>Lycée</span>
-            </li>
-            <li>
-              <span>Université</span>
-            </li>
-            <li>
-              <div className="about__header__right__liRight">
-                <img src={home} />
-                <span>Habite à</span>
-              </div>
-              <div className="about__header__right__left">
-                <div className="about__header__right__friends">
-                  <img
-                    className="about__header__right__friends__friendsImg"
-                    src={friends}
-                    alt=""
-                  />
-                </div>
-                <div className="about__header__right__friends__more">...</div>
-              </div>
-            </li>
-            <li>
-              <div className="about__header__right__liRight">
-                <img src={localisation} />
-                <span>De Bruxelles</span>
-              </div>
-              <div className="about__header__right__left">
-                <div className="about__header__right__friends">
-                  <img
-                    className="about__header__right__friends__friendsImg"
-                    src={friends}
-                    alt=""
-                  />
-                </div>
-                <div className="about__header__right__friends__more">...</div>
-              </div>
-            </li>
-            <li>
-              <div className="about__header__right__liRight">
-                <img src={coeur} />
-                <span>Marié(e)</span>
-              </div>
-              <div className="about__header__right__left">
-                <div className="about__header__right__friends">
-                  <img
-                    className="about__header__right__friends__friendsImg"
-                    src={friends}
-                    alt=""
-                  />
-                </div>
-                <div className="about__header__right__friends__more">...</div>
-              </div>
-            </li>
-            <li>
-              <div className="about__header__right__liRight">
-                <img src={phone} />
-                <span>0477 11 11 11</span>
-              </div>
-              <div className="about__header__right__left">
-                <div className="about__header__right__friends">
-                  <img
-                    className="about__header__right__friends__friendsImg"
-                    src={friends}
-                    alt=""
-                  />
-                </div>
-                <div className="about__header__right__friends__more">...</div>
-              </div>
-            </li>
-          </ul>
+          <Switch>
+            <Route path="/Profil/about" exact component={Overview} />
+
+            <Route path="/Profil/about_work" exact component={Overview} />
+
+            <Route path="/Profil/about" exact />
+          </Switch>
         </div>
       </div>
       <div className="about__friends box">

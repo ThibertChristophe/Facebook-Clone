@@ -127,6 +127,7 @@ const Profil = ({ name }) => {
           <Route path="/Profil/" exact component={Publication} />
           <Route path="/Profil/grid" exact component={Publication} />
           <Route path="/Profil/about" exact component={About} />
+          <Route path="/Profil/about_work" exact component={About} />
         </Switch>
       </div>
     </div>
