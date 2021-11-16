@@ -97,7 +97,15 @@ const Profil = ({ name }) => {
             <NavLink
               to="/Profil/about"
               isActive={() =>
-                ["/Profil/about", "/Profil/about_work"].includes(pathname)
+                [
+                  "/Profil/about",
+                  "/Profil/about_work",
+                  "/Profil/about_content",
+                  "/Profil/about_place",
+                  "/Profil/about_family",
+                  "/Profil/about_detail",
+                  "/Profil/about_life_event",
+                ].includes(pathname)
               }
               exact
             >
@@ -127,7 +135,7 @@ const Profil = ({ name }) => {
           <Route path="/Profil/" exact component={Publication} />
           <Route path="/Profil/grid" exact component={Publication} />
           <Route path="/Profil/about" exact component={About} />
-          <Route path="/Profil/about_work" exact component={About} />
+          <Route path="/Profil/about_*" exact component={About} />
         </Switch>
       </div>
     </div>

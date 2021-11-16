@@ -5,7 +5,20 @@
   border: 2px solid rgba(83, 83, 83, 0.13);
   padding: 15px;
   border-radius: 10px;
-  img {
+  &__imageProfil {
+    position: relative;
+    &:hover .friends-vignette-popup {
+      display: block;
+    }
+    .friends-vignette-popup {
+      top: -252px;
+      left: -120px;
+      position: absolute;
+      z-index: 5;
+      display: none;
+    }
+  }
+  .imgProfil {
     width: 80px;
     height: 80px;
     border-radius: 10px;
@@ -18,9 +31,21 @@
   &__donnees {
     flex: 2;
     margin-left: 15px;
+    position: relative;
+    &:hover &__popup {
+      display: block;
+    }
+    &__popup {
+      top: -250px;
+      position: absolute;
+      z-index: 5;
+      display: none;
+    }
     &__name {
       font-weight: 700;
       color: white;
+      font-size: 17px;
+      cursor: pointer;
     }
     &__sub {
       font-size: 14px;

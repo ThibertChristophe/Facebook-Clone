@@ -4,6 +4,7 @@ import { NavLink, Switch, Route } from "react-router-dom";
 import FriendsVignette from "./FriendsVignette";
 import Posts from "../components/Posts";
 import Overview from "./Overview";
+import AboutWork from "./AboutWork";
 
 const About = () => {
   return (
@@ -41,7 +42,7 @@ const About = () => {
           <Switch>
             <Route path="/Profil/about" exact component={Overview} />
 
-            <Route path="/Profil/about_work" exact component={Overview} />
+            <Route path="/Profil/about_work" exact component={AboutWork} />
 
             {/* <Route path="/Profil/about" exact /> */}
           </Switch>
