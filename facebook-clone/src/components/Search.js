@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const Search = () => {
   // Logo de la loupe
   const [logoLoupe, setLogoLoupe] = useState(
-    <img src="./img/loupe.svg" width="20px" alt="" />
+    <img src="../img/loupe.svg" width="20px" alt="" />
   );
 
   // Logo facebook
   const [logoFacebook, setlogoFacebook] = useState(
-    <Link to="/">
+    <Link to="/" exact>
       <LogoFacebook />
     </Link>
   );
@@ -59,8 +59,12 @@ const Search = () => {
   const sortieFocus = (e) => {
     e.target.style = "padding-left: 40px;";
     popup.current.style.display = "none";
-    setLogoLoupe(<img src="./img/loupe.svg" width="20px" alt="" />);
-    setlogoFacebook(<LogoFacebook />);
+    setLogoLoupe(<img src="../img/loupe.svg" width="20px" alt="" />);
+    setlogoFacebook(
+      <Link to="/" exact>
+        <LogoFacebook />
+      </Link>
+    );
   };
 
   /** useEffect sur l'input pour rechercher dynamiquement dans la liste */

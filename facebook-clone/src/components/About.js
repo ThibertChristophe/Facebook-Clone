@@ -48,6 +48,7 @@ const About = () => {
           </Switch>
         </div>
       </div>
+      {/*============ FRIENDS ===========*/}
       <div className="about__friends box">
         <div className="about__friends__head">
           <h2>Amis</h2>
@@ -76,13 +77,26 @@ const About = () => {
           <button>Voir tout</button>
         </div>
       </div>
+      {/*============ PHOTOS ===========*/}
       <div className="about__photo box">
         <div className="about__photo__head">
           <h2>Photos</h2>
           <div className="action-btn">
-            <div className="btn-blue">Invitations</div>
-            <div className="btn-blue">Retrouver des amis</div>
+            <div className="btn-blue">Ajouter des photos/vidéos</div>
             <div className="btn-more">...</div>
+          </div>
+        </div>
+        <div className="about__friends__onglet">
+          <ul>
+            <li>Photos de vous</li>
+            <li>Vos photos</li>
+            <li>Albums</li>
+          </ul>
+        </div>
+        <div className="about__photos__content">
+          <div className="about__photos__content__card">
+            <div className="about__photos__content__card__img"></div>
+            <div className="about__photos__content__card__edit"></div>
           </div>
         </div>
       </div>
