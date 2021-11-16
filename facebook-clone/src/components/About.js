@@ -43,7 +43,7 @@ const About = () => {
 
             <Route path="/Profil/about_work" exact component={Overview} />
 
-            <Route path="/Profil/about" exact />
+            {/* <Route path="/Profil/about" exact /> */}
           </Switch>
         </div>
       </div>
