@@ -1,12 +1,21 @@
 import React from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
-
 import FriendsVignette from "./FriendsVignette";
-import Posts from "../components/Posts";
 import Overview from "./Overview";
 import AboutWork from "./AboutWork";
 
 const About = () => {
+  const tabPhoto = [
+    "Photo",
+    "Photo",
+    "Photo",
+    "Photo",
+    "Photo",
+    "Photo",
+    "Photo",
+    "Photo",
+  ];
+
   return (
     <div className="about">
       <div className="about__header box">
@@ -94,38 +103,14 @@ const About = () => {
           </ul>
         </div>
         <div className="about__photos__content">
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
-          <div className="about__photos__content__card">
-            <div className="about__photos__content__card__img"></div>
-            <div className="about__photos__content__card__edit"></div>
-          </div>
+          {tabPhoto.map(() => {
+            return (
+              <div className="about__photos__content__card">
+                <div className="about__photos__content__card__img"></div>
+                <div className="about__photos__content__card__edit"></div>
+              </div>
+            );
+          })}
         </div>
         <div className="about__friends__footer">
           <button>Voir tout</button>

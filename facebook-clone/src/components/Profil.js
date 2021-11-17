@@ -5,6 +5,7 @@ import PostsPopUp from "../components/PostsPopUp";
 import Publication from "./Publication";
 import plus from "../img/plus-rond.png";
 import edit from "../img/edit.png";
+import Friends from "./Friends";
 
 const Profil = ({ name }) => {
   const [couv, setCouv] = useState("");
@@ -111,7 +112,7 @@ const Profil = ({ name }) => {
             >
               <li>A propos</li>
             </NavLink>
-            <NavLink to="/Profil/amis">
+            <NavLink to="/Profil/friends">
               <li>Amis</li>
             </NavLink>
             <NavLink to="/Profil/photos">
@@ -136,6 +137,11 @@ const Profil = ({ name }) => {
           <Route path="/Profil/grid" exact component={Publication} />
           <Route path="/Profil/about" exact component={About} />
           <Route path="/Profil/about_*" exact component={About} />
+          <Route path="/Profil/friends" exact component={About} />
+          <Route path="/Profil/photos" exact component={About} />
+          <Route path="/Profil/videos" exact component={About} />
+          <Route path="/Profil/stories" exact component={About} />
+          <Route path="/Profil/plus" exact component={About} />
         </Switch>
       </div>
     </div>
