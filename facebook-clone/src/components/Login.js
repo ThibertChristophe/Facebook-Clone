@@ -1,6 +1,7 @@
 import React from "react";
 
-const Login = () => {
+const Login = ({ connect }) => {
+  connect = true;
   return (
     <div className="login">
       <div className="login__content">
