@@ -14,6 +14,7 @@ const Login = () => {
     loadimg();
   }, []);
 
+  /** On se connecte */
   function connect() {
     localStorage.setItem("connected", true);
   }

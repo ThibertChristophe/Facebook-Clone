@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Login from "../src/components/Login";
 /**
@@ -7,13 +7,17 @@ import Login from "../src/components/Login";
  *
  */
 function App() {
-  return (
-    <BrowserRouter>
-      <Home>
-        <Login />
-      </Home>
-    </BrowserRouter>
-  );
+  const [content, setcontent] = useState("");
+
+  useEffect(() => {
+    if (localStorage.getItem("connected") === "true") {
+      setcontent(<Home />);
+    } else {
+      setcontent(<Login />);
+    }
+  });
+
+  return <BrowserRouter>{content}</BrowserRouter>;
 }
 
 export default App;
