@@ -42,7 +42,7 @@ const PopUpCompte = () => {
           <ButtonMenu title="Paramètre et confidentialité" img={param} />
           <ButtonMenu title="Aide et assistance" img={help} />
           <ButtonMenu title="Affichage et accessibilité" img={moon} />
-          <ButtonMenu title="Se déconnecter" img={exit} />
+          <ButtonMenu title="Se déconnecter" img={exit} deco />
         </div>
       </div>
       <div className="popup-compte-footer">

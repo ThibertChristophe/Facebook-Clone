@@ -12,8 +12,6 @@ const Login = () => {
       setPhotoProfil(json[0].url);
     };
     loadimg();
-    localStorage.setItem("connected", true);
-    console.log(localStorage.getItem("connected"));
   }, []);
 
   function connect() {
@@ -53,13 +51,18 @@ const Login = () => {
         </div>
         <div className="login__content__right">
           <div className="login__content__right__form">
-            <form action={connect()}>
+            <form action="">
               <input
                 type="text"
                 placeholder="Adresse e-mail ou numéro de tél."
               />
               <input type="text" placeholder="Mot de passe" />
-              <input type="submit" value="Se connecter" className="connect" />
+              <input
+                type="submit"
+                value="Se connecter"
+                className="connect"
+                onClick={connect}
+              />
             </form>
             <div className="missMDP">Mot de passe oublié ?</div>
             <div className="login__content__right__form__newCompte">

@@ -8,8 +8,7 @@ const Home = ({ children }) => {
   const [content, setcontent] = useState("");
 
   function logOrHome() {
-    console.log(localStorage.getItem("connected"));
-    if (localStorage.getItem("connected") === true) {
+    if (localStorage.getItem("connected") === "true") {
       setcontent(
         <div className="home">
           <Header />
@@ -23,14 +22,13 @@ const Home = ({ children }) => {
         </div>
       );
     } else {
-      console.log("On est deco");
       setcontent(children);
     }
   }
 
   useEffect(() => {
     logOrHome();
-  }, [children]);
+  }, []);
 
   return <>{content}</>;
 };
