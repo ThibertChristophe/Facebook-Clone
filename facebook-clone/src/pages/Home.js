@@ -7,6 +7,7 @@ import Profil from "../components/Profil";
 const Home = ({ children }) => {
   const [content, setcontent] = useState("");
 
+  // On doit check si on affiche le login ou l'accueil
   function logOrHome() {
     if (localStorage.getItem("connected") === "true") {
       setcontent(
