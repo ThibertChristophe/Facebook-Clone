@@ -6,17 +6,13 @@ import Login from "../src/components/Login";
  *
  */
 function App() {
-  const connected = false;
-
-  function logOrHome() {
-    if (connected) {
-      return <Home />;
-    } else {
-      return <Login />;
-    }
-  }
-
-  return <BrowserRouter>{logOrHome()}</BrowserRouter>;
+  return (
+    <BrowserRouter>
+      <Home>
+        <Login />
+      </Home>
+    </BrowserRouter>
+  );
 }
 
 export default App;

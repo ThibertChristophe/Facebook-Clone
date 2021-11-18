@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Login = ({ connect }) => {
-  connect = true;
+const Login = () => {
+  const [photoProfil, setPhotoProfil] = useState("");
+
+  useEffect(() => {
+    const loadimg = async () => {
+      const response = await fetch(
+        "https://api.thecatapi.com/v1/images/search"
+      );
+      const json = await response.json();
+      setPhotoProfil(json[0].url);
+    };
+    loadimg();
+    localStorage.setItem("connected", true);
+    console.log(localStorage.getItem("connected"));
+  }, []);
+
+  function connect() {
+    localStorage.setItem("connected", true);
+  }
+
   return (
     <div className="login">
       <div className="login__content">
@@ -13,13 +31,20 @@ const Login = ({ connect }) => {
           </div>
           <div className="login__content__left__listCompte">
             <div className="login__content__left__listCompte__card">
-              <div className="login__content__left__listCompte__card__img"></div>
+              <div className="login__content__left__listCompte__card__img">
+                <img src={photoProfil} alt="" />
+              </div>
               <div className="login__content__left__listCompte__card__name">
                 Nom Prénom
               </div>
             </div>
             <div className="login__content__left__listCompte__card">
-              <div className="login__content__left__listCompte__card__img"></div>
+              <div className="login__content__left__listCompte__card__img">
+                <div className="addImg">
+                  <span className="ligneV ligne"></span>
+                  <span className="ligneH ligne"></span>
+                </div>
+              </div>
               <div className="login__content__left__listCompte__card__name add">
                 Ajouter un compte
               </div>
@@ -28,7 +53,7 @@ const Login = ({ connect }) => {
         </div>
         <div className="login__content__right">
           <div className="login__content__right__form">
-            <form action="">
+            <form action={connect()}>
               <input
                 type="text"
                 placeholder="Adresse e-mail ou numéro de tél."
