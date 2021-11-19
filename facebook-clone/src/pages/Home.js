@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import { Switch, Route } from "react-router-dom";
 import Accueil from "../components/Accueil";
 import Profil from "../components/Profil";
+import Messenger from "../components/Messenger";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
           <Route path="/Profil/" exact component={Profil} />
           <Route path="/Profil/*" exact component={Profil} />
         </Switch>
+      </div>
+      <div className="messengerPopup">
+        <Messenger />
       </div>
     </div>
   );
