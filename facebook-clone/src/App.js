@@ -9,13 +9,14 @@ import Login from "../src/components/Login";
 function App() {
   const [content, setcontent] = useState("");
 
+  // UseEffect qui detecte si on est connecté ou deconnecté du compte
   useEffect(() => {
     if (localStorage.getItem("connected") === "true") {
       setcontent(<Home />);
     } else {
       setcontent(<Login />);
     }
-  });
+  }, []);
 
   return <BrowserRouter>{content}</BrowserRouter>;
 }
