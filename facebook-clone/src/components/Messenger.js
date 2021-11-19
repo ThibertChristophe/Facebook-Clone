@@ -78,7 +78,14 @@ const Messenger = () => {
           </div>
         </div>
         {/*=============== DISCUSSION =============== */}
-        <div className="messenger__conversation__fil"></div>
+        <div className="messenger__conversation__fil">
+          <div className="messenger__conversation__fil__ligne">
+            <div className="messenger__conversation__fil__ligne__bulle"></div>
+            <div className="messenger__conversation__fil__ligne__message">
+              Message ...
+            </div>
+          </div>
+        </div>
         {/*=============== FOOTER =============== */}
         <div className="messenger__conversation__footer">
           <div className="messenger__conversation__footer__listAction">
