@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Popup de message instantanné
 const Messenger = () => {
+  // Liste des messages de la conversation
+  const [messages, setMessages] = useState([]);
+
+  /** Init de la conversation (historique par exemple) */
+  useEffect(() => {
+    setMessages([...messages, "Message ..."]);
+  }, []);
+
+  /** Lorsqu'on tappe un message, on l'ajoute a la conversation messenger  */
+  function handleInput(e) {
+    if (e.key === "Enter") {
+      setMessages([...messages, e.target.value]);
+      e.target.value = "";
+    }
+  }
+
   return (
     <div className="messenger">
       <div className="messenger__conversation">
@@ -79,12 +95,16 @@ const Messenger = () => {
         </div>
         {/*=============== DISCUSSION =============== */}
         <div className="messenger__conversation__fil">
-          <div className="messenger__conversation__fil__ligne">
-            <div className="messenger__conversation__fil__ligne__bulle"></div>
-            <div className="messenger__conversation__fil__ligne__message">
-              Message ...
-            </div>
-          </div>
+          {messages.map((message) => {
+            return (
+              <div className="messenger__conversation__fil__ligne">
+                <div className="messenger__conversation__fil__ligne__message">
+                  {message}
+                </div>
+                <div className="messenger__conversation__fil__ligne__bulle"></div>
+              </div>
+            );
+          })}
         </div>
         {/*=============== FOOTER =============== */}
         <div className="messenger__conversation__footer">
@@ -127,6 +147,7 @@ const Messenger = () => {
             type="text"
             placeholder="Aa"
             className="messenger__conversation__footer__input"
+            onKeyUp={handleInput}
           />
           <div className="messenger__conversation__footer__coeur">
             <img
