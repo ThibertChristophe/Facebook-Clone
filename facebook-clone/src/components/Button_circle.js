@@ -6,7 +6,7 @@ const Button_circle = ({ Icon, withoutOver, renverse }) => {
   useEffect(() => {
     let listC;
     if (withoutOver === "true") {
-      listC = "withOver";
+      listC += "withOver";
     }
     if (renverse) {
       listC += " renverse";
@@ -16,9 +16,9 @@ const Button_circle = ({ Icon, withoutOver, renverse }) => {
 
   return (
     <div className="button_circle">
-      <button className={listofClass}>
+      <div className={"circle-btn " + listofClass}>
         <img src={Icon} alt="" />
-      </button>
+      </div>
     </div>
   );
 };

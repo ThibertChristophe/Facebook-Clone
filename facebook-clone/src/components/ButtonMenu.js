@@ -9,14 +9,16 @@ const ButtonMenu = ({ img, title, desc, deco }) => {
   }
 
   return (
-    <form className="btn-menu" onClick={handleClick}>
-      <div className="btn-menu-img">
-        <Button_circle Icon={img} />
-      </div>
-      <div className="btn-menu-text">
-        <div className="btn-menu-text-title">{title}</div>
-        <div className="btn-menu-text-subText">{desc}</div>
-      </div>
+    <form className="btn-menu">
+      <button onClick={handleClick}>
+        <div className="btn-menu-img">
+          <Button_circle Icon={img} />
+        </div>
+        <div className="btn-menu-text">
+          <div className="btn-menu-text-title">{title}</div>
+          <div className="btn-menu-text-subText">{desc}</div>
+        </div>
+      </button>
     </form>
   );
 };
