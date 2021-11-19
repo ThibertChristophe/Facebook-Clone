@@ -9,7 +9,7 @@ const ButtonMenu = ({ img, title, desc, deco }) => {
   }
 
   return (
-    <div className="btn-menu" onClick={handleClick}>
+    <form className="btn-menu" onClick={handleClick}>
       <div className="btn-menu-img">
         <Button_circle Icon={img} />
       </div>
@@ -17,7 +17,7 @@ const ButtonMenu = ({ img, title, desc, deco }) => {
         <div className="btn-menu-text-title">{title}</div>
         <div className="btn-menu-text-subText">{desc}</div>
       </div>
-    </div>
+    </form>
   );
 };
 

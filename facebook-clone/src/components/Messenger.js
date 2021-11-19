@@ -123,7 +123,6 @@ const Messenger = () => {
               height="24"
               width="24"
               alt="💜"
-              referrerpolicy="origin-when-cross-origin"
               src="https://static.xx.fbcdn.net/images/emoji.php/v9/t73/1/24/1f49c.png"
             />
           </div>
