@@ -95,9 +95,9 @@ const Messenger = () => {
         </div>
         {/*=============== DISCUSSION =============== */}
         <div className="messenger__conversation__fil">
-          {messages.map((message) => {
+          {messages.map((message, index) => {
             return (
-              <div className="messenger__conversation__fil__ligne">
+              <div key={index} className="messenger__conversation__fil__ligne">
                 <div className="messenger__conversation__fil__ligne__message">
                   {message}
                 </div>
