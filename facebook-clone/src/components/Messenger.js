@@ -5,6 +5,7 @@ const Messenger = () => {
   return (
     <div className="messenger">
       <div className="messenger__conversation">
+        {/*=============== HEADER =============== */}
         <div className="messenger__conversation__header">
           <div className="messenger__conversation__header__left">
             <div className="messenger__conversation__header__left__img"></div>
@@ -76,7 +77,9 @@ const Messenger = () => {
             </div>
           </div>
         </div>
+        {/*=============== DISCUSSION =============== */}
         <div className="messenger__conversation__fil"></div>
+        {/*=============== FOOTER =============== */}
         <div className="messenger__conversation__footer">
           <div className="messenger__conversation__footer__listAction">
             <div className="messenger__conversation__footer__listAction__plus">
