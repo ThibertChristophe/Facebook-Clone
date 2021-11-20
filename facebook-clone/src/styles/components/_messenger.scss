@@ -64,6 +64,7 @@
     }
     &__fil {
       overflow-y: scroll;
+      overflow-x: hidden;
       flex: 1;
       padding: 0 10px;
       &__ligne {
@@ -89,7 +90,7 @@
       }
     }
     &__footer {
-      height: 50px;
+      min-height: 50px;
       background-color: #222121;
       display: flex;
       align-items: center;
@@ -131,9 +132,14 @@
         height: 100%;
         border-radius: 20px;
         margin-right: 10px;
-        padding-left: 15px;
+        padding: 10px;
         background-color: #323535;
         color: white;
+        resize: none;
+
+        &:focus {
+          width: 250px;
+        }
       }
     }
   }

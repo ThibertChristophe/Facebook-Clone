@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 // Popup de message instantanné
 const Messenger = () => {
   // Liste des messages de la conversation
   const [messages, setMessages] = useState([]);
+  const fil = useRef(null);
 
   /** Init de la conversation (historique par exemple) */
   useEffect(() => {
@@ -13,10 +14,17 @@ const Messenger = () => {
   /** Lorsqu'on tappe un message, on l'ajoute a la conversation messenger  */
   function handleInput(e) {
     if (e.key === "Enter") {
-      setMessages([...messages, e.target.value]);
-      e.target.value = "";
+      if (e.target.value !== "") {
+        setMessages([...messages, e.target.value]);
+        e.target.value = "";
+      }
     }
   }
+
+  // Listener sur notre liste de message
+  useEffect(() => {
+    fil.current.scrollTop = fil.current.scrollHeight;
+  }, [messages]);
 
   return (
     <div className="messenger">
@@ -94,7 +102,7 @@ const Messenger = () => {
           </div>
         </div>
         {/*=============== DISCUSSION =============== */}
-        <div className="messenger__conversation__fil">
+        <div className="messenger__conversation__fil" ref={fil}>
           {messages.map((message, index) => {
             return (
               <div key={index} className="messenger__conversation__fil__ligne">
@@ -143,8 +151,8 @@ const Messenger = () => {
               </svg>
             </div>
           </div>
-          <input
-            type="text"
+          <textarea
+            rows="1"
             placeholder="Aa"
             className="messenger__conversation__footer__input"
             onKeyUp={handleInput}
