@@ -4,15 +4,18 @@ import React, { useEffect, useState, useRef } from "react";
 const Messenger = () => {
   // Liste des messages de la conversation
   const [messages, setMessages] = useState([]);
-  const [hide, setHide] = useState("messenger");
-  const fil = useRef(null);
-  const convers = useRef(null);
-  const listeAction = useRef(null);
-  const bulle = useRef(null);
+  const fil = useRef(null); // Pour forcer le scroll
+  const convers = useRef(null); // Pour cacher/show la popup de conversation
+  const listeAction = useRef(null); // Pour cacher/show les btn a gauche de l'input
+  const bulle = useRef(null); // Pour cacher/show la bulle quand reduit
 
   /** Init de la conversation (historique par exemple) */
   useEffect(() => {
     setMessages([...messages, "Message ..."]);
+    // Conversation cachée
+    convers.current.classList.toggle("hidden");
+    // Bulle affichee
+    bulle.current.classList.add("show");
   }, []);
 
   // Listener sur notre liste de message pour scroller vers le bas automatiquement
@@ -40,30 +43,34 @@ const Messenger = () => {
 
   // On "ferme" la conversation
   function handleClose() {
+    // Replace l'input
     listeAction.current.classList.remove("hide");
-    convers.current.classList.toggle("hidden");
-    setHide(convers.current.classList.value);
+    // Cache la conversation
+    convers.current.classList.add("hidden");
   }
 
   // Reduit la conversation
   function handleReduce() {
+    // Replace l'input
     listeAction.current.classList.remove("hide");
+    // Affiche la bulle
     bulle.current.classList.add("show");
-    convers.current.classList.toggle("hidden");
-    setHide(convers.current.classList.value);
+    // Cache la conversation
+    convers.current.classList.add("hidden");
   }
 
   // Click sur la bulle et refait apparaitre la conversation
   function handleBulle() {
+    // Cache la bulle
     bulle.current.classList.remove("show");
-    convers.current.classList.toggle("hidden");
-    setHide(convers.current.classList.value);
+    // Affiche la conversation
+    convers.current.classList.remove("hidden");
   }
 
   return (
     <>
       <div className="messenger-reduit" ref={bulle} onClick={handleBulle}></div>
-      <div className={hide} ref={convers}>
+      <div className="messenger" ref={convers}>
         <div className="messenger__conversation">
           {/*=============== HEADER =============== */}
           <div className="messenger__conversation__header">
