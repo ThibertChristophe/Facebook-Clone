@@ -127,6 +127,7 @@ const Messenger = () => {
                 className="messenger__conversation__header__right__close cursor"
                 onClick={handleClose}
               >
+                <div className="close-tooltip">Fermer la discussion</div>
                 <svg width="26px" height="26px" viewBox="-4 -4 24 24">
                   <line
                     x1="2"

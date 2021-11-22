@@ -60,6 +60,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &__close {
+          .close-tooltip {
+            display: none;
+            position: absolute;
+            top: -30px;
+            background-color: #d3d3d3ec;
+            padding: 10px;
+            border-radius: 10px;
+            width: fit-content;
+            color: black;
+            font-size: 13px;
+          }
+          &:hover .close-tooltip {
+            display: block;
+          }
+        }
       }
     }
     &__fil {
