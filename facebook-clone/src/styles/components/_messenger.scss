@@ -95,7 +95,13 @@
       display: flex;
       align-items: center;
       padding: 5px 10px 5px 10px;
+      display: flex;
+      justify-content: end;
+      .hide {
+        display: none;
+      }
       &__listAction {
+        transition: all 0.2s ease;
         display: flex;
         width: 130px;
         justify-content: space-between;
@@ -128,7 +134,8 @@
         }
       }
       &__input {
-        width: 170px;
+        transition: all 0.2s ease;
+        min-width: 170px;
         height: 100%;
         border-radius: 20px;
         margin-right: 10px;
@@ -136,11 +143,30 @@
         background-color: #323535;
         color: white;
         resize: none;
+        flex: 1;
+      }
 
-        &:focus {
-          width: 250px;
-        }
+      &__coeur {
+        flex: 0;
       }
     }
   }
+}
+.hidden {
+  display: none;
+}
+
+.messenger-reduit {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4b4d4e;
+  position: absolute;
+  right: -75px;
+  bottom: 20px;
+  cursor: pointer;
+}
+.show {
+  display: block;
 }
