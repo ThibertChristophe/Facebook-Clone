@@ -16,11 +16,12 @@
     justify-content: space-between;
     margin-bottom: 5px;
     &__amiCard {
-      width: 32%;
+      flex: 32%;
       display: flex;
       flex-direction: column;
       cursor: pointer;
       transition: all 0.1s ease;
+      margin: 0 2px;
       .amiCard__photo {
         flex: 2;
         background-color: rgba(128, 128, 128, 0.589);
