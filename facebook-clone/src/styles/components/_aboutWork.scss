@@ -3,12 +3,13 @@
     font-size: 17px;
     margin-top: 10px;
   }
-  &__emploi {
+  &__section {
     margin-bottom: 20px;
-    &__card {
-      display: flex;
-      justify-content: space-between;
-    }
+  }
+  .aboutWork__card {
+    display: flex;
+    justify-content: space-between;
+
     &__img {
       width: 45px;
       height: 45px;
@@ -19,6 +20,10 @@
     &__content {
       flex: 2;
       font-weight: 500;
+      &__time {
+        font-size: 14px;
+        font-weight: 400;
+      }
     }
     &__option {
       display: flex;
@@ -27,10 +32,16 @@
       &__friends {
         width: 25px;
         height: 25px;
-        background-color: grey;
         border-radius: 50%;
-        margin-right: 7px;
+        margin-right: 10px;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: invert(60%);
+        &:hover {
+          background-color: rgba(110, 110, 110, 0.404);
+        }
       }
       &__plus {
         width: 35px;
@@ -42,6 +53,9 @@
         font-size: 20px;
         text-align: center;
         cursor: pointer;
+        &:hover {
+          filter: brightness(115%);
+        }
       }
     }
   }
