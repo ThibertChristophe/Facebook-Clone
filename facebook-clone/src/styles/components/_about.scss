@@ -106,6 +106,7 @@
     }
   }
   &__photos {
+    width: 100%;
     &__head {
       display: flex;
       justify-content: space-between;
@@ -117,8 +118,8 @@
       flex-wrap: wrap;
       &__card {
         margin: 5px;
-        width: 185px;
-        height: 185px;
+        width: 180px;
+        height: 180px;
         background-color: grey;
         border-radius: 10px;
         cursor: pointer;

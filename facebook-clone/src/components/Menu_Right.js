@@ -93,24 +93,24 @@ const Menu_Right = () => {
   return (
     <div>
       <div className="menu_right">
-        <NavLink to="/Profil/" className="menu_right__profil">
+        <NavLink to="/Profil/" className="menu_right__profil menu_right__btn">
           <img src={img_profil} alt="image profil" />
           <span className="nom">Chris</span>
         </NavLink>
-        <div onClick={openMenu}>
+        <div className="menu_right__btn" onClick={openMenu}>
           <Button_circle Icon={img_plus} type="add" withoutOver="true" />
         </div>
-        <div onClick={openMessenger}>
+        <div className="menu_right__btn" onClick={openMessenger}>
           <Button_circle
             Icon={img_messenger}
             type="messenger"
             withoutOver="true"
           />
         </div>
-        <div onClick={openNotif}>
+        <div className="menu_right__btn" onClick={openNotif}>
           <Button_circle Icon={img_notif} type="notif" withoutOver="true" />
         </div>
-        <div onClick={openCompte}>
+        <div className="menu_right__btn" onClick={openCompte}>
           <Button_circle Icon={img_arrow} type="compte" withoutOver="true" />
         </div>
       </div>
