@@ -47,7 +47,7 @@ const Messenger = () => {
         setCurrentMessage(e.target.value);
       }
     } else {
-      // Tout autre touche que Enter
+      // Toute autre touche que Enter
       listeAction.current.classList.add("hide");
       setCurrentMessage(e.target.value);
     }
@@ -165,6 +165,7 @@ const Messenger = () => {
           </div>
           {/*=============== DISCUSSION =============== */}
           <div className="messenger__conversation__fil" ref={fil}>
+            {/* Differencie si des messages de soi-même ou l'autre */}
             {messages.map((message, index) => {
               if (message.me === "true") {
                 return (
