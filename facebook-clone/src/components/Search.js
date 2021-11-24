@@ -61,7 +61,7 @@ const Search = () => {
     popup.current.style.display = "none";
     setLogoLoupe(<img src="../img/loupe.svg" width="20px" alt="" />);
     setlogoFacebook(
-      <Link to="/" exact>
+      <Link to="/">
         <LogoFacebook />
       </Link>
     );
