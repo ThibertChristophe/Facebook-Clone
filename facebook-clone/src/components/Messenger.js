@@ -8,6 +8,7 @@ const Messenger = () => {
   const convers = useRef(null); // Pour cacher/show la popup de conversation
   const listeAction = useRef(null); // Pour cacher/show les btn a gauche de l'input
   const bulle = useRef(null); // Pour cacher/show la bulle quand reduit
+  const [currentMessage, setCurrentMessage] = useState("");
 
   /** Init de la conversation (historique par exemple) */
   useEffect(() => {
@@ -23,26 +24,32 @@ const Messenger = () => {
     bulle.current.classList.add("show");
   }, []);
 
+  // Scroll Down
   // Listener sur notre liste de message pour scroller vers le bas automatiquement
   useEffect(() => {
     fil.current.scrollTop = fil.current.scrollHeight;
   }, [messages]);
 
-  /** Lorsqu'on tappe un message, on l'ajoute a la conversation messenger  */
-  function handleInput(e) {
-    // On cache la liste  gauche de l'input lorsqu'on tappe des lettres
-    if (e.target.value !== "") {
-      listeAction.current.classList.add("hide");
-    } else {
-      listeAction.current.classList.remove("hide");
-    }
+  // Validation du input
+  function handleKeyUp(e) {
     // Validation du message par enter
     if (e.key === "Enter") {
-      if (e.target.value !== "") {
-        setMessages([...messages, { mess: e.target.value, me: "true" }]);
-        // Reset de l'input
+      if (currentMessage !== "") {
+        setMessages([...messages, { mess: currentMessage, me: "true" }]);
         e.target.value = "";
+        setCurrentMessage(e.target.value);
+      } else {
+        // Si on a presser Enter sans message
+        // On n'ajoute pas ce message a la conversation
+        // et on ne le prend pas en compte
+        e.preventDefault();
+        e.target.value = "";
+        setCurrentMessage(e.target.value);
       }
+    } else {
+      // Tout autre touche que Enter
+      listeAction.current.classList.add("hide");
+      setCurrentMessage(e.target.value);
     }
   }
 
@@ -230,7 +237,11 @@ const Messenger = () => {
               rows="1"
               placeholder="Aa"
               className="messenger__conversation__footer__input"
-              onKeyUp={handleInput}
+              onKeyUp={handleKeyUp}
+              onBlur={(e) => {
+                if (e.target.value === "")
+                  listeAction.current.classList.remove("hide");
+              }}
             />
             <div className="messenger__conversation__footer__coeur">
               <img

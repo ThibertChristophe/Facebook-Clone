@@ -114,7 +114,7 @@
         }
       }
       &__ligneG {
-        margin: 5px 0;
+        margin: 5px 0 10px 0;
         justify-content: left;
         align-items: flex-end;
         min-height: 50px;
@@ -145,6 +145,7 @@
     }
     &__footer {
       min-height: 50px;
+      //min-height: fit-content;
       background-color: #222121;
       display: flex;
       align-items: center;
@@ -186,11 +187,19 @@
             background-color: #222121;
           }
         }
+        &__img,
+        &__gif {
+          cursor: pointer;
+          &:hover {
+            filter: brightness(110%);
+          }
+        }
       }
       &__input {
         transition: all 0.2s ease;
         min-width: 170px;
-        height: 100%;
+        max-width: 35ch;
+        height: fit-content;
         border-radius: 20px;
         margin-right: 10px;
         padding: 10px;
@@ -198,6 +207,9 @@
         color: white;
         resize: none;
         flex: 1;
+        overflow: hidden;
+        // Aller à la ligne
+        word-wrap: break-word;
       }
 
       &__coeur {
