@@ -113,6 +113,35 @@
           word-wrap: break-word;
         }
       }
+      &__ligneG {
+        margin: 5px 0;
+        justify-content: left;
+        align-items: flex-end;
+        min-height: 50px;
+        position: relative;
+        display: flex;
+        &__bulleG {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #4b4d4e;
+          margin-right: 10px;
+          bottom: 0;
+        }
+        &__messageG {
+          display: block;
+          position: relative;
+          background-color: #5d7986;
+          color: white;
+          border-radius: 10px 10px 10px 0px;
+          padding: 10px;
+          // Nombre de caractère par ligne
+          max-width: 25ch;
+          min-height: fit-content;
+          // Aller à la ligne
+          word-wrap: break-word;
+        }
+      }
     }
     &__footer {
       min-height: 50px;

@@ -11,7 +11,12 @@ const Messenger = () => {
 
   /** Init de la conversation (historique par exemple) */
   useEffect(() => {
-    setMessages([...messages, "Message ..."]);
+    setMessages([
+      ...messages,
+      { mess: "Coucou !", me: "true" },
+      { mess: "Hey salut :)", me: "false" },
+    ]);
+
     // Conversation cachée
     convers.current.classList.toggle("hidden");
     // Bulle affichee
@@ -34,7 +39,7 @@ const Messenger = () => {
     // Validation du message par enter
     if (e.key === "Enter") {
       if (e.target.value !== "") {
-        setMessages([...messages, e.target.value]);
+        setMessages([...messages, { mess: e.target.value, me: "true" }]);
         // Reset de l'input
         e.target.value = "";
       }
@@ -154,17 +159,31 @@ const Messenger = () => {
           {/*=============== DISCUSSION =============== */}
           <div className="messenger__conversation__fil" ref={fil}>
             {messages.map((message, index) => {
-              return (
-                <div
-                  key={index}
-                  className="messenger__conversation__fil__ligne"
-                >
-                  <div className="messenger__conversation__fil__ligne__message">
-                    {message}
+              if (message.me === "true") {
+                return (
+                  <div
+                    key={index}
+                    className="messenger__conversation__fil__ligne"
+                  >
+                    <div className="messenger__conversation__fil__ligne__message">
+                      {message.mess}
+                    </div>
+                    <div className="messenger__conversation__fil__ligne__bulle"></div>
                   </div>
-                  <div className="messenger__conversation__fil__ligne__bulle"></div>
-                </div>
-              );
+                );
+              } else {
+                return (
+                  <div
+                    key={index}
+                    className="messenger__conversation__fil__ligneG"
+                  >
+                    <div className="messenger__conversation__fil__ligneG__bulleG"></div>
+                    <div className="messenger__conversation__fil__ligneG__messageG">
+                      {message.mess}
+                    </div>
+                  </div>
+                );
+              }
             })}
           </div>
           {/*=============== FOOTER =============== */}
