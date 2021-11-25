@@ -103,9 +103,9 @@ const About = () => {
           </ul>
         </div>
         <div className="about__photos__content">
-          {tabPhoto.map(() => {
+          {tabPhoto.map((Photo, index) => {
             return (
-              <div className="about__photos__content__card">
+              <div className="about__photos__content__card" key={index}>
                 <div className="about__photos__content__card__img"></div>
                 <div className="about__photos__content__card__edit"></div>
               </div>

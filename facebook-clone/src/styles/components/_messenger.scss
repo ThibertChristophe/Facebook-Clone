@@ -144,8 +144,7 @@
       }
     }
     &__footer {
-      min-height: 50px;
-      //min-height: fit-content;
+      min-height: fit-content;
       background-color: #222121;
       display: flex;
       align-items: center;
@@ -191,7 +190,7 @@
         &__gif {
           cursor: pointer;
           &:hover {
-            filter: brightness(110%);
+            filter: brightness(120%);
           }
         }
       }
@@ -205,8 +204,8 @@
         background-color: #323535;
         color: white;
         flex: 1;
-        resize: vertical;
-        height: fit-content;
+        resize: auto;
+
         overflow: hidden;
         // Aller à la ligne
         word-wrap: break-word;

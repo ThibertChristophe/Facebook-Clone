@@ -50,6 +50,13 @@ const Messenger = () => {
       // Toute autre touche que Enter
       listeAction.current.classList.add("hide");
       setCurrentMessage(e.target.value);
+      // Agrandissement / retrecissement de l'input (nombre de row)
+      let row = Math.round(e.target.value.length / 27);
+      if (row > 1) {
+        e.target.rows = row;
+      } else if (row === 0) {
+        e.target.rows = 1;
+      }
     }
   }
 
