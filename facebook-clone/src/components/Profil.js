@@ -5,7 +5,6 @@ import PostsPopUp from "../components/PostsPopUp";
 import Publication from "./Publication";
 import plus from "../img/plus-rond.png";
 import edit from "../img/edit.png";
-import Friends from "./Friends";
 
 const Profil = ({ name }) => {
   const [couv, setCouv] = useState("");
@@ -84,7 +83,7 @@ const Profil = ({ name }) => {
             </div>
           </div>
         </div>
-        <div className="profil__header__menu">
+        <nav className="profil__header__menu">
           <ul>
             <NavLink
               to="/Profil/"
@@ -134,7 +133,7 @@ const Profil = ({ name }) => {
             </NavLink>
           </ul>
           <div className="btn-more">...</div>
-        </div>
+        </nav>
       </div>
       <div className="profil__body">
         <Switch>
