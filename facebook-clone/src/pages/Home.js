@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Accueil from "../components/Accueil";
 import Profil from "../components/Profil";
 import Messenger from "../components/Messenger";
+import FriendsPage from "../components/FriendsPage";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
           <Route path="/" exact component={Accueil} />
           <Route path="/Profil/" exact component={Profil} />
           <Route path="/Profil/*" exact component={Profil} />
+          <Route path="/friends/" exact component={FriendsPage} />
         </Switch>
       </div>
       <div className="messengerPopup">
