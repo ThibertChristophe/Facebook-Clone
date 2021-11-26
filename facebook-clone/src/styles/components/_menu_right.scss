@@ -12,6 +12,28 @@
   }
   &__btn {
     margin: 0 5px;
+    display: flex;
+    justify-content: center;
+  }
+  .btnMenu {
+    &:hover .menu_right__menu__tooltip {
+      display: block;
+    }
+  }
+  .btnMessenger {
+    &:hover .menu_right__messenger__tooltip {
+      display: block;
+    }
+  }
+  .btnNotif {
+    &:hover .menu_right__notif__tooltip {
+      display: block;
+    }
+  }
+  .btnCompte {
+    &:hover .menu_right__compte__tooltip {
+      display: block;
+    }
   }
   &__profil {
     padding: 3px 8px 3px 1px;

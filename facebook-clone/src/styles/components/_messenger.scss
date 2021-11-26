@@ -1,14 +1,14 @@
 .messenger {
-  background-color: #232525;
-  border-radius: 10px 10px 0 0;
+  overflow: hidden;
   height: 450px;
   width: 320px;
-  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  background-color: #232525;
   .cursor {
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-radius: 50%;
     padding: 1px;
     transition: all 0.2s ease;
@@ -21,25 +21,23 @@
     flex-direction: column;
     height: 100%;
     &__header {
-      background-color: #252727;
-      height: 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #252727;
+      height: 50px;
       padding: 5px 15px 5px 5px;
       border-bottom: 1px solid rgba(128, 128, 128, 0.151);
-
       &__left {
+        display: flex;
+        align-items: center;
+        flex: 1.2;
         height: 100%;
         cursor: pointer;
         width: 180px;
-        display: flex;
-        align-items: center;
-
         padding: 5px;
         border-radius: 5px;
         margin-right: 20px;
-        flex: 1.2;
         &__img {
           width: 35px;
           height: 35px;
@@ -56,10 +54,10 @@
         }
       }
       &__right {
-        flex: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex: 1;
         &__close {
           .close-tooltip {
             display: none;
@@ -114,19 +112,19 @@
         }
       }
       &__ligneG {
-        margin: 5px 0 10px 0;
+        position: relative;
+        display: flex;
         justify-content: left;
         align-items: flex-end;
         min-height: 50px;
-        position: relative;
-        display: flex;
+        margin: 5px 0 10px 0;
         &__bulleG {
+          bottom: 0;
           width: 30px;
           height: 30px;
           border-radius: 50%;
           background-color: #4b4d4e;
           margin-right: 10px;
-          bottom: 0;
         }
         &__messageG {
           display: block;
@@ -144,27 +142,26 @@
       }
     }
     &__footer {
-      min-height: fit-content;
-      background-color: #222121;
-      display: flex;
-      align-items: center;
-      padding: 5px 10px 5px 10px;
       display: flex;
       justify-content: end;
+      min-height: fit-content;
+      background-color: #222121;
+      align-items: center;
+      padding: 5px 10px 5px 10px;
       .hide {
         display: none;
       }
       &__listAction {
-        transition: all 0.2s ease;
         display: flex;
-        width: 130px;
         justify-content: space-between;
+        transition: all 0.2s ease;
+        width: 130px;
         margin-right: 15px;
         &__plus {
+          position: relative;
           width: 20px;
           height: 20px;
           background-color: #5d5e5f;
-          position: relative;
           border-radius: 50%;
           cursor: pointer;
           .plusV {
@@ -195,20 +192,17 @@
         }
       }
       &__input {
-        transition: all 0.2s ease;
+        flex: 1;
+        resize: none;
+        overflow: hidden;
         min-width: 170px;
         max-width: 35ch;
         border-radius: 20px;
+        transition: all 0.2s ease;
         margin-right: 10px;
         padding: 10px;
         background-color: #323535;
         color: white;
-        flex: 1;
-        resize: auto;
-
-        overflow: hidden;
-        // Aller à la ligne
-        word-wrap: break-word;
       }
 
       &__coeur {
@@ -223,13 +217,13 @@
 
 .messenger-reduit {
   display: none;
+  position: absolute;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background-color: #4b4d4e;
-  position: absolute;
   right: -75px;
   bottom: 20px;
+  border-radius: 50%;
+  background-color: #4b4d4e;
   cursor: pointer;
 }
 .show {

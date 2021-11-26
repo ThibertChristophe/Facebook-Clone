@@ -25,3 +25,13 @@ html {
   right: 90px;
   bottom: 0px;
 }
+.tooltip {
+  display: none;
+  position: absolute;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.815);
+  padding: 7px 10px;
+  color: black;
+  bottom: -36px;
+  font-size: 13px;
+}

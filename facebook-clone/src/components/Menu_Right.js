@@ -97,21 +97,29 @@ const Menu_Right = () => {
           <img src={img_profil} alt="image profil" />
           <span className="nom">Chris</span>
         </NavLink>
-        <div className="menu_right__btn" onClick={openMenu}>
+        <div className="menu_right__btn btnMenu" onClick={openMenu}>
           <Button_circle Icon={img_plus} type="add" withoutOver="true" />
+          <div className="menu_right__menu__tooltip tooltip">Menu</div>
         </div>
-        <div className="menu_right__btn" onClick={openMessenger}>
+        <div className="menu_right__btn btnMessenger" onClick={openMessenger}>
           <Button_circle
             Icon={img_messenger}
             type="messenger"
             withoutOver="true"
           />
+          <div className="menu_right__messenger__tooltip tooltip">
+            Messenger
+          </div>
         </div>
-        <div className="menu_right__btn" onClick={openNotif}>
+        <div className="menu_right__btn btnNotif" onClick={openNotif}>
           <Button_circle Icon={img_notif} type="notif" withoutOver="true" />
+          <div className="menu_right__notif__tooltip tooltip">
+            Notifications
+          </div>
         </div>
-        <div className="menu_right__btn" onClick={openCompte}>
+        <div className="menu_right__btn btnCompte" onClick={openCompte}>
           <Button_circle Icon={img_arrow} type="compte" withoutOver="true" />
+          <div className="menu_right__compte__tooltip tooltip">Compte</div>
         </div>
       </div>
       {/* Sous-menu ici */}
