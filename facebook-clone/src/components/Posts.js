@@ -12,6 +12,7 @@ import haha from "../img/haha.png";
 import wouah from "../img/Wouah.png";
 import triste from "../img/triste.png";
 import fache from "../img/fache.png";
+import { display } from "@mui/system";
 
 const Posts = ({ titre, img }) => {
   const [like, setlike] = useState(0);
@@ -51,16 +52,8 @@ const Posts = ({ titre, img }) => {
 
   // Affiche les commentaires
   function displayMoreComment() {
-    setShow(show ? false : true);
+    setShow(!show);
   }
-  // Use effect pour montrer les commentaire
-  useEffect(() => {
-    if (show) {
-      blockComment.current.style.display = "block";
-    } else {
-      blockComment.current.style.display = "none";
-    }
-  }, [show]);
 
   /**
    * Ajoute un commentaire au tableau de commentaire
@@ -153,7 +146,11 @@ const Posts = ({ titre, img }) => {
             <ButtonPost type="share" />
           </div>
         </div>
-        <div className="posts__footer__comment" ref={blockComment}>
+        <div
+          className="posts__footer__comment"
+          style={{ display: show ? "block" : "none" }}
+          ref={blockComment}
+        >
           <div className="posts__footer__comment__sort">Les plus récents</div>
           <div className="posts__footer__comment__myComment">
             <div className="posts__footer__comment__myComment__profil"></div>
