@@ -1,19 +1,56 @@
 .friendsPage {
   display: flex;
   min-height: 100vh;
-  &__left {
+  position: relative;
+  .friendsPageFond {
+    position: relative;
+    width: 360px;
+    min-height: inherit;
+    border-right: 1px solid rgb(73, 73, 73);
     background-color: $color-header;
-    flex: 1;
+  }
+  &__left {
+    position: fixed;
+    width: 360px;
+    height: inherit;
     padding: 7px;
-    border-right: 1px solid grey;
-    h2 {
-      font-size: 24px;
-      margin: 5px 0px 15px 10px;
-      width: fit-content;
+    border-right: 1px solid rgb(73, 73, 73);
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        font-size: 24px;
+        margin: 5px 0px 15px 10px;
+        width: fit-content;
+      }
+      &__option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: rgba(192, 192, 192, 0.116);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover {
+          filter: brightness(115%);
+        }
+        .imgEcrou {
+          width: 20px;
+          height: 20px;
+          background-image: url(../../img/palette77.png);
+          background-position: 0px -305px;
+          filter: invert(80%);
+        }
+      }
     }
     &__actions {
       margin-top: 5px;
       span {
+        flex: 2;
         font-weight: 600;
         font-size: 17px;
         color: rgb(228, 228, 228);
@@ -24,26 +61,72 @@
     }
   }
   &__right {
-    flex: 2;
     padding: 10px;
+    flex-grow: 1;
   }
   .action {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 5px;
     height: 55px;
-    border-radius: 7px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
     .action-img {
-      height: 40px;
-      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 37px;
+      width: 37px;
       border-radius: 50%;
-      background-color: grey;
+      background-color: #3a3b3c;
       margin-right: 10px;
+      svg {
+        margin-top: 5px;
+      }
     }
     &:hover {
       background-color: rgba(192, 192, 192, 0.116);
     }
+    &:hover .action-img {
+      filter: brightness(115%);
+    }
+    .flecheD {
+      background-image: url(../../img/arrow-down-simple.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      transform: rotate(-90deg);
+      filter: brightness(70%);
+    }
+    .svgIn {
+      background-size: auto;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      filter: invert(80%);
+    }
+
+    .friendsInvite {
+      background-image: url(../../img/paletteami.png);
+      background-position: 0px -343px;
+    }
+    .friendsAdd {
+      background-image: url(../../img/paletteami.png);
+      background-position: 0px -301px;
+    }
+    .friendsList {
+      background-image: url(../../img/paletteami.png);
+      background-position: 0px -322px;
+    }
+    .annif {
+      background-image: url(../../img/paletteami.png);
+      background-position: 0px -406px;
+    }
+  }
+  .imgaccueil {
+    background-color: $bleuClair !important;
   }
 }
