@@ -60,7 +60,14 @@ const FriendsPage = () => {
           </div>
         </div>
       </div>
-      <div className="friendsPage__right">Liste dddddddd'amis</div>
+      <div className="friendsPage__right">
+        <div className="friendsPage__right__invitations">
+          <h2>Invitations</h2>
+        </div>
+        <div className="friendsPage__right__maybe">
+          <h2>Vous connaissez peut-être</h2>
+        </div>
+      </div>
     </div>
   );
 };
