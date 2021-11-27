@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const FriendsPage = () => {
+  const [listeAmis, setListeAmis] = useState([]);
+
+  useEffect(() => {
+    const tabAmi = [];
+    tabAmi.push("Amis");
+    tabAmi.push("Amis");
+    tabAmi.push("Amis");
+    setListeAmis(tabAmi);
+  }, []);
+
   return (
     <div className="friendsPage">
       <div className="friendsPageFond">
@@ -88,6 +98,7 @@ const FriendsPage = () => {
             </div>
           </div>
         </div>
+        {/**======================= SUFFESTION ======================== */}
         <div className="friendsPage__right__maybe">
           <div className="">
             <div className="maybe__content__header">
@@ -95,40 +106,27 @@ const FriendsPage = () => {
               <button className="seeAll">Voir tout</button>
             </div>
             <div className="maybe__content__main">
-              <div className="friendsPage__right__card">
-                <div className="card__img"></div>
-                <div className="card__bot">
-                  <div className="card__data">
-                    <div className="card__name">Nom Prénom</div>
-                    <div>2 amis en commun</div>
-                  </div>
-                  <div>
-                    <div>
-                      <button className="btn-confirm">Ajouter</button>
-                    </div>
-                    <div>
-                      <button className="btn-delete">Supprimer</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="friendsPage__right__card">
-                <div className="card__img"></div>
-                <div className="card__bot">
-                  <div className="card__data">
-                    <div className="card__name">Nom Prénom</div>
-                    <div>2 amis en commun</div>
-                  </div>
-                  <div>
-                    <div>
-                      <button className="btn-confirm">Ajouter</button>
-                    </div>
-                    <div>
-                      <button className="btn-delete">Supprimer</button>
+              {listeAmis.map((nom, index) => {
+                return (
+                  <div className="friendsPage__right__card" key={index}>
+                    <div className="card__img"></div>
+                    <div className="card__bot">
+                      <div className="card__data">
+                        <div className="card__name">Nom Prénom</div>
+                        <div>2 amis en commun</div>
+                      </div>
+                      <div>
+                        <div>
+                          <button className="btn-confirm clair">Ajouter</button>
+                        </div>
+                        <div>
+                          <button className="btn-delete">Supprimer</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>

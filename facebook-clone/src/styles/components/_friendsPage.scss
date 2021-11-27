@@ -4,7 +4,7 @@
   position: relative;
   .friendsPageFond {
     position: relative;
-    width: 360px;
+    min-width: 360px;
     min-height: inherit;
     border-right: 1px solid rgb(73, 73, 73);
     background-color: $color-header;
@@ -85,7 +85,7 @@
       .maybe__content__header {
         display: flex;
         justify-content: space-between;
-        margin: 20px 0 10px 0;
+        margin: 20px 0 15px 0;
       }
       .maybe__content__main {
         display: flex;
@@ -132,7 +132,7 @@
         color: #fff;
         cursor: pointer;
         &:hover {
-          filter: brightness(110%);
+          filter: brightness(120%);
         }
       }
       .card__name {
@@ -214,6 +214,10 @@
     &:hover {
       background-color: rgba(192, 192, 192, 0.116);
     }
+  }
+  .clair {
+    color: #2d88ff !important;
+    background-color: #2d88ff38 !important ;
   }
   .imgaccueil {
     background-color: $bleuClair !important;
