@@ -4,6 +4,7 @@ const FriendsPage = () => {
   return (
     <div className="friendsPage">
       <div className="friendsPageFond">
+        {/**======================= PARTIE GAUCHE ======================== */}
         <div className="friendsPage__left">
           <div className="friendsPage__left__header">
             <h2>Amis</h2>
@@ -60,12 +61,36 @@ const FriendsPage = () => {
           </div>
         </div>
       </div>
+      {/**======================= PARTIE DROITE ======================== */}
       <div className="friendsPage__right">
         <div className="friendsPage__right__invitations">
-          <h2>Invitations</h2>
+          <div className="friendsPage__right__invitations__header">
+            <h2>Invitations</h2>
+            <button className="seeAll">Voir tout</button>
+          </div>
+          <div className="friendsPage__right__invitations__content">
+            <div className="friendsPage__right__invitations__content__card">
+              <div className="card__img"></div>
+              <div className="card__bot">
+                <div className="card__data">
+                  <div className="card__name">Nom Prénom</div>
+                  <div>2 amis en commun</div>
+                </div>
+                <div>
+                  <div>
+                    <button className="btn-confirm">Confirmer</button>
+                  </div>
+                  <div>
+                    <button className="btn-delete">Supprimer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="friendsPage__right__maybe">
           <h2>Vous connaissez peut-être</h2>
+          <button className="seeAll">Voir tout</button>
         </div>
       </div>
     </div>
