@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import InvitationSuggestion from "./InvitationSuggestion";
+import Requests from "./Requests";
 
 const FriendsPage = () => {
   return (
@@ -8,12 +9,14 @@ const FriendsPage = () => {
       <div className="friendsPageFond">
         {/**======================= PARTIE GAUCHE ======================== */}
         <div className="friendsPage__left">
+          {/**============== HEADER ============== */}
           <div className="friendsPage__left__header">
             <h2>Amis</h2>
             <div className="friendsPage__left__header__option">
               <div className="imgEcrou"></div>
             </div>
           </div>
+          {/**============== LISTE D'OPTION ============== */}
           <div className="friendsPage__left__actions">
             <Link
               className="friendsPage__left__actions__accueil action"
@@ -31,7 +34,8 @@ const FriendsPage = () => {
             </Link>
             <Link
               className="friendsPage__left__actions__invite action"
-              to="/friends/request"
+              to="/friends/requests"
+              exact
             >
               <div className="action-img">
                 <div className="friendsInvite svgIn"></div>
@@ -73,6 +77,7 @@ const FriendsPage = () => {
       <div className="friendsPage__right">
         <Switch>
           <Route path="/friends" exact component={InvitationSuggestion} />
+          <Route path="/friends/requests" exact component={Requests} />
         </Switch>
       </div>
     </div>
