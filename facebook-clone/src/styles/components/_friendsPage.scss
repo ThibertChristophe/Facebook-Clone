@@ -64,84 +64,8 @@
     padding: 20px;
     flex-grow: 1;
     margin-bottom: 5px;
-    &__invitations {
-      margin-top: 10px;
-      padding: 0 5px 25px 0;
-      border-bottom: 1px solid rgb(73, 73, 73);
-      margin-bottom: 15px;
-      &__header {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 10px;
-        margin-bottom: 10px;
-      }
-      &__content {
-        display: flex;
-        padding-left: 10px;
-      }
-    }
-    &__maybe {
-      margin: 0 10px;
-      .maybe__content__header {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0 15px 0;
-      }
-      .maybe__content__main {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-    }
   }
-  .friendsPage__right__card {
-    width: 240px;
-    height: 395px;
-    border: 1px solid rgb(73, 73, 73);
-    border-radius: 7px;
-    overflow: hidden;
-    background-color: $color-header;
-    .card__img {
-      height: 60%;
-      width: 100%;
-      background-color: grey;
-      cursor: pointer;
-    }
-    .card__bot {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 10px;
-      height: 40%;
-      .card__name {
-        margin-bottom: 5px;
-        cursor: pointer;
-      }
-      .btn-confirm {
-        margin: 7px 0;
-        background-color: $bleuClair;
-      }
-      .btn-delete {
-        background-color: rgba(192, 192, 192, 0.171);
-      }
-      button {
-        width: 100%;
-        height: 35px;
-        border-radius: 7px;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-        &:hover {
-          filter: brightness(120%);
-        }
-      }
-      .card__name {
-        font-size: 17px;
-        font-weight: 700;
-        color: #fff;
-      }
-    }
-  }
+
   .action {
     display: flex;
     align-items: center;
@@ -204,17 +128,7 @@
       background-position: 0px -406px;
     }
   }
-  .seeAll {
-    padding: 7px;
-    color: $bleuClair;
-    background-color: transparent;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 17px;
-    &:hover {
-      background-color: rgba(192, 192, 192, 0.116);
-    }
-  }
+
   .clair {
     color: #2d88ff !important;
     background-color: #2d88ff38 !important ;

@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import InvitationSuggestion from "./InvitationSuggestion";
 
 const FriendsPage = () => {
-  const [listeAmis, setListeAmis] = useState([]);
-
-  useEffect(() => {
-    const tabAmi = [];
-    tabAmi.push("Amis");
-    tabAmi.push("Amis");
-    tabAmi.push("Amis");
-    setListeAmis(tabAmi);
-  }, []);
-
   return (
     <div className="friendsPage">
       <div className="friendsPageFond">
@@ -23,7 +15,10 @@ const FriendsPage = () => {
             </div>
           </div>
           <div className="friendsPage__left__actions">
-            <div className="friendsPage__left__actions__accueil action">
+            <Link
+              className="friendsPage__left__actions__accueil action"
+              to="/friends"
+            >
               <div className="action-img imgaccueil">
                 <svg viewBox="0 0 511.99987 511" width="25" height="25">
                   <path
@@ -33,14 +28,17 @@ const FriendsPage = () => {
                 </svg>
               </div>
               <span>Accueil</span>
-            </div>
-            <div className="friendsPage__left__actions__invite action">
+            </Link>
+            <Link
+              className="friendsPage__left__actions__invite action"
+              to="/request"
+            >
               <div className="action-img">
                 <div className="friendsInvite svgIn"></div>
               </div>
               <span>Invitations</span>
               <div className="flecheD"></div>
-            </div>
+            </Link>
             <div className="friendsPage__left__actions__suggest action">
               <div className="action-img">
                 <div className="friendsAdd svgIn"></div>
@@ -73,63 +71,9 @@ const FriendsPage = () => {
       </div>
       {/**======================= PARTIE DROITE ======================== */}
       <div className="friendsPage__right">
-        <div className="friendsPage__right__invitations">
-          <div className="friendsPage__right__invitations__header">
-            <h2>Invitations</h2>
-            <button className="seeAll">Voir tout</button>
-          </div>
-          <div className="friendsPage__right__invitations__content">
-            <div className="friendsPage__right__card">
-              <div className="card__img"></div>
-              <div className="card__bot">
-                <div className="card__data">
-                  <div className="card__name">Nom Prénom</div>
-                  <div>2 amis en commun</div>
-                </div>
-                <div>
-                  <div>
-                    <button className="btn-confirm">Confirmer</button>
-                  </div>
-                  <div>
-                    <button className="btn-delete">Supprimer</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/**======================= SUFFESTION ======================== */}
-        <div className="friendsPage__right__maybe">
-          <div className="">
-            <div className="maybe__content__header">
-              <h2>Vous connaissez peut-être</h2>
-              <button className="seeAll">Voir tout</button>
-            </div>
-            <div className="maybe__content__main">
-              {listeAmis.map((nom, index) => {
-                return (
-                  <div className="friendsPage__right__card" key={index}>
-                    <div className="card__img"></div>
-                    <div className="card__bot">
-                      <div className="card__data">
-                        <div className="card__name">Nom Prénom</div>
-                        <div>2 amis en commun</div>
-                      </div>
-                      <div>
-                        <div>
-                          <button className="btn-confirm clair">Ajouter</button>
-                        </div>
-                        <div>
-                          <button className="btn-delete">Supprimer</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <Switch>
+          <Route path="/friends" exact component={InvitationSuggestion} />
+        </Switch>
       </div>
     </div>
   );
