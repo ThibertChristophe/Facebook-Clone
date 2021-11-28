@@ -31,7 +31,7 @@ const FriendsPage = () => {
             </Link>
             <Link
               className="friendsPage__left__actions__invite action"
-              to="/request"
+              to="/friends/request"
             >
               <div className="action-img">
                 <div className="friendsInvite svgIn"></div>
