@@ -15,50 +15,6 @@
     height: inherit;
     padding: 7px;
     border-right: 1px solid rgb(73, 73, 73);
-    &__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      h2 {
-        font-size: 24px;
-        margin: 5px 0px 15px 10px;
-        width: fit-content;
-      }
-      &__option {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-        margin-right: 5px;
-        border-radius: 50%;
-        background-color: rgba(192, 192, 192, 0.116);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        &:hover {
-          filter: brightness(115%);
-        }
-        .imgEcrou {
-          width: 20px;
-          height: 20px;
-          background-image: url(../../img/palette77.png);
-          background-position: 0px -305px;
-          filter: invert(80%);
-        }
-      }
-    }
-    &__actions {
-      margin-top: 5px;
-      span {
-        flex: 2;
-        font-weight: 600;
-        font-size: 17px;
-        color: rgb(228, 228, 228);
-      }
-      &__accueil {
-        background-color: rgba(192, 192, 192, 0.116);
-      }
-    }
   }
   &__right {
     padding: 20px;
