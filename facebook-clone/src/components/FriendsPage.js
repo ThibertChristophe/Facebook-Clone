@@ -18,6 +18,11 @@ const FriendsPage = () => {
               exact
               component={SideBarLeftInvite}
             />
+            <Route
+              path="/friends/suggestions"
+              exact
+              component={SideBarLeftInvite}
+            />
           </Switch>
         </div>
       </div>

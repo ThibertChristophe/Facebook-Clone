@@ -38,13 +38,17 @@ const SideBarLeftFriends = () => {
           <span>Invitations</span>
           <div className="flecheD"></div>
         </Link>
-        <div className="sideBarLeftFriends__actions__suggest action">
+        <Link
+          className="sideBarLeftFriends__actions__suggest action"
+          to="/friends/suggestions"
+          exact
+        >
           <div className="action-img">
             <div className="friendsAdd svgIn"></div>
           </div>
           <span>Suggestions</span>
           <div className="flecheD"></div>
-        </div>
+        </Link>
         <div className="sideBarLeftFriends__actions__allFriends action">
           <div className="action-img">
             <div className="friendsList svgIn"></div>
