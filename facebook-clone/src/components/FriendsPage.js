@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import InvitationSuggestion from "./InvitationSuggestion";
 import Requests from "./Requests";
 import SideBarLeftFriends from "./SideBarLeftFriends";
+import SideBarLeftInvite from "./SideBarLeftInvite";
 
 const FriendsPage = () => {
   return (
@@ -10,7 +11,14 @@ const FriendsPage = () => {
       <div className="friendsPageFond">
         {/**======================= PARTIE GAUCHE ======================== */}
         <div className="friendsPage__left">
-          <SideBarLeftFriends />
+          <Switch>
+            <Route path="/friends" exact component={SideBarLeftFriends} />
+            <Route
+              path="/friends/requests"
+              exact
+              component={SideBarLeftInvite}
+            />
+          </Switch>
         </div>
       </div>
       {/**======================= PARTIE DROITE ======================== */}

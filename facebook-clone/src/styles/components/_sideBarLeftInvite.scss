@@ -1,0 +1,27 @@
+.sideBarLeftInvite {
+  padding: 10px 5px 0 5px;
+  &__header {
+    display: flex;
+    border-bottom: 1px solid rgb(73, 73, 73);
+    padding-bottom: 10px;
+    &__left {
+      display: flex;
+      align-items: center;
+      .arrowL {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-image: url(../../img/right-arrow.svg);
+        background-size: 17px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(180deg);
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.13);
+        }
+      }
+    }
+  }
+}
