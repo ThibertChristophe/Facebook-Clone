@@ -7,17 +7,10 @@
   margin: 10px 0 15px 0;
   position: relative;
   &__card {
-    width: 108px;
+    max-width: 125px;
     height: 192px;
+    flex: 1;
     margin: 0 2px;
-    @media screen and (max-width: 1450px) {
-      width: 125px;
-      height: 210px;
-    }
-    @media screen and (max-width: 1080px) {
-      width: 108px;
-      height: 192px;
-    }
   }
   .stories-btn-next {
     position: absolute;
