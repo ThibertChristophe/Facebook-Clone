@@ -1,2 +1,20 @@
 .requests {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 120px;
+    }
+    div {
+      font-size: 19px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
 }
