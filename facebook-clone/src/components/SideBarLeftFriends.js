@@ -49,13 +49,17 @@ const SideBarLeftFriends = () => {
           <span>Suggestions</span>
           <div className="flecheD"></div>
         </Link>
-        <div className="sideBarLeftFriends__actions__allFriends action">
+        <Link
+          className="sideBarLeftFriends__actions__allFriends action"
+          to="/friends/list"
+          exact
+        >
           <div className="action-img">
             <div className="friendsList svgIn"></div>
           </div>
           <span>Tous les amis</span>
           <div className="flecheD"></div>
-        </div>
+        </Link>
         <div className="sideBarLeftFriends__actions__annif action">
           <div className="action-img ">
             <div className="annif svgIn"></div>
