@@ -16,6 +16,7 @@ const Home = () => {
           <Route path="/Profil/" exact component={Profil} />
           <Route path="/Profil/*" exact component={Profil} />
           <Route path="/friends*" exact component={FriendsPage} />
+          <Route path="/watch" exact component={FriendsPage} />
         </Switch>
       </div>
       <div className="messengerPopup">

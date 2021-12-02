@@ -32,7 +32,11 @@ const Navigation = () => {
       </NavLink>
       {/* </NavLink> */}
 
-      <div className="logoNav_play logo">
+      <NavLink
+        to="/watch"
+        isActive={() => ["/watch"].includes(pathname)}
+        className="logoNav_play logo"
+      >
         <svg viewBox="0 0 512 512">
           <path
             d="M243.655,133.36c-12.215-7.087-26.812-7.111-39.051-0.064C192.328,140.365,185,153.055,185,167.242v99.638
@@ -49,7 +53,7 @@ const Navigation = () => {
           />
         </svg>
         <div className="navigation__play__tooltip tooltip">Watch</div>
-      </div>
+      </NavLink>
 
       <div className="logoNav_market logo">
         <svg viewBox="0 0 203.125 203.125">
