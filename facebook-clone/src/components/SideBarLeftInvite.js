@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Route, Switch } from "react-router-dom";
+import ListFriends from "./ListFriends";
 import ListRequests from "./ListRequests";
 import ListSuggestions from "./ListSuggestions";
 
@@ -31,7 +32,11 @@ const SideBarLeftInvite = () => {
                 <h2>Tous les amis</h2>
               </div>
               <div>
-                <input type="text" />
+                <input
+                  className="recherche"
+                  type="text"
+                  placeholder="Retrouver des amis"
+                />
               </div>
             </Route>
           </Switch>
@@ -46,6 +51,7 @@ const SideBarLeftInvite = () => {
             exact
             component={ListSuggestions}
           />
+          <Route path="/friends/list" exact component={ListFriends} />
         </Switch>
       </div>
     </div>

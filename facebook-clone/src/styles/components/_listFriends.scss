@@ -1,0 +1,74 @@
+.listFriends {
+  margin-top: 50px;
+  border-top: 1px solid rgb(73, 73, 73);
+  padding-top: 15px;
+  &__resume {
+    padding: 0 10px;
+    .nbInvite {
+      color: white;
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+    a {
+      color: $bleuClair;
+      font-size: 14px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.137);
+    }
+    .card__left {
+      width: 70px;
+      margin-right: 10px;
+      &__img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: grey;
+      }
+    }
+    .card__right {
+      flex: 2;
+      &__data {
+        .name {
+          color: white;
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .amiCommun {
+          font-size: 14px;
+        }
+      }
+      &__btn {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+        button {
+          height: 35px;
+          flex: 1;
+          border-radius: 7px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .btn-confirm {
+    background-color: $bleuClair;
+    color: white;
+    font-weight: 600;
+  }
+  .btn-delete {
+    background-color: rgba(192, 192, 192, 0.171);
+    color: white;
+    font-weight: 600;
+  }
+}

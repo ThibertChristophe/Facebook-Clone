@@ -13,6 +13,7 @@ const SideBarLeftFriends = () => {
       </div>
       {/**============== LISTE D'OPTION ============== */}
       <div className="sideBarLeftFriends__actions">
+        {/**============== ACCUEIL ============== */}
         <Link
           className="sideBarLeftFriends__actions__accueil action"
           to="/friends"
@@ -27,6 +28,7 @@ const SideBarLeftFriends = () => {
           </div>
           <span>Accueil</span>
         </Link>
+        {/**============== INVITATIONS ============== */}
         <Link
           className="sideBarLeftFriends__actions__invite action"
           to="/friends/requests"
@@ -36,8 +38,9 @@ const SideBarLeftFriends = () => {
             <div className="friendsInvite svgIn"></div>
           </div>
           <span>Invitations</span>
-          <div className="flecheD"></div>
+          <div class Name="flecheD"></div>
         </Link>
+        {/**============== SUGGESTIONS ============== */}
         <Link
           className="sideBarLeftFriends__actions__suggest action"
           to="/friends/suggestions"
@@ -49,6 +52,7 @@ const SideBarLeftFriends = () => {
           <span>Suggestions</span>
           <div className="flecheD"></div>
         </Link>
+        {/**============== TOUS LES AMIS ============== */}
         <Link
           className="sideBarLeftFriends__actions__allFriends action"
           to="/friends/list"

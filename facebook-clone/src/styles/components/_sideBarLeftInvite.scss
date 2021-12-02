@@ -26,4 +26,24 @@
   &__content {
     padding-top: 5px;
   }
+  .recherche {
+    margin-top: 10px;
+    position: absolute;
+    background-color: rgba(83, 83, 83, 0.432);
+    border-radius: 20px;
+    width: 340px;
+    height: 35px;
+    left: 10px;
+    padding-left: 35px;
+  }
+  .loupe {
+    position: absolute;
+    background-image: url(../../img/loupe.svg);
+    width: 17px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 20px;
+    bottom: -14px;
+  }
 }
