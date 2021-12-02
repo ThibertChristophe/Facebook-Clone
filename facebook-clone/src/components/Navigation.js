@@ -17,9 +17,12 @@ const Navigation = () => {
         to="/friends"
         className="logoNav_friends logo"
         isActive={() =>
-          ["/friends", "/friends/requests", "/friends/suggestions"].includes(
-            pathname
-          )
+          [
+            "/friends",
+            "/friends/requests",
+            "/friends/suggestions",
+            "/friends/list",
+          ].includes(pathname)
         }
       >
         <svg viewBox="0 0 511.99987 511">
