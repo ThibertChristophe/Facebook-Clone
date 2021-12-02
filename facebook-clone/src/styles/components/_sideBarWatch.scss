@@ -1,2 +1,31 @@
 .sideBarWatch {
+  &__header {
+    padding: 5px 10px;
+    &__titre {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .ecrouFond {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.301);
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.568);
+    }
+  }
+  .ecrou {
+    width: 20px;
+    height: 20px;
+    background-image: url(../../img/palette77.png);
+    background-position: 0px -305px;
+    filter: invert(90%);
+    cursor: pointer;
+    padding: 5px;
+  }
 }
