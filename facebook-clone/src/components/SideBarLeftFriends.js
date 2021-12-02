@@ -38,7 +38,7 @@ const SideBarLeftFriends = () => {
             <div className="friendsInvite svgIn"></div>
           </div>
           <span>Invitations</span>
-          <div class Name="flecheD"></div>
+          <div className="flecheD"></div>
         </Link>
         {/**============== SUGGESTIONS ============== */}
         <Link

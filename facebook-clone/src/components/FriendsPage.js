@@ -33,7 +33,7 @@ const FriendsPage = () => {
         <Switch>
           <Route path="/friends" exact component={InvitationSuggestion} />
           <Route path="/friends/requests" exact component={Requests} />
-          <Route path="/friends/suggestions" exact component={Profil} />
+          <Route path="/friends/suggestions" exact component={Requests} />
           <Route path="/friends/list" exact component={Requests} />
         </Switch>
       </div>
