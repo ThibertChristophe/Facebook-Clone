@@ -2,7 +2,10 @@
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
-
+  //flex-wrap: wrap;
+  @media all and (max-width: 925px) {
+    flex-wrap: wrap;
+  }
   .btn-trans-bleu {
     background-color: transparent;
     color: $bleuClair;

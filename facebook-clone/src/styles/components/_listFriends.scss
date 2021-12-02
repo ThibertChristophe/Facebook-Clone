@@ -1,10 +1,9 @@
 .listFriends {
-  margin-top: 50px;
   border-top: 1px solid rgb(73, 73, 73);
   padding-top: 15px;
   &__resume {
     padding: 0 10px;
-    .nbInvite {
+    .nbAmis {
       color: white;
       font-weight: 600;
       font-size: 17px;
@@ -19,6 +18,7 @@
   &__card {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;
@@ -27,7 +27,7 @@
     }
     .card__left {
       width: 70px;
-      margin-right: 10px;
+      flex: 1;
       &__img {
         width: 60px;
         height: 60px;
@@ -35,40 +35,33 @@
         background-color: grey;
       }
     }
-    .card__right {
-      flex: 2;
-      &__data {
-        .name {
-          color: white;
-          font-weight: 600;
-          font-size: 16px;
-        }
-        .amiCommun {
-          font-size: 14px;
-        }
+
+    .data {
+      flex: 3;
+      .name {
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
       }
-      &__btn {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-top: 10px;
-        button {
-          height: 35px;
-          flex: 1;
-          border-radius: 7px;
-          cursor: pointer;
+      .amiCommun {
+        font-size: 14px;
+      }
+    }
+    .card__right__btn {
+      display: flex;
+      justify-content: space-between;
+      height: 30px;
+      width: 30px;
+      button {
+        flex: 1;
+        border-radius: 7px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: transparent;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.24);
         }
       }
     }
-  }
-  .btn-confirm {
-    background-color: $bleuClair;
-    color: white;
-    font-weight: 600;
-  }
-  .btn-delete {
-    background-color: rgba(192, 192, 192, 0.171);
-    color: white;
-    font-weight: 600;
   }
 }

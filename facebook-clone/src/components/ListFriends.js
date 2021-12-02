@@ -12,14 +12,12 @@ const ListFriends = () => {
           <div className="card__left">
             <div className="card__left__img"></div>
           </div>
-          <div className="card__right">
-            <div className="card__right__data">
-              <div className="name">Nom Prénom</div>
-              <div className="amiCommun">2 amis en commun</div>
-            </div>
-            <div className="card__right__btn">
-              <button className="btn-confirm">...</button>
-            </div>
+          <div className="data">
+            <div className="name">Nom Prénom</div>
+            <div className="amiCommun">2 amis en commun</div>
+          </div>
+          <div className="card__right__btn">
+            <button className="btn-confirm">...</button>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@
     }
   }
   &__header {
-    height: 680px;
+    min-height: 680px;
     background-color: #242526;
     display: flex;
     align-items: center;
@@ -50,11 +50,15 @@
     }
     &__mid {
       width: 100%;
-      height: 160px;
+      min-height: 160px;
       display: flex;
       align-items: center;
       padding: 0 20px;
       max-width: 1250px;
+
+      @media all and (max-width: 730px) {
+        flex-direction: column;
+      }
       &__imgProfil {
         position: relative;
         top: -30px;
@@ -64,6 +68,7 @@
         border: 1px solid black;
         background-color: grey;
         overflow: hidden;
+
         img {
           width: 100%;
           height: 100%;
@@ -73,8 +78,9 @@
       &__donnee {
         display: flex;
         flex-direction: column;
-        margin-left: 20px;
         flex: 2;
+
+        padding-left: 20px;
         a:hover {
           text-decoration: underline;
         }
@@ -83,14 +89,27 @@
           color: white;
           font-weight: 700;
         }
+        @media all and (max-width: 730px) {
+          margin-top: -20px;
+          flex-direction: column;
+          align-items: center;
+          padding-left: 0px;
+          margin-bottom: 5px;
+        }
       }
       &__action {
         display: flex;
         justify-content: space-between;
         margin-top: 5px;
-        .listFriends {
+        @media all and (max-width: 730px) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .listFriend {
           display: flex;
-          width: 200px;
+          width: fit-content;
           align-items: center;
           .listFriends__friend {
             position: relative;
@@ -127,6 +146,10 @@
         &__btn {
           display: flex;
           justify-content: space-between;
+
+          @media all and (max-width: 730px) {
+            margin: 10px 0;
+          }
           .btnAction {
             margin: 0 5px;
             border-radius: 7px;

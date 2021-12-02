@@ -47,7 +47,7 @@ const Profil = ({ name }) => {
               <a href="#">80 Amis</a>
             </span>
             <div className="profil__header__mid__action">
-              <div className="listFriends">
+              <div className="listFriend">
                 <div className="listFriends__friend">
                   {/* Affichage de la popup ici*/}
                   <div className="listFriends__friend__popup">
@@ -138,6 +138,7 @@ const Profil = ({ name }) => {
       <div className="profil__body">
         <Switch>
           <Route path="/Profil/" exact component={Publication} />
+          <Route path="/friends/suggestions" exact component={Publication} />
           <Route path="/Profil/grid" exact component={Publication} />
           <Route path="/Profil/about" exact component={About} />
           <Route path="/Profil/about_*" exact component={About} />

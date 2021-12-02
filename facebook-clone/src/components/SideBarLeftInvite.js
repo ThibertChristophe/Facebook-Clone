@@ -31,16 +31,21 @@ const SideBarLeftInvite = () => {
               <div>
                 <h2>Tous les amis</h2>
               </div>
-              <div>
-                <input
-                  className="recherche"
-                  type="text"
-                  placeholder="Retrouver des amis"
-                />
-              </div>
             </Route>
           </Switch>
         </div>
+        <Switch>
+          <Route path="/friends/list" exact>
+            <div className="loupeInput">
+              <div className="loupe"></div>
+              <input
+                className="recherche"
+                type="text"
+                placeholder="Retrouver des amis"
+              />
+            </div>
+          </Route>
+        </Switch>
       </div>
       {/**============== BODY ============== */}
       <div className="sideBarLeftInvite__content">
