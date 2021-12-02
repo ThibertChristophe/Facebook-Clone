@@ -5,6 +5,7 @@ import Accueil from "../components/Accueil";
 import Profil from "../components/Profil";
 import Messenger from "../components/Messenger";
 import FriendsPage from "../components/FriendsPage";
+import Watch from "../components/Watch";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
           <Route path="/Profil/" exact component={Profil} />
           <Route path="/Profil/*" exact component={Profil} />
           <Route path="/friends*" exact component={FriendsPage} />
-          <Route path="/watch" exact component={FriendsPage} />
+          <Route path="/watch" exact component={Watch} />
         </Switch>
       </div>
       <div className="messengerPopup">

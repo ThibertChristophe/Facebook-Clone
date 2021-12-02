@@ -1,2 +1,26 @@
 .watch {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  &__left {
+    &__sideBar {
+      position: fixed;
+      width: 360px;
+      height: inherit;
+      padding: 7px;
+      border-right: 1px solid rgb(73, 73, 73);
+    }
+  }
+  .fond {
+    position: relative;
+    min-width: 360px;
+    min-height: inherit;
+    border-right: 1px solid rgb(73, 73, 73);
+    background-color: $color-header;
+  }
+  &__right {
+    padding: 20px;
+    flex-grow: 1;
+    margin-bottom: 5px;
+  }
 }

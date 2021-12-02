@@ -4,7 +4,6 @@ import InvitationSuggestion from "./InvitationSuggestion";
 import Requests from "./Requests";
 import SideBarLeftFriends from "./SideBarLeftFriends";
 import SideBarLeftInvite from "./SideBarLeftInvite";
-import Profil from "./Profil";
 
 const FriendsPage = () => {
   return (
