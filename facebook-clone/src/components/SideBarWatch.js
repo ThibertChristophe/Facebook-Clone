@@ -10,7 +10,10 @@ const SideBarWatch = () => {
             <span className="ecrou"></span>
           </div>
         </div>
-        <div className="sideBarWatch__header__input"></div>
+        <div className="sideBarWatch__header__input">
+          <div className="loupe"></div>
+          <input type="text" />
+        </div>
       </div>
     </div>
   );
