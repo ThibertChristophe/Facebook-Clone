@@ -34,8 +34,6 @@
         border-radius: 50%;
         margin-right: 10px;
         background-color: #3a3b3c;
-        &__img {
-        }
       }
       .card__right {
         font-size: 16px;
@@ -43,8 +41,57 @@
         color: rgb(235, 235, 235);
       }
       &:hover {
-        background-color: #3a3b3cb6;
+        background-color: #414344b7;
       }
+    }
+  }
+  &__abonnement {
+    border-top: 1px solid grey;
+    margin-top: 15px;
+    padding: 10px 5px 0 5px;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-size: 17px;
+        color: white;
+      }
+    }
+    &__list {
+      &__card {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        height: 55px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        .card__left {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+          background-color: #3a3b3c;
+        }
+        .card__right {
+          font-size: 16px;
+          font-weight: 600;
+          color: rgb(235, 235, 235);
+        }
+        &:hover {
+          background-color: #414344b7;
+        }
+      }
+    }
+  }
+  .btn-gerer {
+    padding: 10px 7px;
+    color: $bleuClair;
+    border-radius: 7px;
+    cursor: pointer;
+    &:hover {
+      background-color: #414344b7;
     }
   }
   .ecrouFond {
@@ -79,5 +126,17 @@
   }
   .homeActive {
     background-color: $bleuClair;
+  }
+  .directActive {
+    background-color: rgb(255, 53, 53);
+  }
+  .programActive {
+    background-color: #2abba7;
+  }
+  .videoActive {
+    background-color: #f7b928;
+  }
+  .active {
+    background-color: #414344b7;
   }
 }
