@@ -78,6 +78,10 @@
       display: flex;
       li {
         padding: 20px;
+        &:hover{
+          box-shadow: 0 2px $bleuClair;
+         border-radius: 7px 7px 0 0;
+       }
       }
     }
     &__content {

@@ -1,10 +1,11 @@
 import React from "react";
-import { NavLink, Switch, Route } from "react-router-dom";
+import { NavLink, Switch, Route, useLocation } from "react-router-dom";
 import FriendsVignette from "./FriendsVignette";
 import Overview from "./Overview";
 import AboutWork from "./AboutWork";
 
 const About = () => {
+  const { pathname } = useLocation();
   const tabPhoto = [
     "Photo",
     "Photo",
@@ -50,9 +51,9 @@ const About = () => {
         <div className="about__header__right">
           <Switch>
             <Route path="/Profil/about" exact component={Overview} />
-
+            <Route path="/Profil/about/all" exact component={Overview} />
             <Route path="/Profil/about_work" exact component={AboutWork} />
-
+            <Route path="/Profil/about_work/all" exact component={AboutWork} />
             {/* <Route path="/Profil/about" exact /> */}
           </Switch>
         </div>
@@ -69,9 +70,14 @@ const About = () => {
         </div>
         <div className="about__friends__onglet">
           <ul>
-            <li>Tous les amis</li>
-            <li>Ville d'origine</li>
-            <li>Abonnements</li>
+            <ul>
+              <NavLink to={pathname + "/all"} exact>
+                <li>{pathname + "/all"}</li>
+              </NavLink>
+
+              <li>Ville d'origine</li>
+              <li>Abonnements</li>
+            </ul>
           </ul>
         </div>
         <div className="about__friends__content">

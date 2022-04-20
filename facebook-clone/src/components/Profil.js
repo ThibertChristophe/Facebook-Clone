@@ -105,6 +105,7 @@ const Profil = ({ name }) => {
                   "/Profil/about_family",
                   "/Profil/about_detail",
                   "/Profil/about_life_event",
+                  "/Profil/about/all",
                 ].includes(pathname)
               }
               exact
@@ -142,6 +143,7 @@ const Profil = ({ name }) => {
           <Route path="/Profil/grid" exact component={Publication} />
           <Route path="/Profil/about" exact component={About} />
           <Route path="/Profil/about_*" exact component={About} />
+          <Route path="/Profil/about/all" exact component={About} />
           <Route path="/Profil/friends" exact component={About} />
           <Route path="/Profil/photos" exact component={About} />
           <Route path="/Profil/videos" exact component={About} />
