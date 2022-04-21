@@ -11,7 +11,8 @@
     left: -100px;
     position: absolute;
     z-index: 5;
-    display: none;
+    //display: none;
+    display: block;
   }
   .posts-popup-fromImg {
     top: -235px;
@@ -41,9 +42,9 @@
       flex-direction: column;
       width: 85%;
       // On affiche la pop up au mouseover du lien h4>a
-      h4 a:hover .posts-popup {
-        display: block;
-      }
+      // h4 a:hover .posts-popup {
+      //   display: block;
+      // }
       h4 a {
         color: white;
         width: fit-content;

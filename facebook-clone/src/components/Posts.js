@@ -4,6 +4,8 @@ import imgEarth from "../img/earth.svg";
 import imgLike from "../img/like.svg";
 import ButtonPost from "./ButtonPost";
 import PostsPopUp from "./PostsPopUp";
+
+import Fade from "./Fade";
 ////
 import bigLike from "../img/likeBig.png";
 import love from "../img/love.png";
@@ -12,13 +14,17 @@ import haha from "../img/haha.png";
 import wouah from "../img/Wouah.png";
 import triste from "../img/triste.png";
 import fache from "../img/fache.png";
-import { display } from "@mui/system";
 
 const Posts = ({ titre, img }) => {
   const [like, setlike] = useState(0);
   const [liked, setLiked] = useState(false);
   const [nbComment, setNbComment] = useState(0);
   const [show, setShow] = useState(false);
+  const [test, setTest] = useState(false);
+
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => setOpen((o) => !o);
 
   // Reference vers la div des commentaires
   const blockComment = useRef(null);
@@ -30,6 +36,18 @@ const Posts = ({ titre, img }) => {
       <Comment />
     </div>,
   ]);
+
+  function displayHidePopUp(yesNo) {
+    if (yesNo) {
+      setTest(
+        <div className="posts-popup">
+          <PostsPopUp nom="Nom" prenom="Prénom" />
+        </div>
+      );
+    } else {
+      setTest("");
+    }
+  }
 
   /** Like ou dislike un post */
   function likePost() {
@@ -80,11 +98,16 @@ const Posts = ({ titre, img }) => {
         </div>
         <div className="posts-header-title">
           <h4>
-            <a href="">
+            <a href="" onMouseOver={toggle} onMouseOut={toggle}>
               {/* Affichage de la popup ici*/}
-              <div className="posts-popup">
+              <Fade visible={open}>
+                <div className="posts-popup">
+                  <PostsPopUp nom="Nom" prenom="Prénom" />
+                </div>
+              </Fade>
+              {/* <div className="posts-popup">
                 <PostsPopUp nom="Nom" prenom="Prénom" />
-              </div>
+              </div> */}
               {titre}
             </a>
           </h4>
@@ -102,6 +125,7 @@ const Posts = ({ titre, img }) => {
         aliquid! Minus aperiam sit numquam totam reiciendis facere nobis iure
         perferendis.
       </div>
+
       <div className="posts-img">
         <img src={img} alt="" />
       </div>
