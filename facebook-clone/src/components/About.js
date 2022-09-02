@@ -71,11 +71,12 @@ const About = () => {
         <div className="about__friends__onglet">
           <ul>
             <ul>
-              <NavLink to={pathname + "/all"} exact>
-                <li>{pathname + "/all"}</li>
+              <NavLink to="about/all" exact>
+                <li>Tous les amis</li>
               </NavLink>
-
-              <li>Ville d'origine</li>
+              <NavLink to="about/City" exact>
+                <li>Ville d'origine</li>
+              </NavLink>
               <li>Abonnements</li>
             </ul>
           </ul>
